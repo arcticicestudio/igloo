@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Igloo Bootstrap                          +
+# project    igloo                                    +
+# repository https://github.com/arcticicestudio/igloo +
+# author     Arctic Ice Studio                        +
+# email      development@arcticicestudio.com          +
+# copyright  Copyright (C) 2017                       +
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++
+set -e
+
+SNOWSAW_DIR=".snowsaw"
+SNOWSAW_BIN="bin/snowsaw"
+
+SNOWBLOCKS_BASE_DIR_NAME="snowblocks"
+SNOWBLOCKSDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$SNOWBLOCKS_BASE_DIR_NAME"
+
+"${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWBLOCKSDIR}" "${@}"
