@@ -1,0 +1,13 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.git-commit-msg": null,
+      "~/.gitconfig": null,
+      "~/.gitconfig_auth": null,
+      "~/.gitignore": null
+    }
+  }
+]
