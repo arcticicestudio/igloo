@@ -1,0 +1,453 @@
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Git Configuration                         +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# Git
+#   (https://git-scm.com/docs/git-config)
+#   (https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration#Colors-in-Git)
+# diff-so-fancy
+#   (https://github.com/so-fancy/diff-so-fancy#options)
+[include]
+  # Includes sensible authentication data:
+  #   - user.name <USERNAME>
+  #   - user.email <EMAIL>
+  #   - user.signingkey <SIGNINGKEY>
+  #   - user.useconfigonly true
+  path = ~/.gitconfig_auth
+
+[core]
+  repositoryFormatVersion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
+  whitespace = tab-in-indent
+  editor = vim
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  attributesfile = ~/.gitattributes
+  excludesfile = ~/.gitignore
+  autocrlf = input
+
+[commit]
+  template = ~/.git-commit-msg
+  status = false
+
+[diff]
+  tool = intellij
+  compactionHeuristic = true
+
+[difftool "intellij"]
+  prompt = true
+  cmd = idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+
+[diff-so-fancy]
+  markEmptyLines = true
+  changeHunkIndicators = true
+  stripLeadingSymbols = true
+  useUnicodeRuler = true
+
+[merge]
+  tool = intellij
+  ff = false
+
+[mergetool "intellij"]
+  keepBackup = false
+  prompt = false
+  trustExitCode = true
+  cmd = idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+
+[push]
+  default = current
+
+[advice]
+  pushNonFastForward = false
+  statusHints = false
+  resolveConflict = false
+
+[status]
+  showUntrackedFiles = all
+
+[color]
+  branch = always
+  diff = always
+  grep = always
+  pager = true
+  showbranch = always
+  status = always
+  ui = always
+
+[color "branch"]
+  current = "white blue bold"
+  local = "white bold"
+  plain = "white"
+  remote  = "blue bold"
+
+[color "decorate"]
+  branch = "blue bold"
+  HEAD = "white bold ul"
+  remoteBranch = "blue"
+  stash = "yellow"
+  tag = "cyan bold"
+
+[color "diff"]
+  commit = "blue bold"
+  frag = "blue bold"
+  func = "white"
+  meta = "cyan"
+  new = "green"
+  old = "red"
+  plain = "white"
+  whitespace = "white reverse"
+
+[color "diff-highlight"]
+  oldNormal = "red bold"
+  oldHighlight = "white red bold"
+  newNormal = "green bold"
+  newHighlight = "white green bold"
+
+[color "grep"]
+  context = "white"
+  filename = "white dim ul"
+  function = "white"
+  linenumber = "white dim bold"
+  match = "blue bold"
+  selected = "white"
+  separator = "white dim"
+
+[color "interactive"]
+  error = "red bold"
+  header = "blue bold"
+  help = "white dim"
+  prompt = "cyan"
+
+[color "status"]
+  added = "green bold"
+  changed = "yellow bold"
+  header = "white ul"
+  nobranch = "magenta bold ul"
+  unmerged = "blue ul"
+  untracked = "red bold"
+  updated = "cyan bold"
+
+[gui]
+  commitmsgwidth = 72
+
+[alias]
+#+----------------------+
+#+ Interaction - Branch +
+#+----------------------+
+  # Deletes all local branches based on the the specified gitflow branch prefix.
+  #
+  # Usage:
+  #   git bclean <BRANCH>
+  bclean = "!f() { git for-each-ref refs/heads/$1/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -d $branch ; done }; f"
+
+  # Checks out into the specified branch.
+  # Shortended checkout command.
+  #
+  # Usage:
+  #   git co <BRANCH>
+  co = checkout
+
+  # Checks out into a new tracking branch using the specified name.
+  #
+  # Usage:
+  #   git cob <BRANCH>
+  cob = checkout -t -b
+
+  # GitHub Pull Request Management
+  # Creates a branch based on the specified GitHub Pull Request ID.
+  # Default remote "origin" is used unless otherwise stated.
+  #
+  # Usage:
+  #   git pr <GITHUB_PULL_REQUEST_ID> [REMOTE]
+  # Examples:
+  #   "git pr 4"         Creates a local branch "pr/4" from the default "origin" remote
+  #   "git pr 4 remote"  Creates a local branch "pr/4" from the specified remote "remote"
+  pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+
+  # GitHub Pull Request Management
+  # Deletes all branches based on the specified GitHub Pull Request ID.
+  # Default remote "origin" is used unless otherwise stated.
+  #
+  # Usage:
+  #   git pr-clean
+  # Examples:
+  #   "git pr-clean" Removes all branches in "pr/*" from the local repository
+  pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -d $branch ; done"
+
+  # +----------------------+
+  # + Interaction - Commit +
+  # +----------------------+
+  # Adds all specified files to the stage and prints the status.
+  #
+  # Depends on:
+  #   alias.s
+  # Usage:
+  #   git a <FILES>
+  a = ! sh -c 'git add -- "$@" && git s' --
+
+  # Adds all specified files interactively in patch mode to the stage and prints the status.
+  #
+  # Depends on:
+  #   alias.s
+  # Usage:
+  #   git ap <FILES>
+  ap = ! git add -p $@ && git s
+
+  # Adds all unstaged- and untracked files to the stage and prints the status.
+  #
+  # Depends on:
+  #   alias.s
+  # Usage:
+  #   git aa
+  aa = ! git add . && git s
+
+  # Commits all staged files.
+  # Shortended commit command.
+  #
+  # Usage:
+  #   git c
+  c = commit
+
+  # +---------------------+
+  # + Interaction - Fetch +
+  # +---------------------+
+  # Fetches changes from all remotes and removes any remote-tracking references that no longer exists.
+  #
+  # Usage:
+  #   git fa
+  fa = fetch --all --prune
+
+  # +---------------------+
+  # + Interaction - Merge +
+  # +---------------------+
+  # Merges the specified branch in non-fast-forward mode.
+  #
+  # Usage:
+  #   git m <BRANCH>
+  m = merge --no-ff
+
+  # +--------------------+
+  # + Interaction - Pull +
+  # +--------------------+
+  # Pulls changes from the specified remote in non-fast-forward mode and prunes all unreachable objects from the object
+  # database.
+  #
+  # Usage:
+  #   git pl <REMOTE>
+  pl = ! git pull --no-ff --prune $@
+
+  # Pulls changes from the specified remote in non-fast-forward mode, performs a rebase and prunes all unreachable
+  # objects from the object database.
+  # !WARNING!
+  #   Use rebasing with caution and only for local and unpushed branches!
+  #   History that got rewritten in a shared branch touched by multiple developers may break the repository!
+  #   Rebasing a shared branch that others have based work on may lead to problems by forcing other users to manually
+  #   fix their history.
+  #
+  # Usage:
+  #   git plrb <REMOTE>
+  # References:
+  #   https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase
+  plrb = ! git pull --no-ff --rebase --prune $@
+
+  # Pulls changes from the specified remote in fast-forward mode and prunes all unreachable objects from the object
+  # database.
+  # !WARNING!
+  #   Use fast-forward mode with caution to prevent loss of "commit <> branch" tracking information in the history!
+  #
+  # Usage:
+  #   git plff <REMOTE>
+  plff = ! git pull --ff-only --prune $@
+
+  # Pulls changes from the specified remote in fast-forward mode, performs a rebase and prunes all unreachable objects
+  # from the object database.
+  # !WARNING!
+  #   Use fast-forward mode with caution to prevent loss of "commit <> branch" tracking information in the history!
+  # !WARNING!
+  #   Use rebasing with caution and only for local and unpushed branches!
+  #   History that got rewritten in a shared branch touched by multiple developers may break the repository!
+  #   Rebasing a shared branch that others have based work on may lead to problems by forcing other users to manually
+  #   fix their history.
+  #
+  # Usage:
+  #   git plffrb <REMOTE>
+  # References:
+  #   https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase
+  plffrb = ! git pull --rebase --ff-only --prune $@
+
+  # +--------------------+
+  # + Interaction - Push +
+  # +--------------------+
+  # Pushes the current branch to the default "origin" remote.
+  #
+  # Usage:
+  #   git po
+  po = push origin
+
+  # +---------------------+
+  # + Interaction - Reset +
+  # +---------------------+
+  # Resets to the specific commit.
+  # Updates the index and does not touch the working tree.
+  # Shortended reset command.
+  #
+  # Usage:
+  #   git back <SHA1>
+  back = reset
+
+  # Undoes the last commit.
+  #
+  # Usage:
+  #   git undo
+  undo = reset HEAD~1 --mixed
+
+  # Resets the stage.
+  #
+  # Usage:
+  #   git unstage
+  unstage = reset HEAD --
+
+  # Hardresets to the specific commit.
+  # Shortended reset command.
+  # !WARNING!
+  #   Any changes to tracked files in the working tree commited after the specified commit are discarded!
+  #   This will reset the index and the working tree.
+  #
+  # Usage:
+  #   git wipe <SHA1>
+  wipe = reset --hard
+
+  # +----------------------+
+  # + Information - Branch +
+  # +----------------------+
+  # Prints all branches with abbreviated SHA1 checksum and commit message.
+  #
+  # Usage:
+  #   git b
+  # Output Format:
+  #   <BRANCH> <ABBREVIATED SHA1> <COMMIT MESSAGE>
+  b = branch --list --all -v
+
+  # Prints only branches that have not been merged yet into the specified branch.
+  #
+  # Usage:
+  #   git bum <BRANCH>
+  # Output Format:
+  #   <BRANCH> <ABBREVIATED SHA1> <COMMIT MESSAGE>
+  bum = branch --all --list --verbose --no-merged 
+
+  # Prints only branches that have been merged into the specified branch.
+  #
+  # Usage:
+  #   git bm <BRANCH>
+  # Output Format:
+  # <BRANCH> <ABBREVIATED SHA1> <COMMIT MESSAGE>
+  bm = branch --all --list --verbose --merged
+
+  # +-------------------+
+  # + Information - Log +
+  # +-------------------+
+  # Lists an advanced commit log.
+  #
+  # Usage:
+  #   git l
+  # Output Format:
+  #   <SHA1> [REFS]
+  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
+  #   <ISO-8601 DATE>
+  #   <COMMIT MESSAGE>
+  l = log --pretty=format:'%C(74 bold ul)%H%C(reset)%C(86 bold)%d\n%C(80)%an %C(248)<%C(80)%ae%C(248)>\n%C(68)%ci\n%C(253)%B' --graph
+
+  # Lists the log for all commits commited after the given tag or SHA1 checksum.
+  #
+  # Depends on:
+  #   alias.l
+  # Usage:
+  #   git lch <TAG>|<SHA1>
+  # Output Format:
+  #   <SHA1> [REFS]
+  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
+  #   <ISO-8601 DATE>
+  #   <COMMIT MESSAGE>
+  lch = ! git l $1..HEAD
+
+  # Lists an advanced commit log with relative commit dates.
+  #
+  # Usage:
+  #   git lr
+  # Output Format:
+  #   <SHA1> [REFS]
+  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
+  #   <ISO-8601 RELATIVE DATE>
+  #   <COMMIT MESSAGE>
+  lr = log --pretty=format:'%C(74 bold ul)%H%C(reset)%C(86 bold)%d\n%C(80)%an %C(248)<%C(80)%ae%C(248)>\n%C(68)%cr\n%C(253)%B' --graph
+
+  # Lists all new commits after the fetch including stats, but excluding merges.
+  #
+  # Depends on:
+  #   alias.l
+  # Usage:
+  #   git lnew
+  # Output Format:
+  #   <SHA1> [REFS]
+  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
+  #   <ISO-8601 DATE>
+  #   <COMMIT MESSAGE>
+  #   <STATS>
+  lnew = ! git l ORIG_HEAD.. --stat --no-merges
+
+# +----------------------+
+# + Information - Status +
+# +----------------------+
+  # Shows the status.
+  # Shortended status command.
+  #
+  # Usage:
+  #   git s
+  s = status
+
+  # +-------------------+
+  # + Information - Tag +
+  # +-------------------+
+  # Lists all tags handled as version strings in sorted order.
+  #
+  # Usage:
+  #   git t
+  t = tag --list --sort=version:refname
+
+  # Creates a signed annotated tag.
+  #
+  # Usage:
+  #   git ts <TAG>
+  ts = tag --annotate --sign
+
+  # +----------------+
+  # + Query - Branch +
+  # +----------------+
+  # Finds all branches containing the given SHA1 checksum.
+  #
+  # Depends on:
+  #   alias.b
+  # Usage:
+  #   git fb <SHA1>
+  fb = ! sh -c 'git branch --contains $1' --
+
+  # +-------------+
+  # + Query - Tag +
+  # +-------------+
+  # Finds all tags containing the given SHA1 checksum.
+  #
+  # Usage:
+  #   git ft <SHA1>
+  ft = ! git describe --tags --contains $1
+  
+  cc = "!f() { \
+          git log --decorate --date=short -S\"$1\"; \
+        }; f"

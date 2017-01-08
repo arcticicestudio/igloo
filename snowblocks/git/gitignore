@@ -1,0 +1,61 @@
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Git Ignore Pattern                        +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# Git
+#   (https://git-scm.com/docs/gitignore)
+# Java
+#   (http://www.java.com/en/download/help/error_hotspot.xml)
+
+# +--------------------+
+# + Runtime Extensions +
+# +--------------------+
+*.bak
+*.log
+
+# +--- Git ---+
+*.orig
+
+# +------------------+
+# + Operating System +
+# +------------------+
+# +--- Unix ---+
+*~
+*.pid
+
+# +--- macOS ---+
+._*
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.Trash-*
+.Trashes
+
+# +-----------+
+# + Languages +
+# +-----------+
+# +--- Java / JavaFX ---+
+*.bss
+*.class
+*.jar
+hs_err_pid*
+
+# +--- NodeJS ---+
+.npm
+node_modules
+npm-debug.log*
+*.log
+
+# +--- Python ---+
+__pycache__
+*.pyc
+
+# +--- Sass ---+
+.sass-cache/
+*.css.map
