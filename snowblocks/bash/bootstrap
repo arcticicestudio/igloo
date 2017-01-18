@@ -1,0 +1,144 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Bash Snowblock Bootstrap                  +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# StackOverflow
+#   (http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script/677212#677212)
+
+
+__snowblock_bash::get_bootstrap_link_target() {
+  printf "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
+}
+
+__snowblock_bash::get_bootstrap_link_source() {
+  printf "$(readlink $(__snowblock_bash::get_bootstrap_link_target))"
+}
+
+__snowblock_bash::get_base_dir() {
+  if hash realpath 2>/dev/null; then
+    printf "$(dirname $(realpath "${BASH_SOURCE[0]}"))"
+  else
+    printf "$(dirname $(__snowblock_bash::get_bootstrap_link_source))"
+  fi
+}
+
+__snowblock_bash::get_module_basename() {
+  printf "$($SNOWBLOCK_BASH_BASE_DIR/$(basename "${BASH_SOURCE[0]}"))"
+}
+
+__snowblock_bash::log_error() {
+  printf "\e[31m%s\e[0m\n" "✖ $*" 1>&2
+}
+
+__snowblock_bash::log_warning() {
+  printf "\e[33m%s\e[0m\n" "$*"
+}
+
+__snowblock_bash::log_success() {
+  printf "\e[32m%s\e[0m\n" "✔ $*"
+}
+
+__snowblock_bash::log_info() {
+  printf "\e[34m%s\e[0m\n" "➜ $*"
+}
+
+__snowblock_bash::log_debug() {
+  if [ "$SNOWBLOCK_BASH_DEBUG" = true ]; then
+    printf "\e[01;30m[\e[0;35m%s\e[01;30m] \e[0;35m%s\e[0m\n" "$(\date "+%Y-%m-%d %H:%M:%S")" "$*"
+  fi
+}
+
+__snowblock_bash::setup_history() {
+  if [ "$SNOWBLOCK_BASH_HISTORY" = true ]; then
+    mkdir -p $SNOWBLOCK_BASH_BASE_DIR/.log 2> /dev/null
+    export HISTFILE=$SNOWBLOCK_BASH_BASE_DIR/.log/`\date "+%Y-%m-%d"`
+  else
+    export HISTFILE=
+  fi
+}
+
+__snowblock_bash::load_core_modules() {
+  local __self_name="$(basename $(readlink "${BASH_SOURCE[0]}"))"
+
+  if [ "$#" -eq 0 ]; then
+    __snowblock_bash::log_debug "[$__self_name] Missing parameter while calling function $FUNCNAME"
+    __snowblock_bash::log_error "[$__self_name] Error while loading core modules"
+    return 1
+  fi
+  local module
+  
+  for module in $*; do
+    module=$SNOWBLOCK_BASH_BASE_DIR/core/$module
+    if [ -f $module ]; then
+      . $module
+      if [ $? -eq 0 ]; then
+        __snowblock_bash::log_debug "[$__self_name] Core module $(basename $module) successfully loaded"
+      else
+        __snowblock_bash::log_debug "[$__self_name] Error while loading core module $(basename $module)"
+      fi
+    else
+      __snowblock_bash::log_error "[$__self_name] Core module $(basename $module) not found"
+      return 1
+    fi
+  done
+}
+
+__snowblock_bash::load_third_party_scripts() {
+  local __self_name="$(basename $(readlink "${BASH_SOURCE[0]}"))"
+
+  if [ "$#" -eq 0 ]; then
+    __snowblock_bash::log_debug "[$__self_name] Missing parameter while calling function $FUNCNAME"
+    __snowblock_bash::log_error "[$__self_name] Error while loading third-party scripts"
+    return 1
+  fi
+  local script
+  
+  for script in $*; do
+    if [ -f $script ]; then
+      . $script
+      if [ $? -eq 0 ]; then
+        __snowblock_bash::log_debug "[$__self_name] Third-Party script $script successfully loaded"
+      else
+        __snowblock_bash::log_debug "[$__self_name] Error while loading third-party script $script"
+      fi
+    else
+      __snowblock_bash::log_debug "[$__self_name] Third-Party script $script not found"
+    fi
+  done
+}
+
+__snowblock_bash::register_binaries() {
+  export PATH="${PATH}:$SNOWBLOCK_BASH_BINARIES"
+}
+
+export SNOWBLOCK_BASH_BASE_DIR="$(__snowblock_bash::get_base_dir)"
+export SNOWBLOCK_BASH_HISTORY=true
+export SNOWBLOCK_BASH_DEBUG=false
+export SNOWBLOCK_BASH_BINARIES=$SNOWBLOCK_BASH_BASE_DIR/bin
+
+# +--------------+
+# + Core Modules +
+# +--------------+
+__snowblock_bash::load_core_modules loader/env loader/pkg
+__snowblock_bash::load_core_modules aliases functions prompt shelloptions
+
+# +--------------------+
+# +Third-Party Scripts +
+# +--------------------+
+# Git prompt bash support.
+__snowblock_bash::load_third_party_scripts /usr/share/git/completion/git-prompt.sh
+
+# Programmable bash completion features.
+__snowblock_bash::load_third_party_scripts /usr/share/bash-completion/bash_completion
+
+__snowblock_bash::setup_history
+__snowblock_bash::register_binaries
+
+__snowblock_bash::log_debug "[$(basename $(__snowblock_bash::get_bootstrap_link_source))] bootstrap completed"
