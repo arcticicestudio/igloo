@@ -4,7 +4,7 @@
 
 <p align="center">The snowy dotfile home.</p>
 
-<p align="center">Powered by<br><img src="https://cdn.rawgit.com/arcticicestudio/snowsaw/develop/assets/snowsaw-logo-banner.svg"/></p>
+<p align="center">Powered by<br><a href="https://github.com/arcticicestudio/snowsaw"><img src="https://cdn.rawgit.com/arcticicestudio/snowsaw/develop/assets/snowsaw-logo-banner.svg"/></a></p>
 
 ---
 
