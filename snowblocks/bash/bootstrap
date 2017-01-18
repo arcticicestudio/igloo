@@ -57,7 +57,9 @@ __snowblock_bash::log_debug() {
 
 __snowblock_bash::setup_history() {
   if [ "$SNOWBLOCK_BASH_HISTORY" = true ]; then
-    mkdir -p $SNOWBLOCK_BASH_BASE_DIR/.log 2> /dev/null
+    if [ ! -d $SNOWBLOCK_BASH_BASE_DIR/.log ]; then
+      mkdir -p $SNOWBLOCK_BASH_BASE_DIR/.log 2> /dev/null
+    fi
     export HISTFILE=$SNOWBLOCK_BASH_BASE_DIR/.log/`\date "+%Y-%m-%d"`
   else
     export HISTFILE=
