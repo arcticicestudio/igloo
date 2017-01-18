@@ -1,5 +1,10 @@
 # +------------+
 # + Snowblocks +
 # +------------+
+# +--- bash ---+
+snowblocks/bash/**/*.local
+snowblocks/bash/.log
+
+
 # +--- git ---+
-gitconfig_auth
+snowblocks/git/gitconfig_auth
