@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Igloo Environment                         +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+export LANG=en_US.UTF-8
+export LC_MESSAGES=POSIX
+
+export STORE_RUN=$HOME/store/run
+export BITFROEST_HOME=$HOME/store/bitfroest
+
+export ATOM_HOME=$STORE_RUN/atom
+export AUDACITY_PATH=$STORE_RUN/audacity
+export FZ_DATADIR=$STORE_RUN/filezilla
+export GIMP2_DIRECTORY=$STORE_RUN/gimp
+export GRADLE_USER_HOME=$STORE_RUN/gradle
+export INKSCAPE_PROFILE_DIR=$STORE_RUN/inkscape
+export _JAVA_AWT_WM_NONREPARENTING=1
+export JAVA_HOME=/usr/lib/jvm/default
+export M2_REPO=$STORE_RUN/apache-maven-3/repository
+export PURPLEHOME=$STORE_RUN/pidgin
+
+if [[ -e igloo.env.local ]]; then
+  . igloo.env.local
+else
+    unset -v GNUPGHOME
+fi
+
+PATH_NPM_PACKAGES=$STORE_RUN/npm/bin
+PATH_RUBY_GEMS="$HOME/.gem/ruby/2.2.0/bin;$HOME/.gem/ruby/2.3.0/bin"
+PATH_INTELLIJ_IDEA_U_HOME=/opt/intellij-idea-u/bin
+PATH_GIT_DIFF_HIGHLIGHT=/usr/share/git/diff-highlight
+export PATH="${PATH}:$JAVA_HOME/bin:$PATH_NPM_PACKAGES:$PATH_RUBY_GEMS:$PATH_ANI2ICO:$PATH_INTELLIJ_IDEA_U_HOME:$PATH_GIT_DIFF_HIGHLIGHT"
