@@ -22,12 +22,6 @@ export HISTSIZE=""
 # Sets the filesize to be unlimited.
 export HISTFILESIZE=""
 
-# Creates the log destination folder and sets the filename based on the current date.
-if [ ! -d $UMIAQ_HOME/.log ]; then
-  mkdir $UMIAQ_HOME/.log
-fi
-HISTFILE=$UMIAQ_HOME/.log/`\date "+%Y-%m-%d"`
-
 # +--------+
 # + Format +
 # +--------+
