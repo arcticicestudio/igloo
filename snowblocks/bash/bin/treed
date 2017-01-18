@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Colored Directory Tree                    +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# Prints an numbered advanced, recursive and colored directory treeview.
+#
+# @throws 1 Invalid option
+# @throws 2 Missing argument
+# @throws 3 invalid argument
+
+__cleanup() {
+  unset -v
+  unset -f help usage __cleanup
+}
+
+while getopts ":h" option ; do
+  case "$option" in
+    h)
+      help
+      exit 0
+      ;;
+    \?)
+      printf "Invalid option: -%s" "$OPTARG"
+      exit 1
+      ;;
+    :)
+      printf "-%s requires an argument." "$OPTARG"
+      exit 2
+      ;;
+  esac
+done
+
+# +--- Null Parameter Handling ---+
+if [ -z "$1" -o "$1" = "-" ]; then
+  help
+  exit 2
+fi
+
+tree -aC -I ".git|node_modules|bower_components" --dirsfirst "$@" | less -FRNX
+
+__cleanup
+exit 0
