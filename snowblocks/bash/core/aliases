@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Aliases                                   +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# GNU Bash
+#   (https://www.gnu.org/software/bash/manual/bash.html#Aliases)
+# ISO-8601 - Date and time format
+#   (http://www.iso.org/iso/home/standards/iso8601.htm)
+
+# +--------------+
+# + Applications +
+# +--------------+
+# +--- atom ---+
+alias atom-hidpi='atom --force-device-scale-factor=1.5'
+
+# +--- java ---+
+alias jj='java -jar'
+
+# +--- wget ---+
+# Disable log file
+alias wget='wget --hsts-file='
+
+# +--- youtube-dl ---+
+alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
+alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'
+
+# +-------+
+# + Basic +
+# +-------+
+# Enable colorized long listing with human-readable size- and ISO-8601 date format.
+alias ls='LC_COLLATE=C ls -lAh --color=auto --time-style="+%Y-%m-%d +%H:%M:%S" --group-directories-first'
+
+# Increase verbosity by default.
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+
+# rsync based copy with process detailed information- and process output.
+alias cpr='rsync --archive --human-readable --progress --stats'
+
+# Enable colorized line numbers by default.
+alias grep='grep --line-number --color=auto'
+
+# Enable unified diff format by default.
+alias diff='diff -u'
+
+# Use ISO-8601 date format by default.
+alias date='date "+%Y-%m-%d %H:%M:%S UTC%z"'
+
+# List in raw format with one entry per line.
+alias lsraw='LC_COLLATE=C \ls -N1 --group-directories-first'
+
+# +-------+
+# + Utils +
+# +-------+
+# Alert via notify for long running commands.
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

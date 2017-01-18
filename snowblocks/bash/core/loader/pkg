@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Package Configuration Loader              +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+__snowblock_bash::core::loader::pkg::load() {
+  local __self_name="$(basename $(basename "${BASH_SOURCE[0]}"))"
+  local pkgs=$(find -L "$SNOWBLOCK_BASH_BASE_DIR/config/pkg" -maxdepth 1 -not -name "*.local" -type f)
+  local pkg
+
+  for pkg in $pkgs; do
+    . $pkg
+    if [ $? -eq 0 ]; then
+      __snowblock_bash::log_debug "[$__self_name] Package configuration for $(basename $pkg) successfully loaded"
+    else
+      __snowblock_bash::log_debug "[$__self_name] Error while loading package configuration $pkg"
+    fi
+  done
+}
+
+__snowblock_bash::core::loader::pkg::load

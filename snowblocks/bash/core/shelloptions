@@ -1,0 +1,253 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Shell Built-In Options                    +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# GNU Bash
+#   (http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html)
+
+# +--------+
+# + Browse +
+# +--------+
+# A command name that is the name of a directory is executed as if it were the argument to the "cd" command.
+# This option is only used by interactive shells.
+shopt -u autocd
+
+# An argument to the "cd" command that is not a directory is assumed to be the name of a variable whose value is the
+# directory to change to.
+shopt -u cdable_vars
+
+# Minor errors in the spelling of a directory component in a cd command will be corrected.
+# The errors checked for are transposed characters, a missing character and a character too many.
+# If a correction is found, the corrected path is printed, and the command proceeds.
+# This option is only used by interactive shells.
+shopt -u cdspell
+
+# +--------+
+# + Checks +
+# +--------+
+# Checks that a command found in the hash table exists before trying to execute.
+# If a hashed command no longer exists, a normal path search is performed.
+shopt -u checkhash
+
+# Lists the status of any stopped and running jobs before exiting an interactive shell.
+# If any jobs are running, this causes the exit to be deferred until a second exit is attempted without an intervening
+# command.
+# The shell always postpones exiting if any jobs are stopped.
+shopt -u checkjobs
+
+# Checks the window size after each command and, if necessary, updates the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If a file that bash is checking for mail has been accessed since the last time it was checked, the message "The mail
+# in mailfile has been read" is displayed.
+shopt -u mailwarn
+
+# +-----------------+
+# + Auto Completion +
+# +-----------------+
+# Quotes all shell metacharacters in filenames and directory names when performing completion.
+# If not set, bash removes metacharacters such as the dollar character ($) from the set of characters that will be
+# quoted in completed filenames when these metacharacters appear in shell variable references in words to be completed.
+# This means that dollar characters ($) in variable names that expand to directories will not be quoted.
+# Any dollar characters ($) appearing in filenames will not be quoted either.
+# Only active when bash is using backslashes to quote completed filenames.
+# This variable is set by default, which is the default bash behavior in versions through 4.2.
+shopt -s complete_fullquote
+
+# Replaces directory names with the results of word expansion when performing filename completion.
+# This changes the contents of the readline editing buffer.
+# If not set, bash attempts to preserve what the user typed.
+shopt -u direxpand
+
+# Attempts spelling correction on directory names during word completion if the directory name initially supplied does
+# not exist.
+shopt -u dirspell
+
+# Includes filenames beginning with a '.' in the results of filename expansion.
+shopt -u dotglob
+
+# Suffixes specified by the FIGNORE shell variable cause words to be ignored when performing word completion even if the
+# ignored words are the only possible completions.
+# This option is enabled by default.
+shopt -s force_fignore
+
+# Patterns which fail to match filenames during filename expansion result in an expansion error.
+shopt -u failglob
+
+# Enables extended pattern matching features for auto completion options.
+shopt -s extglob
+
+# Aliases are expanded.
+# This option is enabled by default for interactive shells.
+shopt -s expand_aliases
+
+# Matches filenames in a case-insensitive fashion when performing filename expansion.
+shopt -u nocaseglob
+
+# If Readline is being used, bash will attempt to perform hostname completion when a word containing a '@' is being
+# completed.
+# This option is enabled by default.
+shopt -u hostcomplete
+
+# If Readline is being used, bash will not attempt to search the PATH for possible completions when completion is
+# attempted on an empty line.
+shopt -u no_empty_cmd_completion
+
+# Enables the programmable completion facilities.
+# This option is enabled by default.
+shopt -s progcomp
+
+# +---------+
+# + History +
+# +---------+
+# Attempts to save all lines of a multiple-line command in the same history entry to allow easy re-editing of multi-line
+# commands.
+shopt -s cmdhist
+
+# Appends the history list to the file named by the value of the HISTFILE variable when the shell exits, rather than
+# overwriting the file.
+shopt -s histappend
+
+# If Readline is being used, a user is given the opportunity to re-edit a failed history substitution.
+shopt -u histreedit
+
+# If Readline is being used, the results of history substitution are not immediately passed to the shell parser.
+# Instead, the resulting line is loaded into the Readline editing buffer, allowing further modification.
+shopt -u histverify
+
+# If the "cmdhist" option is enabled, multi-line commands are saved to the history with embedded newlines rather than
+# using semicolon separators where possible.
+shopt -u lithist
+
+# +----------------+
+# + RegExp/Pattern +
+# +----------------+
+# $'string' and $"string" quoting is performed within ${parameter} expansions enclosed in double quotes.
+# This option is enabled by default.
+shopt -s extquote
+
+# Range expressions used in pattern matching bracket expressions behave as if in the traditional C locale when
+# performing comparisons.
+# That is, the current locale's collating sequence is not taken into account,  so 'b' will not collate between 'A' and
+# 'B' and upper- and lower-case ASCII characters will collate together.
+shopt -u globasciiranges
+
+# The pattern '**' used in a filename expansion context will match all files and zero or more directories and
+# subdirectories.
+# If the pattern is followed by a '/', only directories and subdirectories match.
+shopt -u globstar
+
+# Matches patterns in a case-insensitive fashion when performing matching while executing case or [[ conditional
+# commands.
+shopt -u nocasematch
+
+# Allows filename patterns which match no files to expand to a null string, rather than themselves.
+shopt -u nullglob
+
+# Allow a word beginning with '#' to cause that word and all remaining characters on that line to be ignored in an
+# interactive shell.
+# This option is enabled by default.
+shopt -s interactive_comments
+
+# +-------+
+# + Modes +
+# +-------+
+# Enables behavior intended for use by debuggers:
+#   - The '-F' option to the declare builtins displays the source file name and line number corresponding to each
+#     function name supplied as an argument
+#   - If the command run by the DEBUG trap returns a non-zero value, the next command is skipped and not executed
+#   - If the command run by the DEBUG trap returns a value of 2, and the shell is executing in a subroutine (a shell
+#     function or a shell script executed by the '.' or source builtins), a call to return is simulated
+#   - BASH_ARGC and BASH_ARGV are updated as described in their descriptions
+#   - Function tracing is enabled: Command substitution, shell functions and subshells invoked with ( command ) inherit
+#     the DEBUG and RETURN traps
+#   - Error tracing is enabled: Command substitution, shell functions and subshells invoked with ( command ) inherit the
+#     ERR trap
+shopt -u extdebug
+
+# The shell sets this option if it is started as a login shell.
+# The value may not be changed.
+shopt -u login_shell
+
+# The shell sets this option if it is started in restricted mode.
+# The value may not be changed.
+# This is not reset when the startup files are executed, allowing the startup files to discover whether or not a shell
+# is restricted.
+shopt -u restricted_shell
+# +--------------------+
+# + Exception Handling +
+# +--------------------+
+# If set, a non-interactive shell will not exit if it cannot execute the file specified as an argument to the "exec"
+# builtin command.
+# An interactive shell does not exit if "exec" fails.
+shopt -u execfail
+
+# All shell error messages are written in the standard GNU error message format.
+shopt -u gnu_errfmt
+
+# +--------+
+# + Prompt +
+# +--------+
+# Prompt strings undergo parameter expansion, command substitution, arithmetic expansion and quote removal after being
+# expanded.
+# This option is enabled by default.
+shopt -s promptvars
+
+# +--------------------------+
+# + Builtin Command Behavior +
+# +--------------------------+
+# The "shift" command prints an error message when the shift count exceeds the number of positional parameters.
+shopt -u shift_verbose
+
+# The "source" built-in command uses the value of PATH to find the directory containing the file supplied as an argument.
+# This option is enabled by default.
+shopt -s sourcepath
+
+# The "echo" command expands backslash-escape (\) sequences by default.
+shopt -u xpg_echo
+
+# +------+
+# + Jobs +
+# +------+
+# Will send SIGHUP to all jobs when an interactive login shell exits.
+shopt -u huponexit
+
+# If job control is not active, the shell runs the last command of a pipeline not executed in the background in the
+# current shell environment.
+shopt -u lastpipe
+# +---------------+
+# + Compatibility +
+# +---------------+
+# Changes the bash behavior to that of version 3.1 with respect to quoted arguments to the conditional command's '=~'
+# operator and with respect to locale-specific string comparison when using the '[[' conditional command's '<' and '>'
+# operators.
+# Versions prior to bash-4.1 use ASCII collation and strcmp(3).
+# bash-4.1 and later use the current locale's collation sequence and strcoll(3).
+shopt -u compat31
+
+# Changes the bash behavior to that of version 3.2 with respect to locale-specific string comparison when using the '[['
+# conditional command's '<' and '>' operators.
+shopt -u compat32
+
+# Changes the bash behavior to that of version 4.0 with respect to locale-specific string comparison when using the "[["
+# conditional command's '<' and '>' operators and the effect of interrupting a command list.
+# Versions 4.0 and later interrupt the list as if the shell received interrupt.
+# Previous versions continue with the next command in the list.
+shopt -u compat40
+
+# If in POSIX mode, bash treats a single quote ('') in a double-quoted ("") parameter expansion as a special character.
+# The single quotes ('') must match (an even number) and the characters between the single quotes ('') are considered
+# quoted.
+# This is the behavior of POSIX mode through version 4.1.
+# The default Bash behavior remains as in previous versions.
+shopt -u compat41
+
+# bash does not process the replacement string in the pattern substitution word expansion using quote removal.
+shopt -u compat42

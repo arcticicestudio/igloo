@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      less Configuration                        +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# GNU less
+#   (https://www.gnu.org/software/less)
+# terminfo(5)
+
+# Use lesspipe(1) for non-text input.
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# +--------+
+# + Colors +
+# +--------+
+# Sets the terminfo variables of the termcap compatibility application interface.
+# Provides colored output for the "man" command.
+#
+# Escape Sequences Comparision Table
+# ==================================
+# termcap  terminfo  function
+# -------  --------  --------
+# ks       smkx      Send commands via keypad
+# ke       rmkx      Send digits via keypad
+# vb       flash     Emit visual bell
+# mb       blink     Start blink
+# md       bold      Start bold
+# me       sgr0      Turn off bold, blink and underline
+# so       smso      Start standout (reverse video)
+# se       rmso      Stop standout
+# us       smul      Start underline
+# ue       rmul      Stop underline
+# +--- Blink ---+
+export LESS_TERMCAP_mb=$'\e[01;34m'
+
+# +--- Keywords ---+
+export LESS_TERMCAP_md=$'\e[01;34m'
+
+# +--- Mode Stop ---+
+export LESS_TERMCAP_me=$'\e[0m'
+
+# +--- Standout-Mode (Info Box) ---+
+export LESS_TERMCAP_so=$'\e[01;30m'
+export LESS_TERMCAP_se=$'\e[0m'
+
+# +--- Constants ---+
+export LESS_TERMCAP_us=$'\e[01;34m'
+export LESS_TERMCAP_ue=$'\e[0m'

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Environment Configuration Loader          +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+__snowblock_bash::core::loader::env::load() {
+  local __self_name="$(basename $(basename "${BASH_SOURCE[0]}"))"
+  local envs=$(find -L "$SNOWBLOCK_BASH_BASE_DIR/config/env" -maxdepth 1 -not -name "*.local" -type f)
+  local env
+
+  for env in $envs; do
+    if [ "$(basename $env)" = $HOSTNAME ]; then
+      . $env
+      if [ $? -eq 0 ]; then
+        __snowblock_bash::log_debug\
+        "[$__self_name] Environment configuration for $(basename $env) successfully loaded"
+      else
+        __snowblock_bash::log_debug "[$__self_name] Error while loading environment configuration $env"
+      fi
+      break
+    fi
+  done
+}
+
+__snowblock_bash::core::loader::env::load

@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      history Configuration                     +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# terminfo(5)
+# ISO-8601
+#   (http://www.iso.org/iso/home/standards/iso8601.htm)
+
+# +--------+
+# + Output +
+# +--------+
+# Sets the amount of entries to be unlimited.
+export HISTSIZE=""
+
+# Sets the filesize to be unlimited.
+export HISTFILESIZE=""
+
+# Creates the log destination folder and sets the filename based on the current date.
+if [ ! -d $UMIAQ_HOME/.log ]; then
+  mkdir $UMIAQ_HOME/.log
+fi
+HISTFILE=$UMIAQ_HOME/.log/`\date "+%Y-%m-%d"`
+
+# +--------+
+# + Format +
+# +--------+
+# Use ISO-8681 time format.
+export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S UTC%z] "
+
+# Define commands that should be ignored.
+# The commands must be separated by a double point and include the exact option- and flag parameters!
+export HISTIGNORE="pwd:ls:ls -ltr:ls -lAhF:cd ..:.."
+
+# Sets the control filter.
+#
+# "ignoredups"
+#   Ignores duplicates
+# "ignorespace"
+#   Ignores commands beginning with a space character
+# "ignoreboth"
+#   Implies "ignoredups" and "ignorespace"
+# "erasedups"
+#   Erase duplicates across the whole history
+export HISTCONTROL="ignoreboth"
