@@ -19,13 +19,12 @@ export FZ_DATADIR=$STORE_RUN/filezilla
 export GIMP2_DIRECTORY=$STORE_RUN/gimp
 export GRADLE_USER_HOME=$STORE_RUN/gradle
 export INKSCAPE_PROFILE_DIR=$STORE_RUN/inkscape
-export _JAVA_AWT_WM_NONREPARENTING=1
 export JAVA_HOME=/usr/lib/jvm/default
 export M2_REPO=$STORE_RUN/apache-maven-3/repository
 export PURPLEHOME=$STORE_RUN/pidgin
 
-if [[ -e igloo.env.local ]]; then
-  . igloo.env.local
+if [[ -e igloo.local ]]; then
+  . igloo.local
 else
     unset -v GNUPGHOME
 fi
