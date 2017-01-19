@@ -50,3 +50,5 @@
 #     Alternative LCD monitor setting. Same as "lcd", but with different distribution of sub pixels (vertical again but
 #     on other side).
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.xrender=true -Dswing.aatext=true"
+
+export _JAVA_AWT_WM_NONREPARENTING=1
