@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      dircolors Configuration                   +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# dircolors(1)
+# dir_colors(5)
+[[ -e ~/.dir_colors ]] && eval $(dircolors ~/.dir_colors)
