@@ -23,8 +23,8 @@ export JAVA_HOME=/usr/lib/jvm/default
 export M2_REPO=$STORE_RUN/apache-maven-3/repository
 export PURPLEHOME=$STORE_RUN/pidgin
 
-if [[ -e igloo.local ]]; then
-  . igloo.local
+if [ -e $(dirname $(realpath "${BASH_SOURCE[0]}"))/igloo.local ]; then
+  . $(dirname $(realpath "${BASH_SOURCE[0]}"))/igloo.local
 else
     unset -v GNUPGHOME
 fi
