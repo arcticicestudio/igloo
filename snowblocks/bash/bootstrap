@@ -14,14 +14,18 @@
 
 __snowblock_bash::get_module_realpath() {
   if hash realpath 2>/dev/null; then
-    printf "$(dirname $(realpath "${BASH_SOURCE[0]}"))"
+    printf "$(realpath "${BASH_SOURCE[0]}")"
   else
-    printf "$(dirname $(__snowblock_bash::get_bootstrap_link_source))"
+    printf "$(readlink "${BASH_SOURCE[0]}")"
   fi
 }
 
-__snowblock_bash::get_module_basename() {
-  printf "$($SNOWBLOCK_BASH_BASE_DIR/$(basename "${BASH_SOURCE[0]}"))"
+__snowblock_bash::get_module_name() {
+  printf "$(basename $(__snowblock_bash::get_module_realpath))"
+}
+
+__snowblock_bash::get_base_dir() {
+  printf "$(dirname $(__snowblock_bash::get_module_realpath))"
 }
 
 __snowblock_bash::log_error() {
@@ -58,7 +62,7 @@ __snowblock_bash::setup_history() {
 }
 
 __snowblock_bash::load_core_modules() {
-  local __self_name="$(basename $(readlink "${BASH_SOURCE[0]}"))"
+  local __self_name="$(__snowblock_bash::get_module_name)"
 
   if [ "$#" -eq 0 ]; then
     __snowblock_bash::log_debug "[$__self_name] Missing parameter while calling function $FUNCNAME"
@@ -84,7 +88,7 @@ __snowblock_bash::load_core_modules() {
 }
 
 __snowblock_bash::load_third_party_scripts() {
-  local __self_name="$(basename $(readlink "${BASH_SOURCE[0]}"))"
+  local __self_name="$(__snowblock_bash::get_module_name)"
 
   if [ "$#" -eq 0 ]; then
     __snowblock_bash::log_debug "[$__self_name] Missing parameter while calling function $FUNCNAME"
@@ -122,16 +126,15 @@ export SNOWBLOCK_BASH_BINARIES=$SNOWBLOCK_BASH_BASE_DIR/bin
 __snowblock_bash::load_core_modules loader/env loader/pkg
 __snowblock_bash::load_core_modules aliases functions prompt shelloptions
 
-# +--------------------+
-# +Third-Party Scripts +
-# +--------------------+
+# +---------------------+
+# + Third-Party Scripts +
+# +---------------------+
 # Git prompt bash support.
 __snowblock_bash::load_third_party_scripts /usr/share/git/completion/git-prompt.sh
-
 # Programmable bash completion features.
 __snowblock_bash::load_third_party_scripts /usr/share/bash-completion/bash_completion
 
 __snowblock_bash::setup_history
 __snowblock_bash::register_binaries
 
-__snowblock_bash::log_debug "[$(basename $(__snowblock_bash::get_bootstrap_link_source))] bootstrap completed"
+__snowblock_bash::log_debug "[$(__snowblock_bash::get_module_name)] bootstrap completed"
