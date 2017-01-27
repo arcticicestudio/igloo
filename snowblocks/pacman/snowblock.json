@@ -8,6 +8,10 @@
       "~/.pacman.conf": {
         "host": ["igloo"],
         "path": "pacman.conf.igloo"
+      },
+      "~/.pacman.conf": {
+        "host": ["archbook"],
+        "path": "pacman.conf.archbook"
       }
     }
   }
