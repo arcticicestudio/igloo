@@ -35,6 +35,9 @@ alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --aud
 # +-------+
 # + Basic +
 # +-------+
+# Enable alias expansion for commands run by sudo
+alias sudo='sudo '
+
 # Enable colorized long listing with human-readable size- and ISO-8601 date format.
 alias ls='LC_COLLATE=C ls -lAh --color=auto --time-style="+%Y-%m-%d +%H:%M:%S" --group-directories-first'
 
