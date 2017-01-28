@@ -1,0 +1,91 @@
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Pacman archbook Configuration             +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [GPG]
+#   Initialize the local keyring before first using pacman by running "pacman-key --init".
+#   Populate with the keys of all official Arch Linux packagers by running "pacman-key --populate archlinux".
+#
+# [References]
+# pacman(8)
+# pacman.conf(5)
+# repo-add(8)
+# Arch Linux
+#   https://wiki.archlinux.org/index.php/pacman
+#   https://www.archlinux.org/pacman/pacman.8.html
+#   https://www.archlinux.org/pacman/pacman.conf.5.html
+#   https://www.archlinux.org/pacman/repo-add.8.html
+
+# +---------+
+# + Options +
+# +---------+
+[options]
+# Set the package architecture "i686" or "x86_64" for sync operations.
+# The special value "auto" uses the system architecture.
+# If unset, no architecture checks are made.
+# Packages with the special architecture "any" can always be installed, as they are meant to be architecture
+# independent.
+Architecture = auto
+
+# Set the default location of the package cache directory.
+# Multiple cache directories can be specified as absolute path and they are tried in the order they are listed.
+# If a file is not found in any cache directory, it will be downloaded to the first cache directory with write access.
+CacheDir = /var/cache/pacman/pkg/ $STORE_PKGS
+
+# List packages that should be protected against removement.
+# Shell-style glob patterns are allowed.
+HoldPkg = pacman glibc
+
+# Instruct pacman to ignore any upgrades for the specified packages when performing a "--sysupgrade".
+# Shell-style glob patterns are allowed.
+IgnorePkg = harfbuzz harfbuzz-icu gdk-pixbuf2
+
+# Instruct pacman to ignore any upgrades for all packages in the specified groups when performing a "--sysupgrade".
+# Shell-style glob patterns are allowed.
+IgnoreGroup =
+
+# Enable tty color support.
+Color
+
+# Perform an approximate check for adequate available disk space before installing packages.
+CheckSpace
+
+# Display name, version and size of target packages formatted as a table for upgrade, sync and remove operations.
+VerbosePkgLists
+
+# Set the default signature verification level.
+SigLevel = Required DatabaseOptional
+
+# Sets the signature verification level for installing packages using the sync "-U" operation on a local file.
+# Uses the value from the "SigLevel" options as the default.
+LocalFileSigLevel = Optional
+
+# +--------------+
+# + Repositories +
+# +--------------+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+[community]
+Include = /etc/pacman.d/mirrorlist
+
+#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+
+#[community-testing]
+#Include = /etc/pacman.d/mirrorlist
+
+#[multilib-testing]
+#Include = /etc/pacman.d/mirrorlist
+
+[bitfroest]
+SigLevel = Optional TrustAll
+Server = file:///home/sgreb/store/bitfroest

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      pacaur Configuration                      +
+# project    igloo                                     +
+# repository https://github.com/arcticicestudio/igloo  +
+# author     Arctic Ice Studio                         +
+# email      development@arcticicestudio.com           +
+# copyright  Copyright (C) 2017                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# pacaur(8)
+# GitHub Repository
+#   https://github.com/rmarquis/pacaur
+
+export AURDEST=/tmp/pacaur/cache
