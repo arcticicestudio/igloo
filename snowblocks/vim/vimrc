@@ -147,10 +147,8 @@ colorscheme nord
 
 filetype plugin on
 filetype indent on
-
 set autochdir
 set binary
-set mouse=a
 set nobackup
 set nocompatible
 set noswapfile
@@ -161,6 +159,10 @@ set fileencodings=utf-8
 set ttyfast
 set viminfo=
 set updatetime=250
+
+if has("gui_running")
+  set mouse=a
+endif
 
 "+----+
 "+ UI +
