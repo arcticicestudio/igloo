@@ -10,6 +10,9 @@
 export LANG=en_US.UTF-8
 export LC_MESSAGES=POSIX
 
+export EDITOR="$(command -v vim)"
+export VISUAL="$(command -v vim)"
+
 export STORE_PKGS=$HOME/store/pool/packages
 export STORE_RUN=$HOME/store/run
 export BITFROEST_HOME=$HOME/store/bitfroest
