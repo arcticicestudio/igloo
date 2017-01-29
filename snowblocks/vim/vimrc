@@ -17,6 +17,7 @@
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
+Plug 'davidhalter/jedi-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Townk/vim-autoclose'
