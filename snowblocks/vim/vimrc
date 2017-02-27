@@ -148,6 +148,7 @@ colorscheme nord
 
 filetype plugin on
 filetype indent on
+set pastetoggle=<F3>
 set autochdir
 set binary
 set nobackup
