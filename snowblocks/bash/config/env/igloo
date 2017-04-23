@@ -33,8 +33,8 @@ else
     unset -v GNUPGHOME
 fi
 
+PATH_RUBY_GEMS=($HOME/.gem/ruby/*/bin);PATH_RUBY_GEMS=$(printf "%s:" "${PATH_RUBY_GEMS[@]}")
 PATH_NPM_PACKAGES=$STORE_RUN/npm/bin
-PATH_RUBY_GEMS="$HOME/.gem/ruby/2.2.0/bin;$HOME/.gem/ruby/2.3.0/bin"
 PATH_INTELLIJ_IDEA_U_HOME=/opt/intellij-idea-u/bin
 PATH_GIT_DIFF_HIGHLIGHT=/usr/share/git/diff-highlight
 export PATH="${PATH}:$JAVA_HOME/bin:$PATH_NPM_PACKAGES:$PATH_RUBY_GEMS:$PATH_ANI2ICO:$PATH_INTELLIJ_IDEA_U_HOME:$PATH_GIT_DIFF_HIGHLIGHT"
