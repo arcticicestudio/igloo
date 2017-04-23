@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      gulp Configuration                       +
+# project    igloo                                    +
+# repository https://github.com/arcticicestudio/igloo +
+# author     Arctic Ice Studio                        +
+# email      development@arcticicestudio.com          +
+# copyright  Copyright (C) 2017                       +
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# gulp
+#   http://gulpjs.com
+#   https://github.com/gulpjs/gulp-cli#completion
+#   https://github.com/gulpjs/gulp
+# gulp()
+
+eval "$(gulp --completion=bash)"
