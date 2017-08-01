@@ -1,25 +1,42 @@
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Git Configuration                         +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Git Configuration                        +
+# project    igloo                                    +
+# repository https://github.com/arcticicestudio/igloo +
+# author     Arctic Ice Studio                        +
+# email      development@arcticicestudio.com          +
+# copyright  Copyright (C) 2017                       +
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++
 #
 # [References]
 # Git
-#   (https://git-scm.com/docs/git-config)
-#   (https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration#Colors-in-Git)
+#   https://git-scm.com/docs/git-config
+#   https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration#_colors_in_git
+#   https://git-scm.com/docs/git-config#_conditional_includes
 # diff-so-fancy
-#   (https://github.com/so-fancy/diff-so-fancy#options)
-[include]
-  # Includes sensible authentication data:
+#   https://github.com/so-fancy/diff-so-fancy#options
+
+[includeIf "gitdir:~/yggdrasil/"]
+  path = ~/.gitconfig_auth
+
+[includeIf "gitdir:~/code/bitbucket/"]
+  path = ~/.gitconfig_auth
+
+[includeIf "gitdir:~/code/bitfroest/"]
+  path = ~/.gitconfig_auth
+
+[includeIf "gitdir:~/code/github/"]
+  path = ~/.gitconfig_auth
+
+[includeIf "gitdir:~/.igloo/"]
+  path = ~/.gitconfig_auth
+
+  # Includes sensible job authentication data:
   #   - user.name <USERNAME>
   #   - user.email <EMAIL>
   #   - user.signingkey <SIGNINGKEY>
   #   - user.useconfigonly true
-  path = ~/.gitconfig_auth
+[includeIf "gitdir:~/code/job/"]
+  path = ~/.gitconfig_auth_job
 
 [core]
   repositoryFormatVersion = 0
