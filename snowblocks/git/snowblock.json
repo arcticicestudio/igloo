@@ -7,6 +7,7 @@
       "~/.git-commit-msg": null,
       "~/.gitconfig": null,
       "~/.gitconfig_auth": null,
+      "~/.gitconfig_auth_job": null,
       "~/.gitignore": null
     }
   }
