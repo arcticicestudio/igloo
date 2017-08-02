@@ -140,6 +140,17 @@ map <C-l> <C-W>l
 
 map <C-n> :NERDTreeToggle<CR>
 
+" Moves the current line or selected block(s) up- or down by one line.
+"
+" In normal -and insert mode the "==" re-indents the moved line to suit its new position.
+" In visual mode "gv" reselects the last visual block while the "=" re-indents that block using the preassigned "'>" mark to identify the selection end.
+nnoremap <C-Down> :m+<CR>==
+nnoremap <C-Up> :m-2<CR>==
+inoremap <C-Down> <Esc>:m+<CR>==gi
+inoremap <C-Up> <Esc>:m-2<CR>==gi
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap <C-Up> :m '<-2<CR>gv=gv
+
 "+---------------+
 "+ Configuration +
 "+---------------+
