@@ -331,25 +331,21 @@
   #
   # Usage:
   #   git b
-  # Output Format:
-  #   <BRANCH> <ABBREVIATED SHA1> <COMMIT MESSAGE>
-  b = branch --list --all -v
+  b = branch --all
 
   # Prints only branches that have not been merged yet into the specified branch.
+  # If no BRANCH is specified, the current branch is used by default.
   #
   # Usage:
-  #   git bum <BRANCH>
-  # Output Format:
-  #   <BRANCH> <ABBREVIATED SHA1> <COMMIT MESSAGE>
-  bum = branch --all --list --verbose --no-merged 
+  #   git bum [BRANCH]
+  bum = branch --all --no-merged 
 
   # Prints only branches that have been merged into the specified branch.
+  # If no BRANCH is specified, the current branch is used by default.
   #
   # Usage:
-  #   git bm <BRANCH>
-  # Output Format:
-  # <BRANCH> <ABBREVIATED SHA1> <COMMIT MESSAGE>
-  bm = branch --all --list --verbose --merged
+  #   git bm [BRANCH]
+  bm = branch --all --merged
 
   # +-------------------+
   # + Information - Log +
