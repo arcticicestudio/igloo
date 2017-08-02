@@ -1,15 +1,15 @@
-" ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-" title      Vim Configuration                         +
-" project    igloo                                     +
-" repository https://github.com/arcticicestudio/igloo  +
-" author     Arctic Ice Studio                         +
-" email      development@arcticicestudio.com           +
-" copyright  Copyright (C) 2017                        +
-" ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++
+" title      Vim Configuration                        +
+" project    igloo                                    +
+" repository https://github.com/arcticicestudio/igloo +
+" author     Arctic Ice Studio                        +
+" email      development@arcticicestudio.com          +
+" copyright  Copyright (C) 2017                       +
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++
 "
 " [References]
 " Google Style Guide
-"   (https://google.github.io/styleguide/vimscriptguide.xml)
+"   https://google.github.io/styleguide/vimscriptguide.xml
 
 "+---------+
 "+ Plugins +
@@ -211,7 +211,10 @@ set smarttab
 set softtabstop=2
 set tabstop=2
 set textwidth=160
-set whichwrap+=<,>,h,l
+
+" Automatically wrap left and right.
+" This allows to move the cursor to the previous/next line after reaching first/last character in the line using the arrow keys in normal-, insert- (<,>) and visual mode ([,]) or the h and l keys.
+set whichwrap+=<,>,h,l,[,]
 set wrap
 
 "+--- Search ---+
