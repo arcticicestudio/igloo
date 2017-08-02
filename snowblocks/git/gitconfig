@@ -354,54 +354,56 @@
   # +-------------------+
   # + Information - Log +
   # +-------------------+
-  # Lists an advanced commit log.
+  # Prints a prettified commit log.
   #
   # Usage:
   #   git l
   # Output Format:
-  #   <SHA1> [REFS]
-  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
-  #   <ISO-8601 DATE>
-  #   <COMMIT MESSAGE>
-  l = log --pretty=format:'%C(74 bold ul)%H%C(reset)%C(86 bold)%d\n%C(80)%an %C(248)<%C(80)%ae%C(248)>\n%C(68)%ci\n%C(253)%B' --graph
+  #   <ABBREVIATED_SHA1> <COMMIT_MESSAGE> <REFS>
+  l = log --graph --pretty=format:'%C(cyan)%h %C(white)%s %C(cyan bold)%d'
 
-  # Lists the log for all commits commited after the given tag or SHA1 checksum.
+  # Prints a prettified flat commit log without topic commits from merges.
+  #
+  # Depends on:
+  #   alias.l
+  # Usage:
+  #   git lf
+  lf = ! git l --first-parent
+
+  # Prints a extended and prettified commit log graph.
+  #
+  # Usage:
+  #   git ll
+  # Output Format:
+  #   <COMMIT_SHA1> [REFS]
+  #   <AUTHOR_NAME> <AUTHOR_EMAIL>
+  #   <COMMIT_ISO_8601_DATE> (<RELATIVE_COMMIT_DATE>)
+  #   <COMMIT_MESSAGE>
+  ll = log --graph --pretty=format:'%C(cyan ul)%H%C(reset) %C(cyan bold)%d\n%C(blue bold)%an %C(black)<%C(blue)%ae%C(black)>\n%C(black bold)%ci (%C(black bold)%cr)\n%C(white)%B'
+
+  # Prints a prettified flat commit log graph without topic commits from merges.
+  #
+  # Depends on:
+  #   alias.ll
+  # Usage:
+  #   git llf
+  llf = ! git ll --first-parent
+
+  # Lists the log for all commits commited after the given tag or SHA1.
   #
   # Depends on:
   #   alias.l
   # Usage:
   #   git lch <TAG>|<SHA1>
-  # Output Format:
-  #   <SHA1> [REFS]
-  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
-  #   <ISO-8601 DATE>
-  #   <COMMIT MESSAGE>
   lch = ! git l $1..HEAD
 
-  # Lists an advanced commit log with relative commit dates.
-  #
-  # Usage:
-  #   git lr
-  # Output Format:
-  #   <SHA1> [REFS]
-  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
-  #   <ISO-8601 RELATIVE DATE>
-  #   <COMMIT MESSAGE>
-  lr = log --pretty=format:'%C(74 bold ul)%H%C(reset)%C(86 bold)%d\n%C(80)%an %C(248)<%C(80)%ae%C(248)>\n%C(68)%cr\n%C(253)%B' --graph
-
-  # Lists all new commits after the fetch including stats, but excluding merges.
+  # Lists all new commits after the fetch including stats.
   #
   # Depends on:
   #   alias.l
   # Usage:
   #   git lnew
-  # Output Format:
-  #   <SHA1> [REFS]
-  #   <AUTHOR NAME> <<AUTHOR EMAIL>>
-  #   <ISO-8601 DATE>
-  #   <COMMIT MESSAGE>
-  #   <STATS>
-  lnew = ! git l ORIG_HEAD.. --stat --no-merges
+  lnew = ! git l ORIG_HEAD.. --stat
 
 # +----------------------+
 # + Information - Status +
@@ -447,7 +449,3 @@
   # Usage:
   #   git ft <SHA1>
   ft = ! git describe --tags --contains $1
-  
-  cc = "!f() { \
-          git log --decorate --date=short -S\"$1\"; \
-        }; f"
