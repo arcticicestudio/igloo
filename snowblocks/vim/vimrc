@@ -100,7 +100,6 @@ function! LightlineFilename()
 endfunction
 
 "+--- airblade/vim-gitgutter ---+
-let g:gitgutter_sign_column_always = 1
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 
@@ -217,6 +216,9 @@ set magic
 set mat=2
 set shiftwidth=2
 set showmatch
+
+" Toggle the sign column automatically when there are signs available to display.
+set signcolumn=auto
 set smartindent
 set smarttab
 set softtabstop=2
