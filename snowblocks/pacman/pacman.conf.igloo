@@ -52,6 +52,9 @@ IgnoreGroup =
 # Enable tty color support.
 Color
 
+# Everyone loves candies!
+ILoveCandy
+
 # Perform an approximate check for adequate available disk space before installing packages.
 CheckSpace
 
