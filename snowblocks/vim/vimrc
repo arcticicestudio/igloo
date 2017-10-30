@@ -20,6 +20,7 @@ Plug 'mattn/emmet-vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
+Plug 'shime/vim-livedown'
 if v:version >= 704
   Plug 'honza/vim-snippets'
   Plug 'SirVer/ultisnips'
@@ -113,6 +114,13 @@ let g:gitgutter_eager = 1
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
+
+"+--- shime/vim-livedown ---+
+" Automatically show the preview upon opening Markdown buffer
+let g:livedown_autorun = 0
+" Open the browser window upon previewing
+let g:livedown_open = 1
+let g:livedown_port = 1337
 
 "+--- SirVer/ultisnips ---+
 let g:UltiSnipsExpandTrigger="<tab>"
