@@ -29,7 +29,7 @@ endif
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'gorodinskiy/vim-coloresque'
+Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
 
 "+--- Syntax ---+
