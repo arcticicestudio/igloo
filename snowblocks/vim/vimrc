@@ -35,6 +35,7 @@ Plug 'airblade/vim-gitgutter'
 
 "+--- Syntax ---+
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'plasticboy/vim-markdown'
 
 "+--- Color Themes ---+
@@ -114,6 +115,9 @@ let g:gitgutter_eager = 1
 let g:javascript_enable_domhtmlcss = 1
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
+
+"+--- mxw/vim-jsx ---+
+let g:jsx_ext_required = 0
 
 "+--- shime/vim-livedown ---+
 " Automatically show the preview upon opening Markdown buffer
