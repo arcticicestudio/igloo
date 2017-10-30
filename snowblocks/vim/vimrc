@@ -15,23 +15,29 @@
 "+ Plugins +
 "+---------+
 call plug#begin(expand('~/.vim/plugged'))
+"+--- IDE / Workflow ---+
 Plug 'mattn/emmet-vim'
-Plug 'Yggdroot/indentLine'
 Plug 'davidhalter/jedi-vim'
-Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'Townk/vim-autoclose'
-Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript'
-
-Plug 'arcticicestudio/nord-vim'
-
 if v:version >= 704
   Plug 'honza/vim-snippets'
   Plug 'SirVer/ultisnips'
 endif
+
+"+--- UI ---+
+Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'airblade/vim-gitgutter'
+
+"+--- Syntax ---+
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+
+"+--- Color Themes ---+
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 "+--- Yggdroot/indentLine ---+
