@@ -1,39 +1,7 @@
-# [!][~]<ISSUE_ID>[<TYPE>](<SCOPE>): <HEADLINE>
-# BLANK_LINE
-# <SUMMARY>
-# BLANK_LINE
-# <SEPARATOR_LINE>
-# <FOOTER_CONTENT>
 
-# Subject line <= 50 characters
-# Summary & Footer block <= 72-character wordwrap
-# Separator Line <= 72-character wrapped
-#
-# !
-#   Breaking change marker
-# ~
-#   Deprecation marker
-# <TYPE>
-#   * bugfix
-#   * improvement
-#   * maintain
-#   * refactor
-#   * test
-# <SCOPE>
-#   * assets
-#   * cleanup
-#   * dependencies
-#   * documentation
-#   * performance
-#   * resources
-#   * security
-#   * style
-#   * toolset
-#
-# Example
-#   [JIRA-578][bugfix](security): Fix memory leak in "load()" method
+
+GH-
+
 # ----------------------------------------------------------------------
-# Arctic Ice Studio "Glacier Git 0.24.0" Git Commit Message Template
-# https://github.com/arcticicestudio/glacier-git
-# This template is designed for the "gitflow" branching model.
-# http://nvie.com/posts/a-successful-git-branching-model
+# Ensure to adhere to the Arctic Ice Studio Git Style Guide:
+# https://github.com/arcticicestudio/styleguide-git
