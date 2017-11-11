@@ -43,7 +43,7 @@ HoldPkg = pacman glibc
 
 # Instruct pacman to ignore any upgrades for the specified packages when performing a "--sysupgrade".
 # Shell-style glob patterns are allowed.
-IgnorePkg = harfbuzz harfbuzz-icu gdk-pixbuf2
+IgnorePkg =
 
 # Instruct pacman to ignore any upgrades for all packages in the specified groups when performing a "--sysupgrade".
 # Shell-style glob patterns are allowed.
