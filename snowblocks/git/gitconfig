@@ -63,6 +63,9 @@
   stripLeadingSymbols = true
   useUnicodeRuler = true
 
+[interactive]
+  diffFilter = diff-so-fancy
+
 [merge]
   tool = intellij
   ff = false
