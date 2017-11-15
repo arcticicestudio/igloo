@@ -1,0 +1,14 @@
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://git-scm.com/docs/gitattributes
+#   https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Keyword-Expansion
+#   https://www.gnupg.org
+#   https://wiki.archlinux.org/index.php/GnuPG
+
+*.igloocrypt filter=igloocrypt diff=igloocrypt
+.gitattributes !filter !diff
