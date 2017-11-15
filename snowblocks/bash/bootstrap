@@ -1,16 +1,11 @@
-#!/usr/bin/env bash
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Bash Snowblock Bootstrap                  +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# [References]
-# StackOverflow
-#   (http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script/677212#677212)
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script/677212#677212
 
 __snowblock_bash::get_module_realpath() {
   if hash realpath 2>/dev/null; then

@@ -1,18 +1,13 @@
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Git Configuration                        +
-# project    igloo                                    +
-# repository https://github.com/arcticicestudio/igloo +
-# author     Arctic Ice Studio                        +
-# email      development@arcticicestudio.com          +
-# copyright  Copyright (C) 2017                       +
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# [References]
-# Git
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
 #   https://git-scm.com/docs/git-config
 #   https://git-scm.com/book/tr/v2/Customizing-Git-Git-Configuration#_colors_in_git
 #   https://git-scm.com/docs/git-config#_conditional_includes
-# diff-so-fancy
 #   https://github.com/so-fancy/diff-so-fancy#options
 
 [includeIf "gitdir:~/yggdrasil/"]
