@@ -1,0 +1,12 @@
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   cower(1)
+#   https://github.com/falconindy/cower
+
+# Enable tty color support.
+Color = always
