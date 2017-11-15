@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      sudo Configuration                        +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# [References]
-# sudo(8)
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   sudo(8)
+
 export SUDO_PROMPT=$(printf "\e[01;30;47msudo\e[0m \e[36m%%u\e[0m@\e[34m%%h\e[m: ")

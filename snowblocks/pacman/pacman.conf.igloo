@@ -1,25 +1,21 @@
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Pacman igloo Configuration                +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# [GPG]
-#   Initialize the local keyring before first using pacman by running "pacman-key --init".
-#   Populate with the keys of all official Arch Linux packagers by running "pacman-key --populate archlinux".
-#
-# [References]
-# pacman(8)
-# pacman.conf(5)
-# repo-add(8)
-# Arch Linux
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   pacman(8)
+#   pacman.conf(5)
+#   repo-add(8)
 #   https://wiki.archlinux.org/index.php/pacman
 #   https://www.archlinux.org/pacman/pacman.8.html
 #   https://www.archlinux.org/pacman/pacman.conf.5.html
 #   https://www.archlinux.org/pacman/repo-add.8.html
+
+# [GPG]
+#   Initialize the local keyring before first using pacman by running "pacman-key --init".
+#   Populate with the keys of all official Arch Linux packagers by running "pacman-key --populate archlinux".
 
 # +---------+
 # + Options +

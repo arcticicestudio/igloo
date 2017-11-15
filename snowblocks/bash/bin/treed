@@ -1,48 +1,18 @@
 #!/usr/bin/env bash
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Colored Directory Tree                    +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# Prints an numbered advanced, recursive and colored directory treeview.
-#
-# @throws 1 Invalid option
-# @throws 2 Missing argument
-# @throws 3 invalid argument
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
 
-__cleanup() {
-  unset -v
-  unset -f help usage __cleanup
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Prints an advanced numbered, recursive and colored directory treeview.
+#
+# @param $@ the directory path(s)
+treed() {
+  if command -v tree > /dev/null 2>&1; then
+    tree -aC -I ".git|node_modules|bower_components" --dirsfirst "$@" | less -FRNX
+  fi
 }
 
-while getopts ":h" option ; do
-  case "$option" in
-    h)
-      help
-      exit 0
-      ;;
-    \?)
-      printf "Invalid option: -%s" "$OPTARG"
-      exit 1
-      ;;
-    :)
-      printf "-%s requires an argument." "$OPTARG"
-      exit 2
-      ;;
-  esac
-done
-
-# +--- Null Parameter Handling ---+
-if [ -z "$1" -o "$1" = "-" ]; then
-  help
-  exit 2
-fi
-
-tree -aC -I ".git|node_modules|bower_components" --dirsfirst "$@" | less -FRNX
-
-__cleanup
-exit 0
+treed $@

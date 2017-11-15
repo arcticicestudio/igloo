@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Functions                                 +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
 
 # Switch up as many parent directories as the pass number.
 # Goes up one by default if no parameter is passed.
 #
-# @usage .. <NUMBER>
+# @param $1 the amount of parent directories to switch up
 ..() {
   local d=""
   limit=$1
@@ -28,7 +26,7 @@
 
 # Extract archived files.
 #
-# @usage extract <FILE>
+# @param $1 the file to extract
 # @throws 1 Unsupported or invalid file
 extract() {
   if [ -f $1 ]; then
@@ -57,7 +55,9 @@ extract() {
 # Extracts archived files to the specified destination.
 # Append a 'v' character at the end to be verbose.
 #
-# @usage extractto <FILE> [DESTINATION_FOLDER] [BE_VEROSE]
+# @param $1 the file to extract
+# @param $2 (optional) the extraction destination path
+# @param $3 flag to indicate verbosity level
 # @options ["v"]
 # @throws 1 No arguments
 # @throws 2 File not found
@@ -156,7 +156,8 @@ extractto() {
 
 # Compress files into archives.
 #
-# @usage compress <ARCHIVE_NAME> <FILES>
+# @param $1 the name of the archive
+# @param $2 the paths(s)/file(s) to compress
 # @throws 1 Unsupported or invalid file
 compress() {
   if [ -n $1 ]; then
@@ -186,7 +187,7 @@ compress() {
 # Shows the current session time.
 # Use option "-s" to show the session start.
 #
-# @usage seti [OPTIONS]
+# @param $@ (optional) the options
 # @options ["-s","-h"]
 # @throws 1 Unknown option
 seti() {
@@ -228,16 +229,15 @@ seti() {
 }
 
 # Create a new directory and enter it.
+#
+# @param $1 the name of the directory to create and enter
 mkd() {
   mkdir -p "$@" && cd "$@"
 }
 
-# "find" shorthand.
-f() {
-  find . -name "$1" 2>&1 | grep -v 'Permission denied'
-}
-
 # Compare original and gzipped file size.
+#
+# @param $1 the file to compare
 gzcomp() {
   local origsize=$(wc -c < "$1");
   local gzipsize=$(gzip -c "$1" | wc -c);
@@ -247,6 +247,8 @@ gzcomp() {
 }
 
 # Encode a string of Unicode symbols to UTF-8
-escape() {
+#
+# @param $1 the string to escape
+uesc() {
   printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u);
 }

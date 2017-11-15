@@ -1,17 +1,12 @@
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Git Ignore Pattern                        +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# [References]
-# Git
-#   (https://git-scm.com/docs/gitignore)
-# Java
-#   (http://www.java.com/en/download/help/error_hotspot.xml)
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://git-scm.com/docs/gitignore
+#   http://www.java.com/en/download/help/error_hotspot.xml
 
 # +--------------------+
 # + Runtime Extensions +

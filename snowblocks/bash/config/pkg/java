@@ -1,25 +1,18 @@
 #!/usr/bin/env bash
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Java Configuration                        +
-# project    igloo                                     +
-# repository https://github.com/arcticicestudio/igloo  +
-# author     Arctic Ice Studio                         +
-# email      development@arcticicestudio.com           +
-# copyright  Copyright (C) 2017                        +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#
-# [References]
-# Arch Linux
-#   (https://wiki.archlinux.org/index.php/Java_Runtime_Environment_fonts)
-# Oracle JDK 8
-#   (http://docs.oracle.com/javase/8/docs/technotes/guides/2d/flags.html#aaFonts)
-#   (http://docs.oracle.com/javase/8/docs/technotes/guides/2d/flags.html#xrender)
-# StackOverflow
-#   (http://stackoverflow.com/questions/28327620/difference-between-java-options-java-tool-options-and-java-opts)
-# NetBeans Wiki
-#   (http://wiki.netbeans.org/FaqFontRendering)
-# java(1)
-# javac(1)
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://wiki.archlinux.org/index.php/Java_Runtime_Environment_fonts
+#   http://docs.oracle.com/javase/8/docs/technotes/guides/2d/flags.html#aaFonts
+#   http://docs.oracle.com/javase/8/docs/technotes/guides/2d/flags.html#xrender
+#   http://stackoverflow.com/questions/28327620/difference-between-java-options-java-tool-options-and-java-opts
+#   http://wiki.netbeans.org/FaqFontRendering
+#   java(1)
+#   javac(1)
 
 # Sets the default system-wide JVM options.
 #
@@ -47,5 +40,6 @@
 #       Alternative LCD monitor setting. Same as "lcd", but with different distribution of sub pixels (monitor is vertical).
 #   - lcd_vbgr (VALUE_TEXT_ANTIALIAS_LCD_VBGR)
 #       Alternative LCD monitor setting. Same as "lcd", but with different distribution of sub pixels (vertical again but on other side).
+
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.xrender=true -Dswing.aatext=true"
 export _JAVA_AWT_WM_NONREPARENTING=1
