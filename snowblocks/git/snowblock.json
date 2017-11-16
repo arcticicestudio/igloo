@@ -4,7 +4,9 @@
   },
   {
     "link": {
+      "~/.gitattributes": null,
       "~/.git-commit-msg": null,
+      "~/.git-diff-igloocrypt": null,
       "~/.gitconfig": null,
       "~/.gitconfig_auth": null,
       "~/.gitconfig_auth_job": null,
