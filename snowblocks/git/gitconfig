@@ -54,7 +54,7 @@
   compactionHeuristic = true
 
 [diff "igloocrypt"]
-  textconv = ".git-diff-igloocrypt"
+  textconv = "~/.git-diff-igloocrypt"
 
 [difftool "intellij"]
   prompt = true
