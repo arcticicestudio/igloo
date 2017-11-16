@@ -225,7 +225,6 @@ set foldenable
 set foldlevelstart=10
 set guicursor=a:ver25-Cursor/lCursor
 set linebreak
-set list
 set listchars=eol:¬,space:·,tab:»\
 set magic
 set mat=2
