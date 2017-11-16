@@ -1,0 +1,12 @@
+[Unit]
+Description=Dropbox Synchronization (igloosync-dropbox)
+After=network.target local-fs.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/gocryptfs -allow_other -extpass="secret-tool lookup igloosync dropbox" %h/cloud/.dropbox/Dropbox/sync %h/cloud/dropbox
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
