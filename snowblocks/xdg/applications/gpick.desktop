@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Gpick
+Icon=gpick
+Exec=gpick
+StartupNotify=true
+MimeType=text/x-utility;application/x-gpick-color-palette;

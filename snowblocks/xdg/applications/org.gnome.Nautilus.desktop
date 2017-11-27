@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Nautilus
+Icon=org.gnome.Nautilus
+Exec=nautilus --new-window %U
+DBusActivatable=true
+Actions=new-window;
+StartupNotify=true
+MimeType=inode/directory;application/x-gnome-saved-search;
+X-GNOME-UsesNotifications=true
+
+[Desktop Action new-window]
+Name=New Window
+Exec=nautilus --new-window

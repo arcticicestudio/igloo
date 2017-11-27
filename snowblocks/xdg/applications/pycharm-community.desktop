@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=PyCharm Community
+Icon=pycharm
+Exec=/opt/pycharm-community/bin/pycharm.sh

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Plank
+Type=Application
+Exec=plank -n igloo
+Icon=plank

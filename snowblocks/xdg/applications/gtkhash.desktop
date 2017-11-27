@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=GtkHash
+Icon=gtkhash
+Exec=gtkhash
+StartupNotify=true
+Keywords=hash;checksum;digest;md5;sha1;sha256;sha512;whirlpool;crc32

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Minecraft
+Icon=minecraft
+Exec=/opt/minecraft-launcher/minecraft-launcher.sh
+Path=/opt/minecraft-launcher
