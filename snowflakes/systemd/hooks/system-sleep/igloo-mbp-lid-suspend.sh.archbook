@@ -1,0 +1,13 @@
+#!/bin/sh
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+case $1 in
+  pre|suspend|hibernate) grep 'XHC1[[:space:]]\+S[1-5][[:space:]]\+\*disabled' /proc/acpi/wakeup || echo XHC1 > /proc/acpi/wakeup ;;
+  *) exit $NA ;;
+esac
+exit 0
