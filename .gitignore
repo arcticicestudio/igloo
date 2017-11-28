@@ -5,6 +5,8 @@
 snowblocks/bash/**/*.local
 snowblocks/bash/.log
 
-
 # +--- git ---+
 snowblocks/git/gitconfig_auth_job
+
+# +--- xdg ---+
+snowblocks/xdg/applications/mimeinfo.cache
