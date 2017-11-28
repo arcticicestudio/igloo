@@ -1,0 +1,31 @@
+[
+  {
+    "clean": [
+      "~/.config",
+      "~/.local/share"
+    ]
+  },
+  {
+    "link": {
+      "~/.config/plank/igloo/launchers": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "launchers/igloo"
+        }
+      },
+      "~/.config/plank/archbook/launchers": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "launchers/archbook"
+        }
+      },
+      "~/.local/share/plank/themes/igloo": {
+        "create": true,
+        "force": true,
+        "path": "themes/igloo"
+      }
+    }
+  }
+]
