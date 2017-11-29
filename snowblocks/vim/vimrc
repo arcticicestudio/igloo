@@ -14,6 +14,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "+--- IDE / Workflow ---+
 Plug 'mattn/emmet-vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'scrooloose/nerdcommenter'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'shime/vim-livedown'
@@ -102,6 +103,10 @@ function! LightlineFilename()
        \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
        \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
 endfunction
+
+"+--- scrooloose/nerdcommenter ---+
+" Add spaces after comment delimiters
+let g:NERDSpaceDelims = 1
 
 "+--- airblade/vim-gitgutter ---+
 let g:gitgutter_realtime = 1
@@ -225,7 +230,6 @@ set foldenable
 set foldlevelstart=10
 set guicursor=a:ver25-Cursor/lCursor
 set linebreak
-set list
 set listchars=eol:¬,space:·,tab:»\
 set magic
 set mat=2

@@ -1,0 +1,114 @@
+[
+  {
+    "clean": [
+      "~/.config",
+      "~/.config/autostart",
+      "~/.config/gtk-3.0",
+      "~/.local/share/applications"
+    ]
+  },
+  {
+    "link": {
+      "~/.config/user-dirs.conf": {
+        "force": true
+      },
+      "~/.config/user-dirs.dirs": {
+        "force": true
+      },
+      "~/.config/user-dirs.locale": {
+        "force": true
+      },
+      "~/.config/gtk-3.0/bookmarks": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "gtk-3.0/bookmarks.archbook.igloocrypt",
+          "igloo": "gtk-3.0/bookmarks.igloo.igloocrypt"
+        }
+      },
+      "~/.local/share/applications/atom.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/atom.desktop"
+      },
+      "~/.local/share/applications/evolution.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/evolution.desktop"
+      },
+      "~/.local/share/applications/gpick.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/gpick.desktop"
+      },
+      "~/.local/share/applications/gtkhash.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/gtkhash.desktop"
+      },
+      "~/.local/share/applications/intellij-idea-ce.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/intellij-idea-ce.desktop"
+      },
+      "~/.local/share/applications/intellij-idea-u.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/intellij-idea-u.desktop"
+      },
+      "~/.local/share/applications/minecraft.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/minecraft.desktop"
+      },
+      "~/.local/share/applications/org.gnome.gedit.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/org.gnome.gedit.desktop"
+      },
+      "~/.local/share/applications/org.gnome.Nautilus.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/org.gnome.Nautilus.desktop"
+      },
+      "~/.local/share/applications/org.gnome.Screenshot.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/org.gnome.Screenshot.desktop"
+      },
+      "~/.local/share/applications/pycharm-community.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/pycharm-community.desktop"
+      },
+      "~/.local/share/applications/shotwell-viewer.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/shotwell-viewer.desktop"
+      },
+      "~/.local/share/applications/webstorm.desktop": {
+        "create": true,
+        "force": true,
+        "path": "applications/webstorm.desktop"
+      },
+      "~/.config/autostart/dropbox.desktop": {
+        "create": true,
+        "force": true,
+        "path": "autostart/dropbox.desktop"
+      },
+      "~/.config/autostart/plank.desktop": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "autostart/plank.desktop.archbook",
+          "igloo": "autostart/plank.desktop.igloo"
+        }
+      },
+      "~/.config/gtk-3.0/settings.ini": {
+        "create": true,
+        "force": true,
+        "path": "gtk-3.0/settings.ini"
+      }
+    }
+  }
+]

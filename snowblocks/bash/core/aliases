@@ -68,6 +68,13 @@ alias lsraw='LC_COLLATE=C \ls -N1 --group-directories-first'
 # * use two tab stops. (-x2, --tabs=n)
 alias less='less -RFXx2'
 
+# Show mode bits of files and directories in ocal form,
+#
+# %A - Access rights in human readable form
+# %a - Access rights in octal
+# %N - Quoted file name with dereference if symbolic link
+alias lsm='stat -c "%A %a %N"'
+
 # +-------+
 # + Utils +
 # +-------+

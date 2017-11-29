@@ -53,6 +53,9 @@
   tool = intellij
   compactionHeuristic = true
 
+[diff "igloocrypt"]
+  textconv = "~/.git-diff-igloocrypt"
+
 [difftool "intellij"]
   prompt = true
   cmd = idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
@@ -65,6 +68,10 @@
 
 [interactive]
   diffFilter = diff-so-fancy
+
+[filter "igloocrypt"]
+  clean = "gpg --encrypt --recipient 60C54F1519346085"
+  smudge = "gpg --decrypt"
 
 [merge]
   tool = intellij
@@ -238,6 +245,16 @@
   # Usage:
   #   git fa
   fa = fetch --all --prune
+  
+  # +----------------------------+
+  # + Interaction - Format Patch +
+  # +----------------------------+
+  # Formats "diff-so-fancy" compatible patchs by removing printed ANSI color escape sequences and enables patch stats
+  # by default.
+  #
+  # Usage:
+  #   git fp
+  fp = diff --patch-with-stat --no-color
 
   # +---------------------+
   # + Interaction - Merge +

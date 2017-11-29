@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+set -euo pipefail
+
+# Allows to use "diff-so-fancy" to compare files that are not controlled by Git.
+# Under the hood it makes use of "git diff" by using the "no-index" option which allows to compare the given two
+# paths/files on the filesystem outside a working tree controlled by Git.
+#
+# @param $1 the path/files to compare
+# @param $2 the path/files to be compared
+# @see https://github.com/so-fancy/diff-so-fancy/issues/220#issuecomment-282530252
+dsf() {
+  if [ "$#" -eq 2 ]; then
+    git diff --no-index --color "$@" | diff-so-fancy | less -RFXx2
+  fi
+}
+
+dsf $@

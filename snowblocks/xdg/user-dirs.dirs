@@ -1,0 +1,17 @@
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+XDG_DESKTOP_DIR="$HOME/desktop" Desktop
+XDG_DOCUMENTS_DIR="$HOME/documents" Documents
+XDG_TEMPLATES_DIR="$HOME/code/snippetbox/gists"
+XDG_DOWNLOAD_DIR="$HOME/downloads" Downloads
+XDG_MUSIC_DIR="$HOME/music" Music
+XDG_PICTURES_DIR="$HOME/images" Images
+XDG_VIDEOS_DIR="$HOME/videos" Videos
+
+# Public share directory is currently disabled
+#XDG_PUBLICSHARE_DIR="$HOME/public/share"

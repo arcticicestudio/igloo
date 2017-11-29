@@ -1,0 +1,19 @@
+# Copyright (c) 2016-2017 Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-2017 Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+[Unit]
+Description=MacBook Pro lid suspend
+Before=sleep.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c "/usr/bin/echo XHC1 > /proc/acpi/wakeup"
+
+[Install]
+WantedBy=sleep.target

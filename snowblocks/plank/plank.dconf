@@ -1,0 +1,24 @@
+[docks/igloo]
+icon-size=48
+show-dock-item=false
+position='bottom'
+dock-items=['org.gnome.Nautilus.dockitem', 'google-chrome.dockitem', 'intellij-idea-u.dockitem', 'webstorm.dockitem', 'pycharm-community.dockitem', 'org.gnome.Screenshot.dockitem']
+unhide-delay=0
+items-alignment='center'
+theme='igloo'
+hide-mode='auto'
+pinned-only=false
+auto-pinning=true
+alignment='center'
+zoom-percent=150
+hide-delay=0
+zoom-enabled=true
+monitor=''
+lock-items=true
+tooltips-enabled=true
+pressure-reveal=false
+offset=0
+current-workspace-only=false
+
+[/]
+enabled-docks=['igloo']

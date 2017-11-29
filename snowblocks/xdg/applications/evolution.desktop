@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Evolution
+Exec=evolution --offline %U
+Icon=evolution
+StartupNotify=true
+X-GNOME-UsesNotifications=true
+MimeType=text/calendar;text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;
+Keywords=email;calendar;contact;addressbook;task;
+Actions=compose;
+
+[Desktop Action compose]
+Name=Compose a message
+Exec=evolution mailto:
