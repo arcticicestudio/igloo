@@ -66,6 +66,9 @@
   stripLeadingSymbols = true
   useUnicodeRuler = true
 
+[interactive]
+  diffFilter = diff-so-fancy
+
 [filter "igloocrypt"]
   clean = "gpg --encrypt --recipient 60C54F1519346085"
   smudge = "gpg --decrypt"
