@@ -30,6 +30,8 @@ quake-width-percent=66
 [keybindings]
 session-synchronize-input='<Primary><Shift>s'
 session-save='disabled'
+terminal-scroll-down='disabled'
+terminal-scroll-up='disabled'
 
 [profiles]
 list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d']

@@ -1,5 +1,7 @@
 * [dconf Configuration](#dconf-configuration)
 * [Nord Color Scheme](#nord-color-scheme)
+* [Key Mappings](#key-mappings)
+  * [tmux snowblock compatibility](#tmux-snowblock-compatibility)
 * [References](#references)
 
 # dconf Configuration
@@ -20,6 +22,17 @@ dconf dump /com/gexperts/Tilix/ > tilix.dconf
 
 The [Nord Tilix][nord-tilix-gh] color scheme, included in the current [`tilix.dconf` dconf dump](##dconf-configuration), is installed through the AUR [`nord-tilix`][nord-tilix-aur] package version `0.3.0-2`.
 
+# Key Mappings
+
+## tmux snowblock compatibility
+
+The key mappings
+
+* *Scroll down* <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Down</kbd>
+* *Scroll up* <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Up</kbd>
+
+have been disabled for compatibility reasons with the [tmux snowlbock][gh-sb-tmux]. It provides key mappings to resize panes via <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>🠨</kbd><kbd>🠩</kbd><kbd>🠪</kbd><kbd>🠫</kbd> which key press events are catched by the Tilix efault terminal scroll key mappings.
+
 # References
 
 * [Official Tilix Website][tilix]
@@ -31,3 +44,4 @@ The [Nord Tilix][nord-tilix-gh] color scheme, included in the current [`tilix.dc
 [nord-tilix-gh]: https://github.com/arcticicestudio/nord-tilix
 [tilix]: https://gnunn1.github.io/tilix-web
 [tilix-gh]: https://github.com/gnunn1/tilix
+[gh-sb-tmux]: https://github.com/arcticicestudio/igloo/tree/develop/snowblocks/tmux
