@@ -242,6 +242,16 @@
   # Usage:
   #   git fa
   fa = fetch --all --prune
+  
+  # +----------------------------+
+  # + Interaction - Format Patch +
+  # +----------------------------+
+  # Formats "diff-so-fancy" compatible patchs by removing printed ANSI color escape sequences and enables patch stats
+  # by default.
+  #
+  # Usage:
+  #   git fp
+  fp = diff --patch-with-stat --no-color
 
   # +---------------------+
   # + Interaction - Merge +
