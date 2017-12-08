@@ -1,0 +1,15 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.npmrc": {
+        "hosts": {
+          "archbook": "npmrc",
+          "igloo": "npmrc"
+        }
+      }
+    }
+  }
+]
