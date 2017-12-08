@@ -4,12 +4,27 @@
   },
   {
     "link": {
-      "~/.gitattributes": null,
+      "~/.gitattributes": {
+        "hosts": {
+          "archbook": "gitattributes",
+          "igloo": "gitattributes"
+        }
+      },
       "~/.git-commit-msg": null,
       "~/.git-diff-igloocrypt": null,
       "~/.gitconfig": null,
-      "~/.gitconfig_auth": null,
-      "~/.gitconfig_auth_job": null,
+      "~/.gitconfig_auth": {
+        "hosts": {
+          "archbook": "gitconfig_auth",
+          "igloo": "gitconfig_auth"
+        }
+      },
+      "~/.gitconfig_auth_job": {
+        "hosts": {
+          "archbook": "gitconfig_auth_job.igloocrypt",
+          "igloo": "gitconfig_auth_job.igloocrypt"
+        }
+      },
       "~/.gitignore": null
     }
   }
