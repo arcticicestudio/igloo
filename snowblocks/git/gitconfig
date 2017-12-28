@@ -22,14 +22,15 @@
 [includeIf "gitdir:~/code/github/"]
   path = ~/.gitconfig_auth
 
+[includeIf "gitdir:~/code/gitlab/"]
+  path = ~/.gitconfig_auth
+
+[includeIf "gitdir:~/code/incubator/"]
+  path = ~/.gitconfig_auth
+
 [includeIf "gitdir:~/.igloo/"]
   path = ~/.gitconfig_auth
 
-  # Includes sensible job authentication data:
-  #   - user.name <USERNAME>
-  #   - user.email <EMAIL>
-  #   - user.signingkey <SIGNINGKEY>
-  #   - user.useconfigonly true
 [includeIf "gitdir:~/code/job/"]
   path = ~/.gitconfig_auth_job
 
