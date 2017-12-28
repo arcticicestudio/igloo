@@ -16,7 +16,6 @@ export STORE_PKGS=$HOME/store/pool/packages
 export STORE_RUN=$HOME/store/run
 export BITFROEST_HOME=$HOME/store/bitfroest
 
-export ATOM_HOME=$STORE_RUN/atom
 export AUDACITY_PATH=$STORE_RUN/audacity
 export FZ_DATADIR=$STORE_RUN/filezilla
 export GIMP2_DIRECTORY=$STORE_RUN/gimp
