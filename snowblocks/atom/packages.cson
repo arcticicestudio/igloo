@@ -1,0 +1,45 @@
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://github.com/lee-dohm/package-sync
+
+packages: [
+  "atom-beautify"
+  "atom-material-ui"
+  "busy-signal"
+  "color-picker"
+  "docblockr"
+  "file-icons"
+  "highlight-selected"
+  "intentions"
+  "language-babel"
+  "language-diff"
+  "language-docker"
+  "language-generic-config"
+  "language-groovy"
+  "language-systemd"
+  "language-viml"
+  "linter"
+  "linter-eslint"
+  "linter-js-yaml"
+  "linter-jsonlint"
+  "linter-less"
+  "linter-markdown"
+  "linter-stylelint"
+  "linter-ui-default"
+  "markdown-preview-enhanced"
+  "minimap"
+  "minimap-git-diff"
+  "minimap-highlight-selected"
+  "minimap-pigments"
+  "nord-atom-syntax"
+  "nord-atom-ui"
+  "package-sync"
+  "pigments"
+  "prettier-atom"
+  "project-folder"
+]

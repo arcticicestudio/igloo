@@ -1,0 +1,19 @@
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth
+
+"body":
+  # Prevent unintended closing of Atom.
+  "ctrl-q": "unset!"
+  "ctrl-shift-W": "unset!"
+
+  # Simple and fast project management workflow.
+  "ctrl-alt-p": "project-folder:add"
+
+"atom-text-editor":
+  "ctrl-alt-c": "color-picker:open"

@@ -66,11 +66,6 @@
         "force": true,
         "path": "applications/org.gnome.gedit.desktop"
       },
-      "~/.local/share/applications/org.gnome.Nautilus.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/org.gnome.Nautilus.desktop"
-      },
       "~/.local/share/applications/org.gnome.Screenshot.desktop": {
         "create": true,
         "force": true,

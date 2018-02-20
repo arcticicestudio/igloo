@@ -1,0 +1,164 @@
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
+
+"*":
+  "atom-beautify":
+    general:
+      analytics: false
+      beautifyEntireFileOnSave: false
+  "atom-ide-ui":
+    hyperclick:
+      linuxTriggerKeys: "shiftKey,ctrlKey"
+  "atom-material-ui":
+    colors:
+      abaseColor: "#88c0d0"
+      accentColor: "#81a1c1"
+      predefinedColor: "Cyan"
+    fonts:
+      fontSize: 18
+    tabs:
+      compactTabs: true
+      noTabMinWidth: true
+      stretchedTabs: true
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "color-picker":
+    abbreviateValues: true
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
+  "command-palette":
+    preserveLastSearch: true
+  core:
+    allowPendingPaneItems: false
+    audioBeep: false
+    autoHideMenuBar: true
+    automaticallyUpdate: false
+    closeEmptyWindows: false
+    disabledPackages: [
+      "exception-reporting"
+      "metrics"
+      "markdown-preview"
+      "symbols-view"
+      "github"
+    ]
+    openEmptyEditorOnStart: false
+    telemetryConsent: "no"
+    themes: [
+      "nord-atom-ui"
+      "nord-atom-syntax"
+    ]
+    useProxySettingsWhenCallingApm: false
+  docblockr:
+    c_style_block_comments: true
+    spacer_between_sections: "after_description"
+  editor:
+    fontFamily: "Source Code Pro Medium"
+    fontSize: 22
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: false
+  "fuzzy-finder":
+    ignoredNames: [
+      "node_modules"
+    ]
+    prefillFromSelection: true
+    preserveLastSearch: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  hyperclick:
+    linuxTriggerKeys: "shiftKey"
+    win32TriggerKeys: "shiftKey"
+  "linter-less":
+    ieCompatibilityChecks: false
+  "linter-markdown":
+    presetConsistentWithoutConfig: false
+    presetRecommendedWithoutConfig: false
+  "markdown-preview-enhanced":
+    closePreviewAutomatically: false
+    enableExtendedTableSyntax: true
+    enableScriptExecution: false
+    imageDropAction: "do nothing"
+    openPreviewPaneAutomatically: false
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+    scrollAnimation: true
+  "nord-atom-syntax":
+    accessibility:
+      commentContrast: 8
+  "nord-atom-ui":
+    darkerFormFocusEffect: true
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  pigments:
+    notifyReloads: false
+  "prettier-atom":
+    formatOnSaveOptions:
+      isDisabledIfNoConfigFile: true
+      isDisabledIfNotInPackageJson: true
+    prettierOptions:
+      printWidth: 120
+      tabWidth: 2
+    useEditorConfig: false
+    useEslint: true
+    useStylelint: true
+  "project-folder":
+    gitProjectDirectories: [
+      "~/code/incubator"
+      "~/code/job"
+      "~/yggdrasil"
+    ]
+    gitProjectSearchMaxDepth: 2
+    projectRootDirectories: [
+      "~/code/bitfroest"
+      "~/code/lab"
+    ]
+    showGroupOnRemoveListCondition: "some-member-was-loaded"
+  "spell-check":
+    addKnownWords: true
+    knownWords: [
+      "arcticicestudio"
+      "arctic ice studio"
+      "facebook"
+      "github"
+      "greb"
+      "lifecycle"
+      "mdn"
+      "mozilla"
+      "reddit"
+      "stackoverflow"
+      "sven"
+      "svengreb"
+      "sven greb"
+      "twitter"
+      "youtube"
+    ]
+    locales: [
+      "en-US"
+      "de-DE"
+    ]
+  tabs:
+    enableVcsColoring: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: false

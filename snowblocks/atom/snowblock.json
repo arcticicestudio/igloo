@@ -1,0 +1,24 @@
+[
+  {
+    "clean": [
+      "~/.atom"
+    ]
+  },
+  {
+    "link": {
+      "~/.atom/config.cson": {
+        "create": true,
+        "force": true
+      },
+      "~/.atom/keymap.cson": {
+        "force": true
+      },
+      "~/.atom/project-folder.cson": {
+        "force": true
+      },
+      "~/.atom/packages.cson": {
+        "force": true
+      }
+    }
+  }
+]
