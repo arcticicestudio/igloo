@@ -1,0 +1,28 @@
+[
+  {
+    "clean": [
+      "~",
+      "~/.timewarrior"
+    ]
+  },
+  {
+    "link": {
+      "~/.timewarrior/timewarrior.cfg": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "timewarrior.cfg.archbook",
+          "igloo": "timewarrior.cfg.igloo"
+        }
+      },
+      "~/.timewarrior/nord.theme": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "nord.theme",
+          "igloo": "nord.theme"
+        }
+      }
+    }
+  }
+]
