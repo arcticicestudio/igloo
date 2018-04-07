@@ -1,0 +1,27 @@
+[
+  {
+    "clean": [
+      "~",
+      "~/.task"
+    ]
+  },
+  {
+    "link": {
+      "~/.taskrc": {
+        "force": true,
+        "hosts": {
+          "archbook": "taskrc",
+          "igloo": "taskrc"
+        }
+      },
+      "~/.task/nord.theme": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "nord.theme",
+          "igloo": "nord.theme"
+        }
+      }
+    }
+  }
+]
