@@ -21,6 +21,16 @@
           "archbook": "nord.theme",
           "igloo": "nord.theme"
         }
+      },
+      "~/.task/hooks/on-modify-track-timewarrior.py": {
+        "create": true,
+        "force": true,
+        "path": "hooks/on-modify-track-timewarrior.py"
+      },
+      "~/.task/hooks/on-modify-track-total-active-time.py": {
+        "create": true,
+        "force": true,
+        "path": "hooks/on-modify-track-total-active-time.py"
       }
     }
   }

@@ -17,7 +17,7 @@
 data.location=~/.task
 
 complete.all.tags=true
-default.command=list
+default.command=stat
 editor=vim
 list.all.projects=true
 list.all.tags=true
@@ -62,12 +62,16 @@ uda.ghi.type=numeric
 uda.ghi.label=GitHub Issue
 uda.ghi.default=
 
+uda.totalactivetime.type=duration
+uda.totalactivetime.label=Total active time
+uda.totalactivetime.values=
+
 #+---------+
 #+ Reports +
 #+---------+
 report.stat.description=Optimized and extended status report
-report.stat.columns=id,start.age,entry.age,depends.indicator,priority,project,tags,recur.indicator,scheduled,scheduled.relative,due,due.relative,until.remaining,description.count,urgency
-report.stat.labels=ID,Active,Age,D,P,Project,Tags,R,Sch,,Due,,Until,Desc,Urg
+report.stat.columns=id,start.age,entry.age,totalactivetime,depends.indicator,priority,project,tags,recur.indicator,scheduled,scheduled.relative,due,due.relative,until.remaining,description.count,urgency
+report.stat.labels=ID,Active,Age,Time,D,P,Project,Tags,R,Sch,,Due,,Until,Desc,Urg
 report.stat.filter=status:pending
 report.stat.sort=start-,due+,project+,urgency-
 
