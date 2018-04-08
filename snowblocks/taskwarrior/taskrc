@@ -8,7 +8,7 @@
 #   https://taskwarrior.org/docs
 #   https://taskwarrior.org/docs/terminology.html#regex
 #   taskrc(5)
-#   task-sync(5)
+#   task(1)
 #   https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions
 
 #+------+
@@ -79,8 +79,10 @@ report.stat.sort=start-,due+,project+,urgency-
 #+ Aliases +
 #+---------+
 alias.a=add
+alias.an=annotate -- Notes
 alias.bd=burndown.daily
 alias.cx=context
 alias.e=edit
 alias.ls=list
 alias.mod=modify
+alias.o=execute taskopen

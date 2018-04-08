@@ -14,6 +14,13 @@
           "igloo": "taskrc"
         }
       },
+      "~/.taskopenrc": {
+        "force": true,
+        "hosts": {
+          "archbook": "taskopenrc",
+          "igloo": "taskopenrc"
+        }
+      },
       "~/.task/nord.theme": {
         "create": true,
         "force": true,
