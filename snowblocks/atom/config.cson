@@ -43,6 +43,7 @@
     autoHideMenuBar: true
     automaticallyUpdate: false
     closeEmptyWindows: false
+    colorProfile: "srgb"
     disabledPackages: [
       "exception-reporting"
       "metrics"
