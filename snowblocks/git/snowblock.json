@@ -12,18 +12,6 @@
       },
       "~/.git-commit-msg": null,
       "~/.gitconfig": null,
-      "~/.gitconfig_auth": {
-        "hosts": {
-          "archbook": "gitconfig_auth",
-          "igloo": "gitconfig_auth"
-        }
-      },
-      "~/.gitconfig_auth_job": {
-        "hosts": {
-          "archbook": "gitconfig_auth_job.igloocrypt",
-          "igloo": "gitconfig_auth_job.igloocrypt"
-        }
-      },
       "~/.gitignore": null
     }
   }
