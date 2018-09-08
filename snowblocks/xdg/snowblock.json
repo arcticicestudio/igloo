@@ -18,6 +18,14 @@
       "~/.config/user-dirs.locale": {
         "force": true
       },
+      "~/.config/gtk-3.0/bookmarks": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "archbook": "gtk-3.0/bookmarks-archbook.igloocrypt",
+          "igloo": "gtk-3.0/bookmarks-igloo.igloocrypt"
+        }
+      },
       "~/.local/share/applications/atom.desktop": {
         "create": true,
         "force": true,

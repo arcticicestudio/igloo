@@ -12,6 +12,24 @@
       },
       "~/.git-commit-msg": null,
       "~/.gitconfig": null,
+      "~/.gitconfig-auth": {
+        "hosts": {
+          "archbook": "gitconfig-auth",
+          "igloo": "gitconfig-auth"
+        }
+      },
+      "~/.gitconfig-auth-svengreb": {
+        "hosts": {
+          "archbook": "gitconfig-auth-svengreb",
+          "igloo": "gitconfig-auth-svengreb"
+        }
+      },
+      "~/.gitconfig-auth-job": {
+        "hosts": {
+          "archbook": "gitconfig-auth-job.igloocrypt",
+          "igloo": "gitconfig-auth-job.igloocrypt"
+        }
+      },
       "~/.gitignore": null
     }
   }
