@@ -10,5 +10,7 @@
 #   https://www.gnupg.org
 #   https://wiki.archlinux.org/index.php/GnuPG
 
-*.igloocrypt filter=igloocrypt diff=igloocrypt
+*.igloocrypt filter=git-crypt diff=git-crypt
 .gitattributes !filter !diff
+.gitignore !filter !diff
+.gitmodules !filter !diff

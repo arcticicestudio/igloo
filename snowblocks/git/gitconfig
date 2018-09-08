@@ -54,9 +54,6 @@
   tool = intellij
   compactionHeuristic = true
 
-[diff "igloocrypt"]
-  textconv = "~/.git-diff-igloocrypt"
-
 [difftool "intellij"]
   prompt = true
   cmd = idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
@@ -69,10 +66,6 @@
 
 [interactive]
   diffFilter = diff-so-fancy
-
-[filter "igloocrypt"]
-  clean = "gpg --encrypt --recipient 60C54F1519346085"
-  smudge = "gpg --decrypt"
 
 [merge]
   tool = intellij
