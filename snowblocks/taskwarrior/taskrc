@@ -21,6 +21,7 @@ default.command=stat
 editor=vim
 list.all.projects=true
 list.all.tags=true
+max_active_tasks=20
 regex=true
 weekstart=Monday
 
