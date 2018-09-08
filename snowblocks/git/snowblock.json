@@ -11,18 +11,23 @@
         }
       },
       "~/.git-commit-msg": null,
-      "~/.git-diff-igloocrypt": null,
       "~/.gitconfig": null,
-      "~/.gitconfig_auth": {
+      "~/.gitconfig-auth": {
         "hosts": {
-          "archbook": "gitconfig_auth",
-          "igloo": "gitconfig_auth"
+          "archbook": "gitconfig-auth",
+          "igloo": "gitconfig-auth"
         }
       },
-      "~/.gitconfig_auth_job": {
+      "~/.gitconfig-auth-svengreb": {
         "hosts": {
-          "archbook": "gitconfig_auth_job.igloocrypt",
-          "igloo": "gitconfig_auth_job.igloocrypt"
+          "archbook": "gitconfig-auth-svengreb",
+          "igloo": "gitconfig-auth-svengreb"
+        }
+      },
+      "~/.gitconfig-auth-job": {
+        "hosts": {
+          "archbook": "gitconfig-auth-job.igloocrypt",
+          "igloo": "gitconfig-auth-job.igloocrypt"
         }
       },
       "~/.gitignore": null

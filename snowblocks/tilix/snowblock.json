@@ -7,8 +7,8 @@
       "~/.config/tilix/bookmarks.json": {
         "create": true,
         "hosts": {
-          "archbook": "bookmarks.json.archbook.igloocrypt",
-          "igloo": "bookmarks.json.igloo.igloocrypt"
+          "archbook": "bookmarks-archbook.json.igloocrypt",
+          "igloo": "bookmarks-igloo.json.igloocrypt"
         }
       }
     }
