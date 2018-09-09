@@ -22,6 +22,9 @@
 [includeIf "gitdir:~/code/github/"]
   path = ~/.gitconfig-auth
 
+[includeIf "gitdir:~/code/github/repositories/communicode/"]
+  path = ~/.gitconfig-auth-svengreb
+
 [includeIf "gitdir:~/code/gitlab/"]
   path = ~/.gitconfig-auth
 
