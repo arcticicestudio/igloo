@@ -2,9 +2,9 @@
 Type=Application
 Name=Atom
 Icon=atom
-Exec=electron --app=/usr/lib/atom %F
+Exec=/usr/lib/atom/atom %F
 StartupNotify=true
-MimeType=text/plain;text/css;text/java;text/md;text/markupdescription;text/readme;text/h;text/c;text/cpp;text/cp;text/js;text/xml;text/schema;text/x-sass;text/x-less;
+MimeType=text/plain;text/css;text/java;text/md;text/markupdescription;text/readme;text/h;text/c;text/cpp;text/cp;text/js;text/xml;text/schema;text/x-sass;text/x-less;text/markdown;
 Actions=dev-mode;
 
 [Desktop Action dev-mode]

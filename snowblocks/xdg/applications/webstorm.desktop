@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=WebStorm
-Icon=webstorm
-Exec=/opt/webstorm/bin/webstorm.sh

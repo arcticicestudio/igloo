@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=IntelliJ IDEA Community Edition
-Icon=intellij-idea-ce
-Exec=/opt/intellij-idea-ce/bin/idea.sh
