@@ -21,6 +21,7 @@ packages: [
   "language-docker"
   "language-generic-config"
   "language-groovy"
+  "language-rust"
   "language-systemd"
   "language-viml"
   "linter"
