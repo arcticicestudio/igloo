@@ -22,12 +22,24 @@ alias sbrd='mvn spring-boot:run -Drun.jvmArguments="-agentlib:jdwp=transport=dt_
 # +--- pacman ---+
 alias pacman='pacman --config ~/.pacman.conf'
 
+# +--- taskwarrior ---+
+alias t='task'
+
+# +--- timewarrior ---+
+# Shortcut to show IDs by default.
+#
+# @see https://taskwarrior.org/docs/timewarrior/hints.html
+alias tw='timew :ids'
+
+# Shortcut to show a summary.
+#
+# @depends alias.tw
+# @see https://taskwarrior.org/docs/timewarrior/hints.html
+alias tws='tw summary'
+
 # +--- trash-cli ---+
 # Shortcut to move a file into the trash.
 alias trm='trash'
-
-# +--- taskwarrior ---+
-alias t='task'
 
 # +--- wget ---+
 # Disable log file
