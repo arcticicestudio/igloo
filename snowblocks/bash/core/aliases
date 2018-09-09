@@ -22,6 +22,13 @@ alias sbrd='mvn spring-boot:run -Drun.jvmArguments="-agentlib:jdwp=transport=dt_
 # +--- pacman ---+
 alias pacman='pacman --config ~/.pacman.conf'
 
+# +--- trash-cli ---+
+# Shortcut to move a file into the trash.
+alias trm='trash'
+
+# +--- taskwarrior ---+
+alias t='task'
+
 # +--- wget ---+
 # Disable log file
 alias wget='wget --hsts-file='
@@ -60,12 +67,11 @@ alias date='date "+%Y-%m-%d %H:%M:%S UTC%z"'
 alias lsraw='LC_COLLATE=C \ls -N1 --group-directories-first'
 
 # Shorthand for alias to
-#
-# * only display ANSI "color" escape sequences in "raw" form. (-R, --RAW-CONTROL-CHARS)
-# * automatically exit if the entire file can be displayed on the first screen. (-F, --quit-if-one-screen)
-# * disable sending the termcap (de)initialization strings to the terminal to avoid unnecessary operations like
-#   clearing the screen. (-X, --no-init)
-# * use two tab stops. (-x2, --tabs=n)
+#   * only display ANSI "color" escape sequences in "raw" form. (-R, --RAW-CONTROL-CHARS)
+#   * automatically exit if the entire file can be displayed on the first screen. (-F, --quit-if-one-screen)
+#   * disable sending the termcap (de)initialization strings to the terminal to avoid unnecessary operations like
+#     clearing the screen. (-X, --no-init)
+#   * use two tab stops. (-x2, --tabs=n)
 alias less='less -RFXx2'
 
 # Show mode bits of files and directories in ocal form,
@@ -80,6 +86,3 @@ alias lsm='stat -c "%A %a %N"'
 # +-------+
 # Alert via notify for long running commands.
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Shortcut for "trash-cli" to move a file into the trash.
-alias t='trash'
