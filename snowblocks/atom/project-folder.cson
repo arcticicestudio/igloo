@@ -19,6 +19,11 @@ groups:
     "~/yggdrasil/aur/nord-vim-lightline"
     "~/yggdrasil/aur/nord-xfce-terminal"
   ]
+  "communikey": [
+    "~/code/github/repositories/communicode/communikey-backend"
+    "~/code/github/repositories/communicode/communikey-docs"
+    "~/code/github/repositories/communicode/communikey-frontend"
+  ]
   "IceCore": [
     "~/yggdrasil/icecore/icecore-hashids"
     "~/yggdrasil/icecore/icecore-json"
@@ -93,11 +98,18 @@ groups:
     "~/yggdrasil/northem/northem/northem-light-notepadplusplus-syntax"
     "~/yggdrasil/northem/northem/northem-notepadplusplus-syntax"
   ]
+  "NPM": [
+    "~/yggdrasil/npm/gitstick"
+    "~/yggdrasil/npm/styled-modern-normalize"
+  ]
   "scratchpad": [
     "~/documents/scratchpad"
   ]
   "snippetbox": [
     "~/code/snippetbox"
+  ]
+  "snowsaw": [
+    "~/yggdrasil/snowsaw"
   ]
   "styleguide": [
     "~/yggdrasil/styleguide/eslint-config-arcticicestudio"
