@@ -44,7 +44,7 @@
   logallrefupdates = true
   whitespace = tab-in-indent
   editor = vim
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = diff-so-fancy | less --tabs=2 -RFX
   attributesfile = ~/.gitattributes
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -68,7 +68,21 @@
   useUnicodeRuler = true
 
 [interactive]
-  diffFilter = diff-so-fancy
+  # Temporary replaced "diff-so-fancy" with bundled "diff-highlight".
+  #
+  # The reason are incompatibility problems of "diff-so-fancy" with the latest Git versions caused by changes in the
+  # diff logic.
+  # See "so-fancy/diff-so-fancy#35" and "so-fancy/diff-so-fancy#296" for details.
+  #
+  # Note that downgrading to a compatible Git version is not an option because versions <2.17.1 are effected by
+  # CVE-2018-11233 and and 11235.
+  # See https://github.com/git/git/blob/master/Documentation/RelNotes/2.17.1.txt#L7-L10 for details.
+  #
+  # To fix this problem for interactive patch mode the filter has been temporary changed to the official
+  # "diff-highlight" tool bundled with Git.
+  # See https://github.com/git/git/tree/master/contrib/diff-highlight for details.
+  #diffFilter = diff-so-fancy
+  diffFilter = diff-highlight
 
 [merge]
   tool = intellij
