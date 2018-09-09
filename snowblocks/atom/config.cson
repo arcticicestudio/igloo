@@ -31,12 +31,34 @@
     ui:
       panelContrast: true
       panelShadows: true
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: false
+    confirmCompletion: "tab and enter"
+    consumeSuffix: true
+    enableAutoActivation: true
+    enableAutoConfirmSingleSuggestion: true
+    enableBuiltinProvider: true
+    enableExtendedUnicodeSupport: false
+    includeCompletionsFromAllBuffers: true
+    similarSuggestionRemoval: "none"
+    strictMatching: false
+    useAlternateScoring: true
+    useCoreMovementCommands: true
+    useLocalityBonus: true
+  "bracket-matcher":
+    alwaysSkipClosingPairs: true
+    autocompleteBrackets: true
+    highlightMatchingLineNumber: true
+    wrapSelectionsInBrackets: true
   "color-picker":
     abbreviateValues: true
     preferredFormat: "HEX"
+    randomColor: false
+    triggerKey: "C"
     uppercaseColorValues: true
   "command-palette":
     preserveLastSearch: true
+    useAlternateScoring: true
   core:
     allowPendingPaneItems: false
     audioBeep: false
@@ -44,6 +66,7 @@
     automaticallyUpdate: false
     closeEmptyWindows: false
     colorProfile: "srgb"
+    destroyEmptyPanes: true
     disabledPackages: [
       "exception-reporting"
       "metrics"
@@ -51,49 +74,179 @@
       "symbols-view"
       "github"
     ]
+    excludeVcsIgnoredPaths: true
+    fileEncoding: "utf8"
+    fileSystemWatcher: "native"
+    followSymlinks: true
     openEmptyEditorOnStart: false
+    reopenProjectMenuCount: 0
+    restorePreviousWindowsOnStart: "always"
     telemetryConsent: "no"
     themes: [
       "nord-atom-ui"
       "nord-atom-syntax"
     ]
     useProxySettingsWhenCallingApm: false
+    useTreeSitterParsers: false
   docblockr:
+    align_tags: "deep"
+    auto_add_method_tag: true
     c_style_block_comments: true
+    deep_indent: false
+    extend_double_slash: true
+    param_description: true
+    return_description: true
     spacer_between_sections: "after_description"
   editor:
+    atomicSoftTabs: true
+    autoIndent: true
+    autoIndentOnPaste: true
+    confirmCheckoutHeadRevision: true
     fontFamily: "Source Code Pro Medium"
     fontSize: 22
     preferredLineLength: 120
     scrollPastEnd: true
+    showCursorOnSelection: true
+    showIndentGuide: false
     showInvisibles: true
+    showLineNumbers: true
+    softTabs: true
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabType: "soft"
     zoomFontWhenCtrlScrolling: false
+  "file-icons":
+    coloured: true
+    onChanges: false
+    strategies:
+      grammar: true
+      hashbangs: true
+      linguist: true
+      modelines: true
+      usertypes: true
+    tabPaneIcon: true
+  "find-and-replace":
+    autocompleteSearches: true
+    closeFindPanelAfterSearch: false
+    focusEditorAfterSearch: false
+    projectSearchResultsPaneSplitDirection: "none"
+    scrollToResultOnLiveSearch: false
+    showSearchWrapIcon: true
   "fuzzy-finder":
     ignoredNames: [
       "node_modules"
+      "*.tar.xz"
+      "*.iso"
+      "*.db"
+      "*.class"
+      "*.ttf"
+      "*.otf"
+      "*.woff"
+      "*.woff2"
+      "*.shar"
+      "*.jar"
     ]
     prefillFromSelection: true
     preserveLastSearch: true
+    searchAllPanes: true
+    useAlternateScoring: true
   "git-diff":
     showIconsInEditorGutter: true
+  "highlight-selected":
+    hideHighlightOnSelectedWord: false
+    highlightBackground: false
+    highlightInPanes: true
+    ignoreCase: false
+    onlyHighlightWholeWords: true
+    showInStatusBar: true
   hyperclick:
     linuxTriggerKeys: "shiftKey"
     win32TriggerKeys: "shiftKey"
+  "language-babel":
+    allowLocalOverride: true
+    autoIndentJSX: false
+    babelMapsAddUrl: true
+    createMap: false
+    createTargetDirectories: true
+    createTranspiledCode: false
+    disableWhenNoBabelrcFileInPath: true
+    emmetCSSAutocomplete: true
+    suppressSourcePathMessages: true
+    suppressTranspileOnSaveMessages: true
+    transpileOnSave: false
+  "language-generic-config":
+    enableAutomatch: true
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  linter:
+    lintOnChange: true
+    lintOnOpen: true
+    lintPreviewTabs: true
+  "linter-eslint":
+    disableEslintIgnore: false
+    disableFSCache: false
+    disableWhenNoEslintConfig: true
+    fixOnSave: false
+    showRuleIdInMessage: true
+    useGlobalEslint: false
   "linter-less":
     ieCompatibilityChecks: false
+    ignoreLessrc: false
+    ignoreUndefinedGlobalVariables: false
+    ignoreUndefinedMixins: true
+    ignoreUndefinedVariables: true
+    strictUnits: false
   "linter-markdown":
     presetConsistentWithoutConfig: false
     presetRecommendedWithoutConfig: false
+    yamlWithoutConfig: true
+  "linter-stylelint":
+    disableWhenNoConfig: false
+    showIgnored: false
+    useStandard: false
+  "linter-ui-default":
+    decorateOnTreeView: "Files"
+    gutterPosition: "Right"
+    hidePanelWhenEmpty: true
+    panelRepresents: "Current File"
+    showDecorations: true
+    showPanel: false
+    showProviderName: false
+    showStatusBar: true
+    showTooltip: true
+    statusBarClickBehavior: "Toggle Panel"
+    statusBarPosition: "Left"
+    statusBarRepresents: "Entire Project"
+    tooltipFollows: "Mouse"
+    useBusySignal: true
   "markdown-preview-enhanced":
+    automaticallyShowPreviewOfMarkdownBeingEdited: true
+    breakOnSingleNewLine: true
     closePreviewAutomatically: false
+    enableCriticMarkupSyntax: false
+    enableEmojiSyntax: true
     enableExtendedTableSyntax: true
     enableScriptExecution: false
+    enableWikiLinkSyntax: true
+    enableZenMode: true
+    frontMatterRenderingOption: "none"
     imageDropAction: "do nothing"
+    liveUpdate: true
     openPreviewPaneAutomatically: false
+    previewPanePosition: "right"
+    printBackground: false
+    scrollSync: true
+    singlePreview: true
   minimap:
+    absoluteMode: false
+    adjustMinimapWidthOnlyIfSmaller: true
+    adjustMinimapWidthToSoftWrap: true
+    autoToggle: true
+    displayMinimapOnLeft: false
+    ignoreWhitespacesInTokens: false
+    independentMinimapScroll: false
+    minimapScrollIndicator: true
+    moveCursorOnMinimapClick: false
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
@@ -102,35 +255,56 @@
       pigments: true
       pigmentsDecorationsZIndex: 0
     scrollAnimation: true
+    smoothScrolling: true
+    useHardwareAcceleration: true
   "nord-atom-syntax":
     accessibility:
       commentContrast: 8
   "nord-atom-ui":
     darkerFormFocusEffect: true
+  notifications:
+    showErrorsInDevMode: false
+  "package-generator":
+    packageSyntax: "javascript"
   "package-sync":
     createOnChange: true
     forceOverwrite: true
   pigments:
+    autocompleteSuggestionsFromValue: false
+    dismissableReloadNotifications: true
+    extendAutocompleteToColorValue: false
+    extendAutocompleteToVariables: false
+    ignoreVcsIgnoredPaths: true
+    markerType: "native-background"
+    mergeColorDuplicates: false
     notifyReloads: false
+    traverseIntoSymlinkDirectories: false
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
       isDisabledIfNoConfigFile: true
       isDisabledIfNotInPackageJson: true
+      respectEslintignore: true
+      showInStatusBar: true
+    prettierEslintOptions:
+      prettierLast: false
     prettierOptions:
       printWidth: 120
       tabWidth: 2
-    useEditorConfig: false
+    useEditorConfig: true
     useEslint: true
     useStylelint: true
   "project-folder":
+    closeItemsForRemovedProject: false
     gitProjectDirectories: [
+      "~/code/github/communicode"
       "~/code/incubator"
       "~/code/job"
       "~/yggdrasil"
     ]
     gitProjectSearchMaxDepth: 2
+    hideLoadedFolderFromAddList: true
     projectRootDirectories: [
-      "~/code/bitfroest"
       "~/code/lab"
     ]
     showGroupOnRemoveListCondition: "some-member-was-loaded"
@@ -157,9 +331,34 @@
       "en-US"
       "de-DE"
     ]
+    noticesMode: "both"
+    useLocales: true
+  "status-bar":
+    fullWidth: true
+    isVisible: true
   tabs:
+    addNewTabsAtEnd: false
+    alwaysShowTabBar: true
+    displayMruTabList: true
+    enableMruTabSwitching: true
     enableVcsColoring: true
+    showIcons: true
+  "tree-view":
+    alwaysOpenExisting: false
+    autoReveal: false
+    focusOnReveal: true
+    hideIgnoredNames: false
+    hideVcsIgnoredFiles: false
+    sortFoldersBeforeFiles: true
+    squashDirectoryNames: false
   welcome:
     showOnStartup: false
   whitespace:
+    ensureSingleTrailingNewline: true
+    ignoreWhitespaceOnCurrentLine: true
+    ignoreWhitespaceOnlyLines: false
+    keepMarkdownLineBreakWhitespace: true
     removeTrailingWhitespace: false
+".git-commit.text":
+  editor:
+    preferredLineLength: 72
