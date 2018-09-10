@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://github.com/jarun/Buku
+#   https://github.com/jarun/Buku/wiki/Customize-colors
+
+# Defines custom colors for "buku" according to the same principle like the `LSCOLORS` environment variables of the BSD
+# `ls` command.
+# The five letters represent the colors in ordered form of
+#   - index
+#   - title
+#   - url
+#   - description/comment/note
+#   - tag
+#
+# See the GitHub repository wiki for details about available letters and their meaning.
+# @see https://github.com/jarun/Buku/wiki/Customize-colors
+export BUKU_COLORS="hOghE"
