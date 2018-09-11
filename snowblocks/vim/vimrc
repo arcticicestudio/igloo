@@ -33,7 +33,6 @@ Plug 'airblade/vim-gitgutter'
 "+--- Syntax ---+
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'plasticboy/vim-markdown'
 
 "+--- Color Themes ---+
 Plug 'arcticicestudio/nord-vim'
