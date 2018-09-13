@@ -1,0 +1,13 @@
+[
+  {
+    "clean": ["~/.gnupg"]
+  },
+  {
+    "link": {
+      "~/.gnupg/gpg.conf": {
+        "create": true,
+        "path": "gpg.conf"
+      }
+    }
+  }
+]
