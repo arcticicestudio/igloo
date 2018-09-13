@@ -228,7 +228,7 @@
     enableExtendedTableSyntax: true
     enableScriptExecution: false
     enableWikiLinkSyntax: true
-    enableZenMode: true
+    enableZenMode: false
     frontMatterRenderingOption: "none"
     imageDropAction: "do nothing"
     liveUpdate: true
