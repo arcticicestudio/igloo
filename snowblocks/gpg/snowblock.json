@@ -1,12 +1,31 @@
 [
   {
-    "clean": ["~/.gnupg"]
+    "clean": [
+      "~/.gnupg",
+      "~/.gnupg-socket-box"
+    ]
   },
   {
     "link": {
+      "~/.gnupg/gpg-agent.conf": {
+        "create": true,
+        "hosts": {
+          "iceowl": "gpg-agent.iceowl.conf"
+        }
+      },
       "~/.gnupg/gpg.conf": {
         "create": true,
         "path": "gpg.conf"
+      },
+      "~/.gnupg-socket-box/S.gpg-agent": {
+        "hosts": {
+          "iceowl": "S.gpg-agent"
+        }
+      },
+      "~/.gnupg-socket-box/S.gpg-agent.ssh": {
+        "hosts": {
+          "iceowl": "S.gpg-agent.ssh"
+        }
       }
     }
   }
