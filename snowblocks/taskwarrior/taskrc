@@ -88,3 +88,4 @@ alias.e=edit
 alias.ls=list
 alias.mod=modify
 alias.o=execute taskopen
+alias.on=execute "$HOME/.task/scripts/open-note.sh"

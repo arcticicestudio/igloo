@@ -38,6 +38,11 @@
         "create": true,
         "force": true,
         "path": "hooks/on-modify-track-total-active-time.py"
+      },
+      "~/.task/scripts/open-note.sh": {
+        "create": true,
+        "force": true,
+        "path": "scripts/open-note.sh"
       }
     }
   }
