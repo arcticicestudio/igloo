@@ -1,0 +1,36 @@
+{
+  "version": 4,
+  "lastUserContextId": 5,
+  "identities": [{
+    "userContextId": 1,
+    "public": false,
+    "icon": "",
+    "color": "",
+    "name": "userContextIdInternal.thumbnail",
+    "accessKey": ""
+  }, {
+    "userContextId": 2,
+    "public": true,
+    "icon": "fingerprint",
+    "color": "blue",
+    "name": "Arctic Ice Studio"
+  }, {
+    "userContextId": 3,
+    "public": true,
+    "icon": "fingerprint",
+    "color": "blue",
+    "name": "Sven Greb"
+  }, {
+    "userContextId": 4,
+    "public": true,
+    "icon": "chill",
+    "color": "blue",
+    "name": "Arctic Frost Gaming"
+  }, {
+    "userContextId": 5,
+    "public": true,
+    "icon": "briefcase",
+    "color": "green",
+    "name": "sgreb@communicode"
+  }]
+}
