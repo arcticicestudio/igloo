@@ -1,0 +1,35 @@
+<!--
+Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+Project:    igloo
+Repository: https://github.com/arcticicestudio/igloo
+License:    MIT
+-->
+<application>
+  <component name="DefaultFont">
+    <option name="FONT_SIZE" value="20" />
+    <option name="FONT_FAMILY" value="Source Code Pro" />
+    <option name="SECONDARY_FONT_FAMILY" value="Hack" />
+  </component>
+  <component name="EditorSettings">
+    <option name="IS_ENSURE_NEWLINE_AT_EOF" value="true" />
+    <option name="SHOW_BREADCRUMBS" value="false" />
+    <!-- Allow scrolling past end (virtual space) -->
+    <option name="ADDITIONAL_PAGE_AT_BOTTOM" value="true" />
+    <option name="SHOW_NOTIFICATION_AFTER_REFORMAT_CODE_ACTION" value="false" />
+    <option name="SHOW_PARAMETER_NAME_HINTS" value="false" />
+  </component>
+  <component name="JSEditorOptions">
+    <option name="START_STRING_INTERPOLATION_ON_TYPING" value="true" />
+  </component>
+  <component name="TodoConfiguration">
+    <pattern pattern="\btodo\b.*" />
+    <pattern pattern="\bfixme\b.*" />
+    <pattern icon="important" pattern="\bnote\b.*" />
+  </component>
+  <component name="XmlEditorOptions">
+    <option name="showCssInlineColorPreview" value="true" />
+    <option name="tagTreeHighlightingLevelCount" value="10" />
+  </component>
+</application>

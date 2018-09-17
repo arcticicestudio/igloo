@@ -1,0 +1,222 @@
+[
+  {
+    "clean": [
+      "~/Library/Preferences/IntelliJIdea2018.2",
+      "~/.IntelliJIdea2018.2"
+    ]
+  },
+  {
+    "link": {
+      "~/Library/Preferences/IntelliJIdea2018.2/codestyles/arctic-codestyle.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "codestyles/arctic-codestyle.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/codestyles/arctic-codestyle.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "codestyles/arctic-codestyle.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/inspection/arctic-inspections.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "inspection/arctic-inspections.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/inspection/arctic-inspections.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "inspection/arctic-inspections.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/keymaps/arctic-keymap.macos.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "keymaps/arctic-keymap.macos.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/keymaps/arctic-inspections.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "keymaps/arctic-keymap.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/code.style.schemes.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/code.style.schemes.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/code.style.schemes.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/code.style.schemes.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/colors.scheme.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/colors.scheme.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/colors.scheme.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/colors.scheme.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/customization.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/customization.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/customization.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/customization.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/editor.codeinsight.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/editor.codeinsight.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/editor.codeinsight.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/editor.codeinsight.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/editor.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/editor.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/editor.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/editor.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/ide.general.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/ide.general.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/ide.general.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/ide.general.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/keymap.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/keymap.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/keymap.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/keymap.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/laf.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/laf.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/laf.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/laf.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/options.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/options.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/options.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/options.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/project.default.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/project.default.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/project.default.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/project.default.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/options/ui.lnf.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "options/ui.lnf.xml"
+        }
+      },
+      "~/.IntelliJIdea2018.2/options/ui.lnf.xml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "options/ui.lnf.xml"
+        }
+      },
+      "~/Library/Preferences/IntelliJIdea2018.2/disabled_plugins.txt": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "disabled_plugins.txt"
+        }
+      },
+      "~/.IntelliJIdea2018.2/disabled_plugins.txt": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "disabled_plugins.txt"
+        }
+      }
+    }
+  }
+]

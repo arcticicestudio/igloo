@@ -1,0 +1,143 @@
+<!--
+Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+Project:    igloo
+Repository: https://github.com/arcticicestudio/igloo
+License:    MIT
+-->
+<profile version="1.0">
+  <option name="myName" value="arctic-inspections" />
+  <inspection_tool class="ArrayEquality" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="BashFloatArithmetic" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+  <inspection_tool class="BashSimpleArrayUse" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+  <inspection_tool class="BashUnregisterGlobalVariableInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+  <inspection_tool class="CheckEmptyScriptTag" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="ClassHasNoToStringMethod" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+    <option name="excludeClassNames" value="" />
+    <option name="excludeException" value="true" />
+    <option name="excludeDeprecated" value="true" />
+    <option name="excludeEnum" value="false" />
+    <option name="excludeAbstract" value="false" />
+    <option name="excludeTestCode" value="false" />
+    <option name="excludeInnerClasses" value="false" />
+  </inspection_tool>
+  <inspection_tool class="CollectionContainsUrl" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="DynamicRegexReplaceableByCompiledPattern" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="EqualsHashCodeCalledOnUrl" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="HtmlTagCanBeJavadocTag" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="myValues">
+      <value>
+        <list size="4">
+          <item index="0" class="java.lang.String" itemvalue="layout:decorator" />
+          <item index="1" class="java.lang.String" itemvalue="layout:fragment" />
+          <item index="2" class="java.lang.String" itemvalue="th:fragment" />
+          <item index="3" class="java.lang.String" itemvalue="class" />
+        </list>
+      </value>
+    </option>
+    <option name="myCustomValuesEnabled" value="true" />
+  </inspection_tool>
+  <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="myValues">
+      <value>
+        <list size="8">
+          <item index="0" class="java.lang.String" itemvalue="nobr" />
+          <item index="1" class="java.lang.String" itemvalue="noembed" />
+          <item index="2" class="java.lang.String" itemvalue="comment" />
+          <item index="3" class="java.lang.String" itemvalue="noscript" />
+          <item index="4" class="java.lang.String" itemvalue="embed" />
+          <item index="5" class="java.lang.String" itemvalue="script" />
+          <item index="6" class="java.lang.String" itemvalue="th:block" />
+          <item index="7" class="java.lang.String" itemvalue="style" />
+        </list>
+      </value>
+    </option>
+    <option name="myCustomValuesEnabled" value="true" />
+  </inspection_tool>
+  <inspection_tool class="IOResource" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="ignoredTypesString" value="java.io.ByteArrayOutputStream,java.io.ByteArrayInputStream,java.io.StringBufferInputStream,java.io.CharArrayWriter,java.io.CharArrayReader,java.io.StringWriter,java.io.StringReader" />
+    <option name="insideTryAllowed" value="false" />
+  </inspection_tool>
+  <inspection_tool class="IgnoreUnusedEntry" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+  <inspection_tool class="InconsistentLineSeparators" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="JDBCResource" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="insideTryAllowed" value="false" />
+  </inspection_tool>
+  <inspection_tool class="JNDIResource" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="insideTryAllowed" value="false" />
+  </inspection_tool>
+  <inspection_tool class="JavaDoc" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="TOP_LEVEL_CLASS_OPTIONS">
+      <value>
+        <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+        <option name="REQUIRED_TAGS" value="" />
+      </value>
+    </option>
+    <option name="INNER_CLASS_OPTIONS">
+      <value>
+        <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+        <option name="REQUIRED_TAGS" value="" />
+      </value>
+    </option>
+    <option name="METHOD_OPTIONS">
+      <value>
+        <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+        <option name="REQUIRED_TAGS" value="@return@param@throws or @exception" />
+      </value>
+    </option>
+    <option name="FIELD_OPTIONS">
+      <value>
+        <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+        <option name="REQUIRED_TAGS" value="" />
+      </value>
+    </option>
+    <option name="IGNORE_DEPRECATED" value="false" />
+    <option name="IGNORE_JAVADOC_PERIOD" value="true" />
+    <option name="IGNORE_DUPLICATED_THROWS" value="false" />
+    <option name="IGNORE_POINT_TO_ITSELF" value="false" />
+    <option name="myAdditionalJavadocTags" value="{inheritDoc}" />
+  </inspection_tool>
+  <inspection_tool class="JavaLangImport" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="MissingDeprecatedAnnotation" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="MissingPackageInfo" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="OnDemandImport" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PackageDotHtmlMayBePackageInfo" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PackageInfoWithoutPackage" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="ProblematicWhitespace" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="PublicStaticArrayField" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="RedundantMethodOverride" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="SamePackageImport" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="SetReplaceableByEnumSet" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="SocketResource" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="insideTryAllowed" value="false" />
+  </inspection_tool>
+  <inspection_tool class="StringEqualsEmptyString" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="StringReplaceableByStringBuffer" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="onlyWarnOnLoop" value="true" />
+  </inspection_tool>
+  <inspection_tool class="TodoComment" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="UnnecessaryInheritDoc" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="UnnecessaryJavaDocLink" enabled="true" level="WARNING" enabled_by_default="true">
+    <option name="ignoreInlineLinkToSuper" value="false" />
+  </inspection_tool>
+  <inspection_tool class="UnusedImport" enabled="true" level="WARNING" enabled_by_default="true" />
+  <inspection_tool class="WeakerAccess" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+    <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="true" />
+    <option name="SUGGEST_PACKAGE_LOCAL_FOR_TOP_CLASSES" value="true" />
+    <option name="SUGGEST_PRIVATE_FOR_INNERS" value="false" />
+  </inspection_tool>
+  <inspection_tool class="unused" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+    <option name="LOCAL_VARIABLE" value="true" />
+    <option name="FIELD" value="true" />
+    <option name="METHOD" value="true" />
+    <option name="CLASS" value="true" />
+    <option name="PARAMETER" value="true" />
+    <option name="REPORT_PARAMETER_FOR_PUBLIC_METHODS" value="true" />
+    <option name="ADD_MAINS_TO_ENTRIES" value="true" />
+    <option name="ADD_APPLET_TO_ENTRIES" value="true" />
+    <option name="ADD_SERVLET_TO_ENTRIES" value="true" />
+    <option name="ADD_NONJAVA_TO_ENTRIES" value="true" />
+  </inspection_tool>
+</profile>
