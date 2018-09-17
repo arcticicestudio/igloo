@@ -10,5 +10,5 @@ init-author-email=development@arcticicestudio
 init-author-url=http://arcticicestudio.com
 init-version=0.0.0
 init-license=MIT
-package-lock=false
+package-lock=true
 save-exact=true
