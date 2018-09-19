@@ -10,14 +10,14 @@
       "~/.taskrc": {
         "force": true,
         "hosts": {
-          "archbook": "taskrc",
+          "iceowl": "taskrc",
           "igloo": "taskrc"
         }
       },
       "~/.taskopenrc": {
         "force": true,
         "hosts": {
-          "archbook": "taskopenrc",
+          "iceowl": "taskopenrc",
           "igloo": "taskopenrc"
         }
       },
@@ -25,7 +25,7 @@
         "create": true,
         "force": true,
         "hosts": {
-          "archbook": "nord.theme",
+          "iceowl": "nord.theme",
           "igloo": "nord.theme"
         }
       },

@@ -17,7 +17,7 @@ dconf dump /net/launchpad/plank/ > plank.dconf
 
 # Autostart
 
-The [xdg snowblock][gh-sb-xdg] provides host specific [autostart][gh-sb-xdg-autostart] configurations for the [igloo][gh-sb-xdg-autostart-igloo] and [archbook][gh-sb-xdg-autostart-archbook] Plank launcher profiles.
+The [xdg snowblock][gh-sb-xdg] provides host specific [autostart][gh-sb-xdg-autostart] configurations for the [igloo][gh-sb-xdg-autostart-igloo] Plank launcher profile(s).
 
 # References
 
@@ -27,6 +27,5 @@ The [xdg snowblock][gh-sb-xdg] provides host specific [autostart][gh-sb-xdg-auto
 [dconf]: https://wiki.gnome.org/Projects/dconf
 [gh-sb-xdg]: https://github.com/arcticicestudio/igloo/tree/develop/snowblocks/xdg
 [gh-sb-xdg-autostart]: https://github.com/arcticicestudio/igloo/tree/develop/snowblocks/xdg/autostart
-[gh-sb-xdg-autostart-archbook]: https://github.com/arcticicestudio/igloo/blob/develop/snowblocks/xdg/autostart/plank.desktop.archbook
 [gh-sb-xdg-autostart-igloo]: https://github.com/arcticicestudio/igloo/blob/develop/snowblocks/xdg/autostart/plank.desktop.igloo
 [plank-gh]: https://github.com/ricotz/plank

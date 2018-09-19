@@ -7,8 +7,7 @@
       "~/.makepkg.conf": null,
       "~/.pacman.conf": {
         "hosts": {
-          "igloo": "pacman.conf.igloo",
-          "archbook": "pacman.conf.archbook"
+          "igloo": "pacman.conf.igloo"
         }
       }
     }

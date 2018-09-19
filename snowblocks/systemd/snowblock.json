@@ -7,7 +7,6 @@
       "~/.config/systemd/user/igloosync-dropbox.service": {
         "create": true,
         "hosts": {
-          "archbook": "units/user/igloosync-dropbox.service",
           "igloo": "units/user/igloosync-dropbox.service"
         }
       },

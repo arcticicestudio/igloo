@@ -23,10 +23,10 @@ The changes will be applied after the `systemd-logind` daemon has been restarted
 
 ### custom suspend service
 
-Install the [`igloo-mbp-lid-suspend.service.archbook`][gh-unit-suspend] suspend/resume service file, a single hook that does all the work for different phases (sleep/resume) and for different targets (suspend/hibernate/hybrid-sleep).
+Install the [`igloo-mbp-lid-suspend.service`][gh-unit-suspend] suspend/resume service file, a single hook that does all the work for different phases (sleep/resume) and for different targets (suspend/hibernate/hybrid-sleep).
 
 ```sh
-sudo cp snowflakes/systemd/units/system/igloo-mbp-lid-suspend.service.archbook /lib/systemd/system/igloo-mbp-lid-suspend.service
+sudo cp snowflakes/systemd/units/system/igloo-mbp-lid-suspend.service /lib/systemd/system/igloo-mbp-lid-suspend.service
 sudo systemctl daemon-reload
 sudo systemctl enable igloo-mbp-lid-suspend.service
 ```
@@ -38,10 +38,10 @@ sudo systemctl enable igloo-mbp-lid-suspend.service
 * either `pre` or `post`: Depending on whether the machine is going to *sleep* or *waking* up
 * `suspend`, `hibernate` or `hybrid-sleep`: Depending on which is being invoked
 
-Install the [`igloo-mbp-lid-suspend.service.sh.archbook`][gh-hook-system-sleep] *system-sleep* hook:
+Install the [`igloo-mbp-lid-suspend.service.sh`][gh-hook-system-sleep] *system-sleep* hook:
 
 ```sh
-sudo cp snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.service.sh.archbook /lib/systemd/system-sleep/igloo-mbp-lid-suspend.service.sh
+sudo cp snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.service.sh /lib/systemd/system-sleep/igloo-mbp-lid-suspend.service.sh
 sudo systemctl daemon-reload
 ```
 
@@ -65,8 +65,8 @@ References:
 [archw-pw-mng-inst-wakeup]: https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Instantaneous_wakeups_from_suspend
 [archw-suspend-service]: https://wiki.archlinux.org/index.php/Power_management#Combined_Suspend.2Fresume_service_file
 [archw-system-sleep-hook]: https://wiki.archlinux.org/index.php/Power_management#Hooks_in_.2Fusr.2Flib.2Fsystemd.2Fsystem-sleep
-[gh-hook-system-sleep]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.sh.archbook
+[gh-hook-system-sleep]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.sh
 [gh-lk-fix-commit]: https://github.com/torvalds/linux/commit/13cfc732160f7bc7e596128ce34cda361c556966
-[gh-unit-suspend]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/systemd/units/system/igloo-mbp-lid-suspend.service.archbook
+[gh-unit-suspend]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/systemd/units/system/igloo-mbp-lid-suspend.service
 [man-systemd.sleep]: https://www.freedesktop.org/software/systemd/man/sleep.conf.d.html
 [man-systemd.special]: https://www.freedesktop.org/software/systemd/man/systemd.special.html

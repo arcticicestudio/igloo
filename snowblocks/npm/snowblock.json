@@ -6,7 +6,7 @@
     "link": {
       "~/.npmrc": {
         "hosts": {
-          "archbook": "npmrc",
+          "iceowl": "npmrc",
           "igloo": "npmrc"
         }
       }
