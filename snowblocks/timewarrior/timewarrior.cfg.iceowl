@@ -1,5 +1,5 @@
-# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <code@svengreb.de>
 
 # Project:    igloo
 # Repository: https://github.com/arcticicestudio/igloo
@@ -11,7 +11,7 @@
 #+----+
 #+ UI +
 #+----+
-import /home/sgreb/.timewarrior/nord.theme
+import /Users/sgreb/.timewarrior/nord.theme
 color = true
 
 #+---------+

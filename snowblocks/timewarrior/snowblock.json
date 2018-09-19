@@ -1,9 +1,6 @@
 [
   {
-    "clean": [
-      "~",
-      "~/.timewarrior"
-    ]
+    "clean": ["~/.timewarrior"]
   },
   {
     "link": {
@@ -11,15 +8,14 @@
         "create": true,
         "force": true,
         "hosts": {
+          "iceowl": "timewarrior.cfg.iceowl",
           "igloo": "timewarrior.cfg.igloo"
         }
       },
       "~/.timewarrior/nord.theme": {
         "create": true,
         "force": true,
-        "hosts": {
-          "igloo": "nord.theme"
-        }
+        "path": "nord.theme"
       }
     }
   }
