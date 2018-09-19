@@ -127,9 +127,16 @@ __snowblock_bash::load_core_modules aliases functions prompt shelloptions
 # + Third-Party Scripts +
 # +---------------------+
 # Git prompt bash support.
+# Linux
 __snowblock_bash::load_third_party_scripts /usr/share/git/completion/git-prompt.sh
+# macOS
+__snowblock_bash::load_third_party_scripts /usr/local/opt/git/etc/bash_completion.d/git-prompt.sh
+
 # Programmable bash completion features.
+# Linux
 __snowblock_bash::load_third_party_scripts /usr/share/bash-completion/bash_completion
+# macOS
+__snowblock_bash::load_third_party_scripts /usr/local/opt/bash-completion@2/share/bash-completion/bash_completion
 
 __snowblock_bash::setup_history
 __snowblock_bash::register_binaries
