@@ -67,6 +67,7 @@ brew "hub"
 brew "icu4c"
 brew "ifuse"
 brew "imagemagick", args: ["with-fftw", "with-fontconfig", "with-hdri", "with-libheif", "with-libqr", "with-librsvg", "with-libwmf", "with-little-cms", "with-little-cms2", "with-opencl", "with-openexr", "with-openjpeg", "with-openmp", "with-perl", "with-webp", "with-x11"]
+brew "imageoptim-cli"
 brew "iproute2mac"
 brew "jo"
 brew "jq"
@@ -167,6 +168,7 @@ cask "gimp"
 cask "google-chrome"
 cask "hwsensors"
 cask "iina"
+cask "imageoptim"
 cask "insomnia"
 cask "intellij-idea"
 cask "iterm2"
@@ -190,6 +192,7 @@ cask "virtualbox-extension-pack"
 cask "webstorm"
 cask "xquartz"
 
-mas "Xcode", id: 497799835
-mas "Magnet", id: 441258766
 mas "Gapplin", id: 768053424
+mas "Gifski", id: 1351639930
+mas "Magnet", id: 441258766
+mas "Xcode", id: 497799835
