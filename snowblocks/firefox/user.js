@@ -201,7 +201,7 @@ user_pref("browser.startup.homepage", "about:home");
 user_pref("browser.startup.page", 3);
 
 /* Render tabs in the title bar. */
-user_pref("browser.tabs.drawInTitlebar", false);
+user_pref("browser.tabs.drawInTitlebar", true);
 
 /*
  * Always open bookmark tabs in the background.
