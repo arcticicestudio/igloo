@@ -13,6 +13,11 @@
       analytics: false
       beautifyEntireFileOnSave: false
   "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: false
+      formatOnType: false
+    "atom-ide-datatip":
+      datatipDebounceDelay: 2000
     hyperclick:
       linuxTriggerKeys: "shiftKey,ctrlKey"
   "atom-material-ui":
@@ -73,6 +78,7 @@
       "markdown-preview"
       "symbols-view"
       "github"
+      "linter"
     ]
     excludeVcsIgnoredPaths: true
     fileEncoding: "utf8"
