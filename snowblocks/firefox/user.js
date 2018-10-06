@@ -330,6 +330,9 @@ user_pref("font.default.x-western", "sans-serif");
 user_pref("font.name.monospace.x-western", "Source Code Pro");
 user_pref("font.size.fixed.x-western", 16);
 
+/* Disable the fullscreen warning popup. */
+user_pref("full-screen-api.warning.timeout", 0);
+
 /*
  * Enable autoscrolling.
  * Available within the UI under:
