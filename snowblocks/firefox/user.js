@@ -45,6 +45,9 @@ user_pref("accessibility.force_disabled", 1);
  */
 user_pref("app.shield.optoutstudies.enabled", false);
 
+/* Disable third-party API requests on new tab page for snippets widget. */
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
+
 /*
  * Always keep the bookmark menu open until it gets dismissed.
  * By default, the bookmarks menu will close when opening a bookmark in a new tab.
@@ -97,6 +100,7 @@ user_pref("browser.link.open_newwindow", 3);
 
 /*
  * Use a minimal new tab page by disabling all additional elements except the seach bar.
+ * Also improves the privacy by removing requests against third-party APIs.
  * Available within the UI under:
  *   Home > Firefox Home Content
  */
@@ -110,6 +114,7 @@ user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket",
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
 user_pref("browser.newtabpage.activity-stream.showSearch", true);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 1);
+user_pref("browser.newtabpage.directory.source", "");
 user_pref("browser.newtabpage.enabled", true);
 
 /*
