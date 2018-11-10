@@ -28,7 +28,7 @@ user_pref("accessibility.browsewithcaret", false);
  * Available within the UI under:
  *   Preferences > General > Browsing
  */
-user_pref("accessibility.typeaheadfind", true);
+user_pref("accessibility.typeaheadfind", false);
 
 /*
  * Improve the performance and unblock e10s by disabling unused accessability features.
