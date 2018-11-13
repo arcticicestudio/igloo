@@ -210,6 +210,12 @@ user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("browser.tabs.loadBookmarksInBackground", true);
 
 /*
+ * Always open bookmarks in a new tab in the background.
+ * By default, opening a bookmark from the sidebar uses the current active tab.
+ */
+user_pref("browser.tabs.loadBookmarksInTabs", true);
+
+/*
  * When you open a link in a new tab, switch to it immediately
  * Available within the UI under:
  *   Preferences > General > Tabs
