@@ -15,5 +15,8 @@
   # Simple and fast project management workflow.
   "ctrl-alt-p": "project-folder:add"
 
-"atom-text-editor":
+".platform-linux atom-text-editor":
   "ctrl-alt-c": "color-picker:open"
+  # Easy mappings to move the caret to the end/start of the current line instead of using "end" and "pos" keys.
+  "cmd-alt-right": "editor:move-to-end-of-screen-line"
+  "cmd-alt-left": "editor:move-to-first-character-of-line"
