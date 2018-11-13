@@ -18,6 +18,8 @@
       formatOnType: false
     "atom-ide-datatip":
       datatipDebounceDelay: 2000
+    "atom-ide-debugger":
+      showDebuggerOnBpSet: false
     hyperclick:
       linuxTriggerKeys: "shiftKey,ctrlKey"
   "atom-material-ui":
