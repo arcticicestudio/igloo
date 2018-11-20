@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+set -euo pipefail
+
+# Open a file, path or URL with the associated application based on the MIME type.
+# When running on Linux it'll use the XDG compliant tool "xdg-open" and will pass through the parameters to the builtin
+# application "open" when run on macOS.
+#
+# @param $1 the path or URL to open
+# @see https://www.gnu.org/software/bash/manual/bashref.html#Shell-Parameter-Expansion
+# @see https://en.wikipedia.org/wiki/Uname
+open() {
+  local os_type
+    # Check if the default environment variable is set and not empty (remove spaces using shell parameter expansion), otherwise try to detect via GNU core util "uname".
+  if [[ ! -z "${OSTYPE// }" ]]; then
+    os_type="$OSTYPE"
+  elif ! command -v uname > /dev/null 2>&1; then
+    os_type=$(uname -s)
+  fi
+
+  if [[ -z "$os_type" ]]; then
+    echo "Unable to detect OS type!"
+    exit 1
+  fi
+  
+  if [[ "$os_type" == "linux-gnu" || "$os_type" == "Linux" ]]; then
+    if command -v xdg-open > /dev/null 2>&1; then
+      xdg-open $@
+    else
+      echo "'xdg-open' is not installed or available in PATH!"
+      exit 1
+    fi
+  elif [[ "$OSTYPE" == "darwin"* || "$OSTYPE" == "Darwin"* ]]; then
+    if command -v open > /dev/null 2>&1; then
+      open $@
+    else
+      echo "'open' is not installed or available in PATH!"
+      exit 1
+    fi
+  else
+    echo "OS type not supported!"
+    exit 1
+  fi
+}
+
+open $@
