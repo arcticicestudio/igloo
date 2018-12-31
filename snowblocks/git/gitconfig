@@ -13,6 +13,9 @@
 [includeIf "gitdir:~/yggdrasil/"]
   path = ~/.gitconfig-auth
 
+[includeIf "gitdir:~/yggdrasil/svengreb/"]
+  path = ~/.gitconfig-auth-svengreb
+
 [includeIf "gitdir:~/code/bitbucket/"]
   path = ~/.gitconfig-auth
 
