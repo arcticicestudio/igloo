@@ -62,6 +62,7 @@ brew "git-sizer"
 brew "gnu-sed", args: ["with-default-names"]
 brew "gnu-tar", args: ["with-default-names"]
 brew "gnu-witch", args: ["with-default-names"]
+brew "hostess"
 brew "htop", args: ["with-ncurses"]
 brew "httpie"
 brew "hub"
