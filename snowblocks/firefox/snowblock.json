@@ -35,7 +35,7 @@
           "iceowl": "profiles.iceowl.ini"
         }
       },
-      "~/Library/Application Support/Firefox/igloo/user.js": {
+      "~/Library/Application Support/Firefox/Profiles/igloo/user.js": {
         "create": true,
         "force": true,
         "hosts": {
