@@ -7,6 +7,7 @@
 
 tap "2ion/mpv-bash-completion"
 tap "arcticicestudio/bitfroest-brew", "~/yggdrasil/bitfroest-brew.git"
+tap "cjbassi/gotop"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -51,6 +52,7 @@ brew "gifsicle"
 brew "git"
 brew "glances"
 brew "gocryptfs"
+brew "gotop"
 brew "gpatch"
 brew "gpg"
 brew "gradle", args: ["with-all"]
