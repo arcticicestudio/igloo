@@ -112,6 +112,7 @@ brew "sassc"
 brew "shellcheck"
 brew "shellharden"
 brew "sqlite"
+brew "streamlink"
 brew "task", args: ["without-gnutls"]
 brew "terminal-notifier"
 brew "timewarrior"
