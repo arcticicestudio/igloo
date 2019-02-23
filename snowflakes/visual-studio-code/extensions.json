@@ -1,0 +1,21 @@
+[
+  "arcticicestudio.nord-visual-studio-code",
+  "be5invis.vscode-custom-css",
+  "christian-kohler.path-intellisense",
+  "dbaeumer.vscode-eslint",
+  "drewbourne.vscode-remark-lint",
+  "EditorConfig.EditorConfig",
+  "Equinusocio.vsc-material-theme-icons",
+  "esbenp.prettier-vscode",
+  "fabiospampinato.vscode-projects-plus",
+  "file-icons.file-icons",
+  "jpoissonnier.vscode-styled-components",
+  "mgmcdermott.vscode-language-babel",
+  "ms-vscode.Go",
+  "PeterJausovec.vscode-docker",
+  "pnp.polacode",
+  "Prisma.vscode-graphql",
+  "redhat.vscode-yaml",
+  "rust-lang.rust",
+  "shd101wyy.markdown-preview-enhanced"
+]

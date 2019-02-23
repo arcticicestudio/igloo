@@ -42,6 +42,7 @@ context.igloo=project:igloo
 context.job=+job
 context.lumio=project:lumio
 context.nord=project:nord
+context.nord-docs=project:nord-docs
 context.northem=project:northem
 context.private=+private
 context.snowsaw=project:snowsaw

@@ -1,0 +1,111 @@
+/*
+ * Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    igloo
+ * Repository: https://github.com/arcticicestudio/igloo
+ * License:    MIT
+ */
+{
+  /*+--- Core ---+*/
+  "editor.accessibilitySupport": "off",
+  "editor.codeLens": true,
+  "editor.colorDecorators": true,
+  "editor.cursorBlinking": "phase",
+  "editor.emptySelectionClipboard": false,
+  "editor.fontFamily": "'Source Code Pro', 'Hack'",
+  "editor.fontSize": 20,
+  "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
+  "editor.lightbulb.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderIndentGuides": false,
+  "editor.renderWhitespace": "all",
+  "editor.smoothScrolling": true,
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": "onlySnippets",
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 120,
+  "explorer.autoReveal": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.autoUpdate": false,
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.associations": {
+    "*.jsx": "javascriptreact",
+    "*.js": "javascript"
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "problems.autoReveal": false,
+  "search.collapseResults": "alwaysCollapse",
+  "search.useGlobalIgnoreFiles": true,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "tilix",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 20,
+  "update.channel": "none",
+  "update.enableWindowsBackgroundUpdates": false,
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "hidden",
+  "window.titleBarStyle": "native",
+  "window.zoomLevel": 0.5,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Nord",
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.enableExperiments": false,
+  "workbench.iconTheme": "eq-material-theme-icons-ocean",
+  "workbench.quickOpen.preserveInput": true,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.feedback.visible": false,
+
+  /*+--- Extensions ---+*/
+  "eslint.autoFixOnSave": true,
+  "docker.showExplorer": false,
+  "go.autocompleteUnimportedPackages": true,
+  "go.coverageDecorator": {
+    "type": "highlight",
+    "coveredHighlightColor": "rgba(163, 190, 140, 0.45)",
+    "uncoveredHighlightColor": "rgba(191, 97, 106, 0.25)",
+    "coveredGutterStyle": "verticalgreen",
+    "uncoveredGutterStyle": "verticalred"
+  },
+  "html.format.indentInnerHtml": true,
+  "javascript.preferences.quoteStyle": "double",
+  "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+  "markdown.preview.breaks": true,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, Inter, sans-serif",
+  "markdown.preview.fontSize": 20,
+  "path-intellisense.showHiddenFiles": true,
+  "prettier.printWidth": 120,
+  "projects.checkPaths": true,
+  "projects.configPath": "~/.vscode/projects.json",
+  "projects.indentationSpaces": 2,
+  "projects.refreshDepth": 4,
+  "projects.refreshRoots": ["~/code/incubator", "~/code/job", "~/code/lab", "~/code/snippetbox", "~/yggdrasil"],
+  "projects.showDescriptions": false,
+  "projects.statusbarEnabled": false,
+  "rust-client.disableRustup": true,
+  "typescript.preferences.quoteStyle": "double",
+  "vscode_custom_css.imports": [
+    "file:///home/arcticicestudio/.vscode/css/remove-action-button.css",
+    "file:///Users/sgreb/.vscode/css/remove-action-button.css"
+  ],
+  "vscode_custom_css.statusbar": false,
+  "yaml.format.enable": true,
+
+  /*+--- Language Scopes ---+*/
+  "[markdown]": {
+    "editor.quickSuggestions": false
+  }
+}

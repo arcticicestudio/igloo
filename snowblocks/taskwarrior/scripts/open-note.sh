@@ -50,7 +50,7 @@ open_notes() {
   declare -a local task_uuids
   local task_uuid
   local note_path="~/.task/notes"
-  local editor_cmd="atom -a"
+  local editor_cmd="code --add"
   local note_file_ext="md"
 
   for task_id in $@; do

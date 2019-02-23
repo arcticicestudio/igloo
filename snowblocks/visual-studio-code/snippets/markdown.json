@@ -1,0 +1,39 @@
+/*
+ * Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    igloo
+ * Repository: https://github.com/arcticicestudio/igloo
+ * License:    MIT
+ */
+
+/*+--- Images ---+*/
+{
+  "image": {
+    "prefix": "img",
+    "body": ["![${1:alt}](${0:url})"],
+    "description": "An inline image with alternative text"
+  },
+  "image-reference": {
+    "prefix": "imgr",
+    "body": ["![${1:alt}][${0:url}]"],
+    "description": "An image reference with alternative text"
+  },
+
+  /*+--- Links ---+*/
+  "link": {
+    "prefix": "l",
+    "body": ["[${1:text}](${0:url})"],
+    "description": "An inline link"
+  },
+  "link-reference": {
+    "prefix": "lr",
+    "body": ["[${1:text}][${0:id}]"],
+    "description": "A link targeting a reference link"
+  },
+  "reference-link": {
+    "prefix": "ref",
+    "body": ["[${1:id}]: ${0:url}"],
+    "description": "A reference link"
+  }
+}
