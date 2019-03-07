@@ -408,6 +408,22 @@
   #   <ABBREVIATED_SHA1> <COMMIT_MESSAGE> <REFS>
   l = log --graph --pretty=format:'%C(cyan)%h %C(white)%s %C(cyan bold)%d'
 
+  # Lists all commits the current branch is ahead of the tracked origin branch that have not been pushed yet.
+  #
+  # Depends on:
+  #   alias.l
+  # Usage:
+  #   git lahead
+  lahead = ! git l @{u}..HEAD
+
+  # Lists all ahead commits of the tracked origin branch that are not merged into the current branch yet.
+  #
+  # Depends on:
+  #   alias.l
+  # Usage:
+  #   git lbehind
+  lbehind = ! git l HEAD..@{u}
+
   # Prints a prettified flat commit log without topic commits from merges.
   #
   # Depends on:
@@ -442,14 +458,6 @@
   # Usage:
   #   git lch <TAG>|<SHA1>
   lch = ! git l $1..HEAD
-
-  # Lists all new commits after the fetch including stats.
-  #
-  # Depends on:
-  #   alias.l
-  # Usage:
-  #   git lnew
-  lnew = ! git l ORIG_HEAD.. --stat
 
 # +----------------------+
 # + Information - Status +
