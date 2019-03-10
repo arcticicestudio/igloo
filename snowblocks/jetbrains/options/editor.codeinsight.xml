@@ -9,6 +9,7 @@ License:    MIT
 <application>
   <component name="CodeInsightSettings">
     <option name="AUTO_POPUP_PARAMETER_INFO" value="false" />
+    <option name="PARAMETER_INFO_DELAY" value="200" />
     <option name="SURROUND_SELECTION_ON_QUOTE_TYPED" value="true" />
   </component>
   <component name="DaemonCodeAnalyzerSettings" profile="arctic-inspections">

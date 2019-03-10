@@ -7,7 +7,11 @@ Repository: https://github.com/arcticicestudio/igloo
 License:    MIT
 -->
 <application>
-  <component name="KeymapManager">
-    <active_keymap name="arctic-keymap" />
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$USER_HOME$/.go" />
+      </list>
+    </option>
   </component>
 </application>

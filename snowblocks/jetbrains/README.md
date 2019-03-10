@@ -6,18 +6,19 @@ This snowblock provides all important configurations for all used [JetBrains][] 
 
 The includes configurations are mostly platform and IDE/product independent.
 
-* The [code style][intellij-doc-code-style] XMl configuration file stored in the `codestyles` folder.
-* The [inspections][intellij-doc-inspections] XMl configuration file stored in the `inspections` folder.
-* The [keymaps][intellij-doc-keymap] XMl configuration files for Linux and macOS stored in the `keymaps` folder. See the [keymap reference][intellij-doc-keymap-ref] for a visual presentation of the default mappings.
-* The [preference][intellij-doc-prefs] XMl configuration files are stored in the `options` folder:
-  * `code.style.schemes.xml` - settings of the currently used code style.
-  * `colors.scheme.xml` - settings of the currently used color scheme.
-  * `customization.xml` and `project.default.xml` - settings of the customized [menus and toolbars][intellij-doc-menu-toolbar].
-  * `editor.codeinsight.xml` - settings of various automatic code transformations.
-  * `keymap.xml` - the currently used keymap.
-  * `laf.xml` and `ui.lnf.yml` - settings of the currently used UI theme.
-  * all other customized preferences defined in the various categories: `editor.xml`, `ide.general.xml` and `options.xml`
-* The list of [disabled plugins][intellij-doc-plugins] stored in the `disabled_plugins.txt` file.
+- The [code style][intellij-doc-code-style] XMl configuration file stored in the `codestyles` folder.
+- The [inspections][intellij-doc-inspections] XMl configuration file stored in the `inspections` folder.
+- The [keymaps][intellij-doc-keymap] XMl configuration files for Linux and macOS stored in the `keymaps` folder. See the [keymap reference][intellij-doc-keymap-ref] for a visual presentation of the default mappings.
+- The [preference][intellij-doc-prefs] XMl configuration files are stored in the `options` folder:
+  - `code.style.schemes.xml` - settings of the currently used code style.
+  - `colors.scheme.xml` - settings of the currently used color scheme.
+  - `customization.xml` and `project.default.xml` - settings of the customized [menus and toolbars][intellij-doc-menu-toolbar].
+  - `editor.codeinsight.xml` - settings of various automatic code transformations.
+  - `keymap.xml` - the currently used keymap.
+  - `laf.xml` and `ui.lnf.yml` - settings of the currently used UI theme.
+  - all other customized preferences defined in the various categories: `editor.xml`, `ide.general.xml` and `options.xml`
+- The list of [disabled plugins][intellij-doc-plugins] stored in the `disabled_plugins.txt` file.
+- The `disabled_update.txt` state file to [disable auto updates][intellij-doc-autoupdate].
 
 ## Configurations
 
@@ -50,15 +51,16 @@ The base target folder name for the `clean` and `link` plugins must be updated a
 [gh-igloo-sb-jb-editor.xml]: https://github.com/arcticicestudio/igloo/blob/develop/snowblocks/jetbrains/ooptions/editor.xml
 [goland]: https://www.jetbrains.com/go
 [google-font-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
-[intellij]: https://www.jetbrains.com/idea
+[intellij-doc-autoupdate]: https://www.jetbrains.com/help/idea/keep-product-up-to-date.html#manage_updates_manually
 [intellij-doc-code-style]: https://www.jetbrains.com/help/idea/settings-code-style.html
 [intellij-doc-inspections]: https://www.jetbrains.com/help/idea/inspections-settings.html
-[intellij-doc-keymap]: https://www.jetbrains.com/help/idea/settings-keymap.html
 [intellij-doc-keymap-ref]: https://www.jetbrains.com/help/idea/keymap-reference.html
+[intellij-doc-keymap]: https://www.jetbrains.com/help/idea/settings-keymap.html
 [intellij-doc-menu-toolbar]: https://www.jetbrains.com/help/idea/menus-and-toolbars.html
 [intellij-doc-plugins]: https://www.jetbrains.com/help/idea/managing-plugins.html
 [intellij-doc-prefs]: https://www.jetbrains.com/help/idea/settings-preferences-dialog.html
 [intellij-doc-settings-paths]: https://intellij-support.jetbrains.com/hc/en-us/articles/206544519-Directories-used-by-the-IDE-to-store-settings-caches-plugins-and-logs
+[intellij]: https://www.jetbrains.com/idea
 [jetbrains]: https://www.jetbrains.com/products.html
 [pycharm]: https://www.jetbrains.com/pycharm
 [webstorm]: https://www.jetbrains.com/webstorm

@@ -13,6 +13,7 @@ License:    MIT
     <option name="SECONDARY_FONT_FAMILY" value="Hack" />
   </component>
   <component name="EditorSettings">
+    <option name="USE_SOFT_WRAPS" value="" />
     <option name="IS_ENSURE_NEWLINE_AT_EOF" value="true" />
     <option name="SHOW_BREADCRUMBS" value="false" />
     <!-- Allow scrolling past end (virtual space) -->
@@ -24,9 +25,15 @@ License:    MIT
     <option name="START_STRING_INTERPOLATION_ON_TYPING" value="true" />
   </component>
   <component name="TodoConfiguration">
-    <pattern pattern="\btodo\b.*" />
-    <pattern pattern="\bfixme\b.*" />
-    <pattern icon="important" pattern="\bnote\b.*" />
+    <pattern icon="question" case-sensitive="true" pattern="\bCHECK\b.*" />
+    <pattern case-sensitive="true" pattern="\bREFACTOR\b.*" />
+    <pattern case-sensitive="true" pattern="\bTODO\b.*" />
+    <pattern case-sensitive="true" pattern="\bDOCUMENT\b.*" />
+    <pattern icon="important" case-sensitive="true" pattern="\bFIX\b.*" />
+    <pattern icon="important" case-sensitive="true" pattern="\bCRITFIX\b.*" />
+    <pattern case-sensitive="true" pattern="\bPROCESSING\b.*" />
+    <pattern case-sensitive="true" pattern="\bARCHIVE\b.*" />
+    <pattern case-sensitive="true" pattern="\bPLANNING\b.*" />
   </component>
   <component name="XmlEditorOptions">
     <option name="showCssInlineColorPreview" value="true" />

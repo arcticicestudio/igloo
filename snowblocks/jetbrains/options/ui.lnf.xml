@@ -9,17 +9,20 @@ License:    MIT
 <application>
   <component name="UISettings">
     <option name="CLOSE_TAB_BUTTON_ON_THE_RIGHT" value="false" />
+    <option name="DISABLE_MNEMONICS" value="true" />
     <option name="DISABLE_MNEMONICS_IN_CONTROLS" value="true" />
-    <option name="EDITOR_TAB_LIMIT" value="15" />
+    <option name="EDITOR_TAB_LIMIT" value="30" />
+    <option name="FONT_FACE" value="Noto Sans" />
     <option name="FONT_SCALE" value="1.0" />
     <option name="FONT_SIZE" value="14" />
     <option name="HIDE_KNOWN_EXTENSION_IN_TABS" value="true" />
-    <!-- Hide tools stripes in bottom-left hover icon by default -->
     <option name="HIDE_TOOL_STRIPES" value="true" />
+    <option name="MARK_MODIFIED_TABS_WITH_ASTERISK" value="true" />
     <option name="OVERRIDE_NONIDEA_LAF_FONTS" value="true" />
+    <option name="PRESENTATION_MODE_FONT_SIZE" value="26" />
     <option name="SHOW_MAIN_TOOLBAR" value="true" />
     <option name="SHOW_NAVIGATION_BAR" value="false" />
-    <option name="USE_SMALL_LABELS_ON_TABS" value="false" />
+    <option name="smoothScrolling" value="true" />
     <option name="WIDESCREEN_SUPPORT" value="true" />
   </component>
 </application>

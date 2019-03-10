@@ -10,6 +10,9 @@ License:    MIT
   <action id="ActivateDatabaseToolWindow">
     <keyboard-shortcut first-keystroke="alt 8" />
   </action>
+  <action id="ActivateVersionControlToolWindow">
+    <keyboard-shortcut first-keystroke="alt 0" />
+  </action>
   <action id="ChangesView.AddUnversioned" />
   <action id="ChangesView.Revert" />
   <action id="CheckinProject" />
@@ -18,23 +21,29 @@ License:    MIT
   </action>
   <action id="CloseEditor">
     <keyboard-shortcut first-keystroke="ctrl alt w" />
-    <keyboard-shortcut first-keystroke="meta w" />
   </action>
   <action id="CodeGlance.toggle" />
   <action id="CopyElement" />
+  <action id="DashLauncherAction">
+    <keyboard-shortcut first-keystroke="shift ctrl q" />
+  </action>
   <action id="EditSource">
     <keyboard-shortcut first-keystroke="f6" />
   </action>
+  <action id="EditorCloneCaretAbove">
+    <keyboard-shortcut first-keystroke="shift alt up" />
+  </action>
+  <action id="EditorCloneCaretBelow">
+    <keyboard-shortcut first-keystroke="shift alt down" />
+  </action>
+  <action id="EditorLookupDown" />
+  <action id="EditorLookupUp" />
   <action id="EditorMatchBrace">
     <keyboard-shortcut first-keystroke="ctrl m" />
   </action>
+  <action id="EditorScrollDown" />
   <action id="EditorScrollToCenter" />
-  <action id="GotoDeclaration">
-    <keyboard-shortcut first-keystroke="ctrl b" />
-    <mouse-shortcut keystroke="control button1" />
-    <mouse-shortcut keystroke="button2" />
-    <mouse-shortcut keystroke="meta button1" />
-  </action>
+  <action id="EditorScrollUp" />
   <action id="GotoFile">
     <keyboard-shortcut first-keystroke="shift ctrl g" />
   </action>
@@ -42,12 +51,20 @@ License:    MIT
     <keyboard-shortcut first-keystroke="ctrl alt d" />
   </action>
   <action id="Hotswap">
-    <keyboard-shortcut first-keystroke="shift alt r" />
+    <keyboard-shortcut first-keystroke="shift ctrl f3" />
   </action>
-  <action id="Macro.hotswap">
+  <action id="Macro.Spring HotReload">
     <keyboard-shortcut first-keystroke="shift ctrl s" />
   </action>
+  <action id="MethodOverloadSwitchDown" />
+  <action id="MethodOverloadSwitchUp" />
   <action id="Move" />
+  <action id="MoveLineDown">
+    <keyboard-shortcut first-keystroke="ctrl down" />
+  </action>
+  <action id="MoveLineUp">
+    <keyboard-shortcut first-keystroke="ctrl up" />
+  </action>
   <action id="NextDiff" />
   <action id="NextProjectWindow" />
   <action id="PreviousDiff" />
@@ -114,4 +131,7 @@ License:    MIT
   <action id="VcsHistory.ShowAllAffected" />
   <action id="VcsShowNextChangeMarker" />
   <action id="VcsShowPrevChangeMarker" />
+  <action id="WebServicesPlugin.CreateRESTClient">
+    <keyboard-shortcut first-keystroke="alt 9" />
+  </action>
 </keymap>

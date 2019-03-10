@@ -9,8 +9,24 @@ License:    MIT
 <application>
   <component name="ProjectManager">
     <defaultProject>
+      <component name="CheckStyle-IDEA">
+        <option name="configuration">
+          <map>
+            <entry key="checkstyle-version" value="8.16" />
+            <entry key="copy-libs" value="false" />
+            <entry key="location-0" value="BUNDLED:(bundled):Sun Checks" />
+            <entry key="location-1" value="BUNDLED:(bundled):Google Checks" />
+            <entry key="scan-before-checkin" value="false" />
+            <entry key="scanscope" value="JavaOnly" />
+            <entry key="suppress-errors" value="false" />
+          </map>
+        </option>
+      </component>
+      <component name="Encoding" addBOMForNewFiles="with NO BOM" />
       <component name="PropertiesComponent">
-        <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+        <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+        <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+        <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
       </component>
     </defaultProject>
   </component>
