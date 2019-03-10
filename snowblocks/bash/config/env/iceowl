@@ -33,6 +33,7 @@ BREW_MANPATH_COREUTILS="/usr/local/opt/coreutils/libexec/gnuman"
 BREW_INFOPATH_BASE="/usr/local/share/info"
 
 PATH_BIN="~/.bin"
+PATH_BIN_GO_WORKSPACE="$HOME/.go/bin"
 PATH_GIT_CONTRIB_DIFF_HIGHLIGHT="/usr/local/opt/git/share/git-core/contrib/diff-highlight"
 
 PATHS=(
@@ -43,6 +44,7 @@ PATHS=(
   "$BREW_PATH_PYTHON"
   "$BREW_PATH_SQLITE"
   "$PATH_BIN"
+  "$PATH_BIN_GO_WORKSPACE"
   "$PATH_GIT_CONTRIB_DIFF_HIGHLIGHT"
   "$PATH"
 )
