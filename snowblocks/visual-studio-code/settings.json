@@ -33,6 +33,7 @@
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
+    "Brewfile": "ruby",
     "*.jsx": "javascriptreact",
     "*.js": "javascript"
   },
