@@ -76,6 +76,8 @@ brew "imageoptim-cli"
 brew "iproute2mac"
 brew "jo"
 brew "jq"
+brew "kubernetes-cli"
+brew "kubernetes-helm"
 brew "launchctl-completion"
 brew "less", args: ["with-pcre"]
 brew "lsyncd"
