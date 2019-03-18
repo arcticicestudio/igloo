@@ -12,6 +12,14 @@
           "igloo": "css"
         }
       },
+      "~/.vscode/dictionaries": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "dictionaries",
+          "igloo": "dictionaries"
+        }
+      },
       "~/.config/Code/User/snippets": {
         "create": true,
         "force": true,

@@ -49,6 +49,7 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontSize": 20,
   "update.channel": "none",
+  "update.mode": "none",
   "update.enableWindowsBackgroundUpdates": false,
   "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "hidden",
@@ -69,6 +70,91 @@
   "workbench.statusBar.feedback.visible": false,
 
   /*+--- Extensions ---+*/
+  "cSpell.dictionaries": [
+    "apps-en-iceowl",
+    "apps-en-igloo",
+    "code-en-iceowl",
+    "code-en-igloo",
+    "general-en-iceowl",
+    "general-en-igloo",
+    "identities-iceowl",
+    "identities-igloo",
+    "projects-iceowl",
+    "projects-igloo"
+  ],
+  "cSpell.dictionaryDefinitions": [
+    {
+      "name": "apps-en-iceowl",
+      "path": "/Users/sgreb/.vscode/dictionaries/apps-en.txt"
+    },
+    {
+      "name": "apps-en-igloo",
+      "path": "/home/arcticicestudio/.vscode/dictionaries/apps-en.txt"
+    },
+    {
+      "name": "code-en-iceowl",
+      "path": "/Users/sgreb/.vscode/dictionaries/code-en.txt"
+    },
+    {
+      "name": "code-en-igloo",
+      "path": "/home/arcticicestudio/.vscode/dictionaries/code-en.txt"
+    },
+    {
+      "name": "general-en-iceowl",
+      "path": "/Users/sgreb/.vscode/dictionaries/general-en.txt"
+    },
+    {
+      "name": "general-en-igloo",
+      "path": "/home/arcticicestudio/.vscode/dictionaries/general-en.txt"
+    },
+    {
+      "name": "identities-iceowl",
+      "path": "/Users/sgreb/.vscode/dictionaries/identities.txt"
+    },
+    {
+      "name": "identities-igloo",
+      "path": "/home/arcticicestudio/.vscode/dictionaries/identities.txt"
+    },
+    {
+      "name": "projects-iceowl",
+      "path": "/Users/sgreb/.vscode/dictionaries/projects.txt"
+    },
+    {
+      "name": "projects-igloo",
+      "path": "/home/arcticicestudio/.vscode/dictionaries/projects.txt"
+    }
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "go",
+    "handlebars",
+    "html",
+    "jade",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "latex",
+    "less",
+    "markdown",
+    "mdx",
+    "php",
+    "plaintext",
+    "pub",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yml"
+  ],
+  "cSpell.language": "en,en-US",
+  "cSpell.showStatus": false,
   "eslint.autoFixOnSave": true,
   "docker.showExplorer": false,
   "go.autocompleteUnimportedPackages": true,
@@ -82,6 +168,7 @@
   "html.format.indentInnerHtml": true,
   "javascript.preferences.quoteStyle": "double",
   "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+  "markdown-preview-enhanced.scrollSync": true,
   "markdown.preview.breaks": true,
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, Inter, sans-serif",
