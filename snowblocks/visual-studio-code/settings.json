@@ -33,9 +33,10 @@
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
-    "Brewfile": "ruby",
+    "*.js": "javascript",
     "*.jsx": "javascriptreact",
-    "*.js": "javascript"
+    "Brewfile": "ruby",
+    "vimrc": "viml"
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
