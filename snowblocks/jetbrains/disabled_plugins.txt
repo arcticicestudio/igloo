@@ -1,7 +1,6 @@
 AngularJS
 AntSupport
 CFML Support
-CVS
 CloudBees
 CloudFoundry
 DevKit
@@ -20,7 +19,6 @@ Refactor-X
 Resin
 StrutsAssistant
 Subversion
-TFS
 TestNG-J
 WebSphere
 Weblogic
