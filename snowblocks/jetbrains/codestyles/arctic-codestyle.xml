@@ -22,6 +22,11 @@ License:    MIT
   <option name="JD_ALIGN_EXCEPTION_COMMENTS" value="false" />
   <GoCodeStyleSettings>
     <option name="ADD_LEADING_SPACE_TO_COMMENTS" value="true" />
+    <option name="IMPORT_SORTING" value="GOIMPORTS" />
+    <option name="MOVE_ALL_IMPORTS_IN_ONE_DECLARATION" value="true" />
+    <option name="MOVE_ALL_STDLIB_IMPORTS_IN_ONE_GROUP" value="true" />
+    <option name="GROUP_STDLIB_IMPORTS" value="true" />
+    <option name="GROUP_CURRENT_PROJECT_IMPORTS" value="true" />
   </GoCodeStyleSettings>
   <GroovyCodeStyleSettings>
     <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="999" />
