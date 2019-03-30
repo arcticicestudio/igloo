@@ -13,8 +13,12 @@ License:    MIT
     <option name="SURROUND_SELECTION_ON_QUOTE_TYPED" value="true" />
   </component>
   <component name="DaemonCodeAnalyzerSettings" profile="arctic-inspections">
-    <!-- Reparse code after specified milliseconds when a marked error has been edited -->
     <option name="AUTOREPARSE_DELAY" value="150" />
+  </component>
+  <component name="Go">
+    <option name="detectGoPackageFromClipboard" value="false" />
+    <option name="indentOnEnterInRawStrings" value="true" />
+    <option name="showDocumentationInParameterPopup" value="true" />
   </component>
   <component name="JSCodeFoldingSettings">
     <option name="collapseOneLineFunctions" value="true" />
