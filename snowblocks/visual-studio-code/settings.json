@@ -57,7 +57,7 @@
   "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "hidden",
   "window.titleBarStyle": "native",
-  "window.zoomLevel": 0.5,
+  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Nord",
   "workbench.commandPalette.preserveInput": true,
