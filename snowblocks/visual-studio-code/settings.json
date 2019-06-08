@@ -12,6 +12,7 @@
   "editor.codeLens": true,
   "editor.colorDecorators": true,
   "editor.cursorBlinking": "phase",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "'Source Code Pro', 'Hack'",
   "editor.fontSize": 20,
