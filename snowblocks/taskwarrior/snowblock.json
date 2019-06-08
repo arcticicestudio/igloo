@@ -1,9 +1,6 @@
 [
   {
-    "clean": [
-      "~",
-      "~/.task"
-    ]
+    "clean": ["~", "~/.task"]
   },
   {
     "link": {
@@ -29,20 +26,15 @@
           "igloo": "nord.theme"
         }
       },
-      "~/.task/hooks/on-modify-track-timewarrior.py": {
+      "~/.task/hooks": {
         "create": true,
         "force": true,
-        "path": "hooks/on-modify-track-timewarrior.py"
+        "path": "hooks"
       },
-      "~/.task/hooks/on-modify-track-total-active-time.py": {
+      "~/.task/scripts": {
         "create": true,
         "force": true,
-        "path": "hooks/on-modify-track-total-active-time.py"
-      },
-      "~/.task/scripts/open-note.sh": {
-        "create": true,
-        "force": true,
-        "path": "scripts/open-note.sh"
+        "path": "scripts"
       }
     }
   }
