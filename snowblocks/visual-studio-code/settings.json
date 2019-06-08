@@ -64,7 +64,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.enableExperiments": false,
-  "workbench.iconTheme": "eq-material-theme-icons-ocean",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.quickOpen.preserveInput": true,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.sideBar.location": "left",
@@ -193,12 +193,26 @@
   "vscode_custom_css.statusbar": false,
   "yaml.format.enable": true,
 
+  /*+--- Color Theme ---+*/
+  "editor.tokenColorCustomizations": {
+    "[Nord]": {
+      "textMateRules": []
+    }
+  },
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.folders.color": "#616e88",
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-icon-theme.saturation": 0.6,
+  "workbench.colorCustomizations": {
+    "[Nord]": {}
+  },
+
   /*+--- Language Scopes ---+*/
   "[markdown]": {
     "editor.quickSuggestions": false,
     "editor.wordWrap": "on"
   },
-
   "[mdx]": {
     "editor.quickSuggestions": false,
     "editor.wordWrap": "on"
