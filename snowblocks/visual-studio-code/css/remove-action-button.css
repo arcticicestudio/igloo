@@ -27,3 +27,6 @@
 .panel-header.expanded .actions {
   display: none !important;
 }
+.sidebar .title-actions .actions-container {
+  display: none !important;
+}
