@@ -503,3 +503,10 @@
   # Usage:
   #   git ft <SHA1>
   ft = ! git describe --tags --contains $1
+
+# NOTE: The following "include" statements/blocks must be applied last in order to override their initial
+# blocks above, otherwise the configurations won't be overridden when placed at the top of this file!
+
+# Apply workaround to fix exit code handling for IntelliJ as merge tool when running on macOS.
+[include]
+  path = ~/.gitconfig-macos-mergetool-exit-code

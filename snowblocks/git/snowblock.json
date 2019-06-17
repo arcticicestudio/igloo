@@ -30,7 +30,12 @@
           "igloo": "gitconfig-auth-job.igloocrypt"
         }
       },
-      "~/.gitignore": null
+      "~/.gitignore": null,
+      "~/.gitconfig-macos-mergetool-exit-code": {
+        "hosts": {
+          "iceowl": "includes/gitconfig-macos-mergetool-exit-code"
+        }
+      }
     }
   }
 ]
