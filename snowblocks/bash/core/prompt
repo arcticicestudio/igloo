@@ -68,6 +68,7 @@ GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_HIDE_IF_PWD_IGNORED=false
 
 compile_prompt () {
+  local EXIT=$?
   local CONNECTBAR_DOWN=$'\u250C\u2500\u257C'
   local CONNECTBAR_UP=$'\u2514\u2500\u257C'
   local GITSPLITBAR=$'\u2570\u257C'
@@ -98,7 +99,7 @@ compile_prompt () {
   # > Exit Status
   # Format:
   #   (bracket open)(last exit status)(bracket close)(splitbar)
-  PS1+="[${c_blue}$?${c_gray}]"
+  PS1+="[${c_blue}${EXIT}${c_gray}]"
   PS1+="$SPLITBAR"
 
   # > Time
