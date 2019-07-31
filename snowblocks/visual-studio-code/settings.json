@@ -8,6 +8,7 @@
  */
 {
   /*+--- Core ---+*/
+  "breadcrumbs.enabled": false,
   "editor.accessibilitySupport": "off",
   "editor.codeLens": true,
   "editor.colorDecorators": true,
