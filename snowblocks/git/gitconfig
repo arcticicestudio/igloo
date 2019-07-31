@@ -277,11 +277,24 @@
   # +---------------------+
   # + Interaction - Merge +
   # +---------------------+
-  # Merges the specified branch in non-fast-forward mode.
+  # Merges the specified branch in non-fast-forward mode with output about stats.
   #
+  # See:
+  #   https://help.github.com/en/articles/about-pull-request-merges
   # Usage:
   #   git m <BRANCH>
-  m = merge --no-ff
+  m = merge --no-ff --stat
+
+  # +---------------------+
+  # + Interaction - Merge +
+  # +---------------------+
+  # "Squashes" and merges the specified branch in fast-forward (default) mode with output about stats.
+  #
+  # See:
+  #   https://help.github.com/en/articles/about-pull-request-merges#squash-and-merge-your-pull-request-commits
+  # Usage:
+  #   git ms <BRANCH>
+  ms = merge --ff --squash --stat
 
   # +--------------------+
   # + Interaction - Pull +
