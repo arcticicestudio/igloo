@@ -72,6 +72,7 @@
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.statusBar.feedback.visible": false,
+  "workbench.tree.renderIndentGuides": "none",
 
   /*+--- Extensions ---+*/
   "cSpell.dictionaries": [
