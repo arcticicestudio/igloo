@@ -20,7 +20,7 @@
           "iceowl": "codestyles/arctic-codestyle.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/codestyles/arctic-codestyle.xml": {
+      "~/.IntelliJIdea2019.2/config/codestyles/arctic-codestyle.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -34,7 +34,7 @@
           "iceowl": "inspection/arctic-inspections.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/inspection/arctic-inspections.xml": {
+      "~/.IntelliJIdea2019.2/config/inspection/arctic-inspections.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -48,7 +48,7 @@
           "iceowl": "keymaps/arctic-keymap.macos.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/keymaps/arctic-inspections.xml": {
+      "~/.IntelliJIdea2019.2/config/keymaps/arctic-inspections.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -62,7 +62,7 @@
           "iceowl": "options/code.style.schemes.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/code.style.schemes.xml": {
+      "~/.IntelliJIdea2019.2/config/options/code.style.schemes.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -76,7 +76,7 @@
           "iceowl": "options/colors.scheme.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/colors.scheme.xml": {
+      "~/.IntelliJIdea2019.2/config/options/colors.scheme.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -90,7 +90,7 @@
           "iceowl": "options/customization.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/customization.xml": {
+      "~/.IntelliJIdea2019.2/config/options/customization.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -104,7 +104,7 @@
           "iceowl": "options/editor.codeinsight.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/editor.codeinsight.xml": {
+      "~/.IntelliJIdea2019.2/config/options/editor.codeinsight.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -118,7 +118,7 @@
           "iceowl": "options/editor.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/editor.xml": {
+      "~/.IntelliJIdea2019.2/config/options/editor.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -132,7 +132,7 @@
           "iceowl": "options/goLibraries.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/goLibraries.xml": {
+      "~/.IntelliJIdea2019.2/config/options/goLibraries.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -146,7 +146,7 @@
           "iceowl": "options/ide.general.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/ide.general.xml": {
+      "~/.IntelliJIdea2019.2/config/options/ide.general.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -160,7 +160,7 @@
           "iceowl": "options/keymap.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/keymap.xml": {
+      "~/.IntelliJIdea2019.2/config/options/keymap.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -174,7 +174,7 @@
           "iceowl": "options/laf.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/laf.xml": {
+      "~/.IntelliJIdea2019.2/config/options/laf.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -188,7 +188,7 @@
           "iceowl": "options/options.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/options.xml": {
+      "~/.IntelliJIdea2019.2/config/options/options.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -202,7 +202,7 @@
           "iceowl": "options/project.default.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/project.default.xml": {
+      "~/.IntelliJIdea2019.2/config/options/project.default.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -216,7 +216,7 @@
           "iceowl": "options/ui.lnf.xml"
         }
       },
-      "~/.IntelliJIdea2019.2/options/ui.lnf.xml": {
+      "~/.IntelliJIdea2019.2/config/options/ui.lnf.xml": {
         "create": true,
         "force": true,
         "hosts": {
@@ -230,7 +230,7 @@
           "iceowl": "disabled_plugins.txt"
         }
       },
-      "~/.IntelliJIdea2019.2/disabled_plugins.txt": {
+      "~/.IntelliJIdea2019.2/config/disabled_plugins.txt": {
         "create": true,
         "force": true,
         "hosts": {
@@ -244,7 +244,7 @@
           "iceowl": "disabled_update.txt"
         }
       },
-      "~/.IntelliJIdea2019.2/disabled_update.txt": {
+      "~/.IntelliJIdea2019.2/config/disabled_update.txt": {
         "create": true,
         "force": true,
         "hosts": {
