@@ -42,6 +42,7 @@
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "npm.enableScriptExplorer": false,
   "problems.autoReveal": false,
   "search.collapseResults": "alwaysCollapse",
   "search.useGlobalIgnoreFiles": true,
