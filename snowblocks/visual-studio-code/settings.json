@@ -22,7 +22,7 @@
   "editor.lightbulb.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderIndentGuides": false,
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "selection",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
   "editor.tabCompletion": "onlySnippets",
