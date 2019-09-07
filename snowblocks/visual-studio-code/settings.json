@@ -29,6 +29,7 @@
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 120,
   "explorer.autoReveal": false,
+  "explorer.incrementalNaming": "smart",
   "explorer.openEditors.visible": 0,
   "extensions.autoUpdate": false,
   "extensions.closeExtensionDetailsOnViewChange": true,
