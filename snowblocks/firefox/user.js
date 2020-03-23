@@ -200,6 +200,9 @@ user_pref("browser.startup.homepage", "about:home");
  */
 user_pref("browser.startup.page", 3);
 
+/* Disable automatic sending of reports on crash. */
+user_pref("browser.tabs.crashReporting.sendReport", false);
+
 /* Render tabs in the title bar. */
 user_pref("browser.tabs.drawInTitlebar", true);
 
