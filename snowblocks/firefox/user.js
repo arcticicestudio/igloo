@@ -57,6 +57,9 @@ user_pref("browser.bookmarks.openInTabClosesMenu", false);
 /* Disable restoration of the default bookmarks for new sessions. */
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
 
+
+user_pref("browser.contentblocking.category", false);
+
 /*
  * Disallow Firefox to send backlogged crash reports.
  * Available within the UI under:
