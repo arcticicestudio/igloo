@@ -520,6 +520,16 @@ user_pref("signon.generation.enabled", false);
  */
 user_pref("signon.rememberSignons", true);
 
+/*
+ * As of Firefox version 69, the ` userChrome.css` and `userContent.css` files are not loaded by default anymore
+ * in order to improve the performance during browser startup.
+ * To achieve the previous behavior, this option enables the loading of such "legacy" files again.
+ * References:
+ *   - https://www.userchrome.org/firefox-changes-userchrome-css.html
+ *   - https://www.mozilla.org/en-US/firefox/69.0/releasenotes/#note-788117
+ */
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
 /* Set the available values for zoom levels in percent. */
 user_pref("toolkit.zoomManager.zoomValues", ".1,.2,.3,.4,.5,.6,.7,.8,.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3,3.1,3.2,3.3,3.4,3.5,3.6,3.7,3.8,3.9,4,4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,5");
 
