@@ -481,6 +481,11 @@ user_pref("security.default_personal_cert", "Ask Every Time");
  */
 user_pref("security.OCSP.enabled", 1);
 
+
+/* Allows to toggle "soft tokens" to develop and test WebAuthn. */
+user_pref("security.webauth.webauthn_enable_softtoken", false);
+user_pref("security.webauth.webauthn_enable_usbtoken", false);
+
 /*
  * Always ask to save logins and passwords for websites.
  * Available within the UI under:
