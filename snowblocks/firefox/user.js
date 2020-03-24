@@ -302,6 +302,7 @@ user_pref("devtools.editor.detectindentation", true);
 user_pref("devtools.editor.expandtab", true);
 user_pref("devtools.editor.keymap", "default");
 user_pref("devtools.editor.tabsize", 2);
+user_pref("devtools.gridinspector.showGridLineNumbers", true);
 user_pref("devtools.responsive.reloadConditions.touchSimulation", false);
 user_pref("devtools.responsive.reloadConditions.userAgent", false);
 user_pref("devtools.responsive.showUserAgentInput", false);
