@@ -274,9 +274,15 @@ user_pref("datareporting.healthreport.uploadEnabled", false);
  * References:
  *   - https://developer.mozilla.org/son/docs/Tools
  */
+user_pref("devtools.aboutdebugging.collapsibilities.processes", true);
+user_pref("devtools.aboutdebugging.collapsibilities.tab", true);
+user_pref("devtools.aboutdebugging.local-tab-debugging", true);
+user_pref("devtools.aboutdebugging.showHiddenAddons", true);
 user_pref("devtools.cache.disabled", false);
 user_pref("devtools.command-button-frames.enabled", true);
 user_pref("devtools.command-button-measure.enabled", true);
+user_pref("devtools.command-button-noautohide.enabled", true);
+user_pref("devtools.command-button-paintflashing.enabled", true);
 user_pref("devtools.command-button-pick.enabled", true);
 user_pref("devtools.command-button-responsive.enabled", true);
 user_pref("devtools.command-button-rulers.enabled", true);
