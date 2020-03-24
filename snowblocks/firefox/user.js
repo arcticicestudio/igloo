@@ -505,6 +505,15 @@ user_pref("security.webauth.webauthn_enable_softtoken", false);
 user_pref("security.webauth.webauthn_enable_usbtoken", false);
 
 /*
+ * Disable the password generation suggestion for password fields.
+ * References:
+ *   - https://wiki.mozilla.org/Toolkit:Password_Manager/Password_Generation
+ *   - https://www.mozilla.org/firefox/lockwise
+ *   - https://blog.mozilla.org/firefox/password-security-features
+ */
+user_pref("signon.generation.enabled", false);
+
+/*
  * Always ask to save logins and passwords for websites.
  * Available within the UI under:
  *   Preferences > Privacy & Security > Forms & Passwords
