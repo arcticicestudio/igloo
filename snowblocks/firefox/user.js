@@ -328,6 +328,9 @@ user_pref("dom.disable_beforeunload", true);
  */
 user_pref("dom.disable_open_during_load", true);
 
+/* Set the active theme extension. */
+user_pref("extensions.activeThemeID", "firefox-compact-light@mozilla.org");
+
 /* Configure activation status of the Firefox builtin extensions. */
 user_pref("extensions.pocket.enabled", false);
 user_pref("extensions.screenshots.disabled", false);
