@@ -282,7 +282,8 @@ user_pref("devtools.command-button-responsive.enabled", true);
 user_pref("devtools.command-button-rulers.enabled", true);
 user_pref("devtools.command-button-screenshot.enabled", true);
 user_pref("devtools.debugger.ignore-caught-exceptions", true);
-user_pref("devtools.debugger.pause-on-exceptions", true);
+/* Prevent automatic execution pause when opening DevTools on any site that contains erroneous scripts. */
+user_pref("devtools.debugger.pause-on-exceptions", false);
 user_pref("devtools.defaultColorUnit", "authored");
 user_pref("devtools.editor.autoclosebrackets", true);
 user_pref("devtools.editor.detectindentation", true);
