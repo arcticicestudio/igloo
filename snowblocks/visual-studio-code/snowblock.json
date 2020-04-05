@@ -1,0 +1,97 @@
+[
+  {
+    "clean": ["~/Library/Application Support/Code/User", "~/.config/Code/User", "~/.vscode"]
+  },
+  {
+    "link": {
+      "~/.vscode/css": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "css",
+          "igloo": "css"
+        }
+      },
+      "~/.vscode/dictionaries": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "dictionaries",
+          "igloo": "dictionaries"
+        }
+      },
+      "~/.config/Code/User/snippets": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "snippets"
+        }
+      },
+      "~/Library/Application Support/Code/User/snippets": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "snippets"
+        }
+      },
+      "~/.vscode/workspaces": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "workspaces",
+          "igloo": "workspaces"
+        }
+      },
+      "~/.config/Code/User/keybindings.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "keybindings.json"
+        }
+      },
+      "~/Library/Application Support/Code/User/keybindings.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "keybindings.json"
+        }
+      },
+      "~/.config/Code/User/locale.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "locale.json"
+        }
+      },
+      "~/Library/Application Support/Code/User/locale.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "locale.json"
+        }
+      },
+      "~/.vscode/projects.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "projects.json",
+          "igloo": "projects.json"
+        }
+      },
+      "~/.config/Code/User/settings.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "settings.json"
+        }
+      },
+      "~/Library/Application Support/Code/User/settings.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "settings.json"
+        }
+      }
+    }
+  }
+]

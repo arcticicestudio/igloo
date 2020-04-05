@@ -1,0 +1,100 @@
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://taskwarrior.org/docs/themes.html
+#   task-color(5)
+#   taskrc(5)
+
+rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
+
+#+---------+
+#+ General +
+#+---------+
+color.label=
+color.label.sort=
+color.alternate=
+color.header=bold blue
+color.footnote=cyan
+color.warning=bold black on yellow
+color.error=bold white on red
+color.debug=magenta
+
+#+-------------+
+#+ Task States +
+#+-------------+
+color.completed=green
+color.deleted=red
+color.active=bold black on cyan
+color.recurring=
+color.scheduled=white on black
+color.until=white on bright black
+color.blocked=yellow on black
+color.blocking=bold yellow on black
+
+#+----------+
+#+ Projects +
+#+----------+
+color.project.none=
+
+#+----------+
+#+ Priority +
+#+----------+
+color.uda.priority.H=bold cyan
+color.uda.priority.M=bold blue
+color.uda.priority.L=bold black
+
+#+------+
+#+ Tags +
+#+------+
+color.tag.next=
+color.tag.none=
+color.tagged=
+
+#+-----+
+#+ Due +
+#+-----+
+color.due=blue
+color.due.today=cyan on black
+color.overdue=bold red
+
+#+---------+
+#+ Reports +
+#+---------+
+color.burndown.done=bold black on cyan
+color.burndown.pending=black on bright cyan
+color.burndown.started=black on blue
+
+color.history.add=bold black on blue
+color.history.delete=bright white on bold black
+color.history.done=bold black on cyan
+
+color.summary.background=bright white on black
+color.summary.bar=black on cyan
+
+#+----------+
+#+ Calendar +
+#+----------+
+color.calendar.due=bold black on blue
+color.calendar.due.today=bold black on cyan
+color.calendar.holiday=bold blue on white
+color.calendar.overdue=white on red
+color.calendar.today=bold black on cyan
+color.calendar.weekend=bright white on bright black
+color.calendar.weeknumber=bold black
+
+#+-----------------+
+#+ Synchronization +
+#+-----------------+
+color.sync.added=green
+color.sync.changed=yellow
+color.sync.rejected=red
+
+#+------+
+#+ Undo +
+#+------+
+color.undo.after=green
+color.undo.before=red

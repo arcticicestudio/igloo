@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# This environment comnfiguration contains some hardcoded paths (/usr/local/opt) because "$(brew --prefix <package>)"
+# increases the start up time to more than 10 seconds!
+# It seems like for each execution of the Ruby code a new instance is spawned that also spawns more shell processes.
+# This might be caused by some macOS changes of essential logics from "El Capitan" to "High Sierra". Using the Homebrew
+# command in subshell calls works fine on "El Capitan" and older versions.
+
+export LANG=en_US.UTF-8
+export LC_MESSAGES=POSIX
+
+export EDITOR="$(command -v vim)"
+export MANPAGER="$(command -v less)"
+export VISUAL="$(command -v vim)"
+
+BREW_PATH_COREUTILS="/usr/local/opt/coreutils/libexec/gnubin"
+BREW_PATH_E2FSPROGS="/usr/local/opt/e2fsprogs/bin:/usr/local/opt/e2fsprogs/sbin"
+BREW_PATH_ICU4C="/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin"
+BREW_PATH_OPENVPN="/usr/local/opt/openvpn/sbin"
+BREW_PATH_PYTHON="/usr/local/opt/python/libexec/bin"
+BREW_PATH_SQLITE="/usr/local/opt/sqlite/bin"
+
+BREW_MANPATH_BASE="/usr/local/share/man"
+BREW_MANPATH_COREUTILS="/usr/local/opt/coreutils/libexec/gnuman"
+
+BREW_INFOPATH_BASE="/usr/local/share/info"
+
+PATH_BIN="~/.bin"
+PATH_BIN_GO_WORKSPACE="$HOME/.go/bin"
+PATH_GIT_CONTRIB_DIFF_HIGHLIGHT="/usr/local/opt/git/share/git-core/contrib/diff-highlight"
+
+PATHS=(
+  "$BREW_PATH_COREUTILS"
+  "$BREW_PATH_E2FSPROGS"
+  "$BREW_PATH_ICU4C"
+  "$BREW_PATH_OPENVPN"
+  "$BREW_PATH_PYTHON"
+  "$BREW_PATH_SQLITE"
+  "$PATH_BIN"
+  "$PATH_BIN_GO_WORKSPACE"
+  "$PATH_GIT_CONTRIB_DIFF_HIGHLIGHT"
+  "$PATH"
+)
+
+MANPATHS=(
+  "$BREW_MANPATH_BASE"
+  "$BREW_MANPATH_COREUTILS"
+  "$MANPATH"
+)
+
+INFOPATHS=(
+  "$BREW_INFOPATH_BASE"
+  "$INFOPATH"
+)
+
+export PATH=$(IFS=$":"; echo "${PATHS[*]}")
+export MANPATH=$(IFS=$":"; echo "${MANPATHS[*]}")
+export INFOPATH=$(IFS=$":"; echo "${INFOPATHS[*]}")

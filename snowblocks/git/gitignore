@@ -1,0 +1,56 @@
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://git-scm.com/docs/gitignore
+#   http://www.java.com/en/download/help/error_hotspot.xml
+
+# +--------------------+
+# + Runtime Extensions +
+# +--------------------+
+*.bak
+*.log
+
+# +--- Git ---+
+*.orig
+
+# +------------------+
+# + Operating System +
+# +------------------+
+# +--- Unix ---+
+*~
+*.pid
+
+# +--- macOS ---+
+._*
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.Trash-*
+.Trashes
+
+# +-----------+
+# + Languages +
+# +-----------+
+# +--- Java / JavaFX ---+
+*.bss
+*.class
+*.jar
+hs_err_pid*
+
+# +--- NodeJS ---+
+.npm
+node_modules
+npm-debug.log*
+*.log
+
+# +--- Python ---+
+__pycache__
+*.pyc
+
+# +--- Sass ---+
+.sass-cache/
+*.css.map

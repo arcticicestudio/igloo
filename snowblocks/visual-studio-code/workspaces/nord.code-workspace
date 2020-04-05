@@ -1,0 +1,143 @@
+{
+  "folders": [{
+      "name": "nord",
+      "path": "~/yggdrasil/nord/nord"
+    },
+    {
+      "name": "nord-alacritty",
+      "path": "~/yggdrasil/nord/nord-alacritty"
+    },
+    {
+      "name": "nord-atom-syntax",
+      "path": "~/yggdrasil/nord/nord-atom-syntax"
+    },
+    {
+      "name": "nord-atom-ui",
+      "path": "~/yggdrasil/nord/nord-atom-ui"
+    },
+    {
+      "name": "nord-brackets",
+      "path": "~/yggdrasil/nord/nord-brackets"
+    },
+    {
+      "name": "nord-coda",
+      "path": "~/yggdrasil/nord/nord-coda"
+    },
+    {
+      "name": "nord-conemu",
+      "path": "~/yggdrasil/nord/nord-conemu"
+    },
+    {
+      "name": "nord-dircolors",
+      "path": "~/yggdrasil/nord/nord-dircolors"
+    },
+    {
+      "name": "nord-docs",
+      "path": "~/yggdrasil/nord/nord-docs"
+    },
+    {
+      "name": "nord-eclipse-syntax",
+      "path": "~/yggdrasil/nord/nord-eclipse-syntax"
+    },
+    {
+      "name": "nord-emacs",
+      "path": "~/yggdrasil/nord/nord-emacs"
+    },
+    {
+      "name": "nord-gedit",
+      "path": "~/yggdrasil/nord/nord-gedit"
+    },
+    {
+      "name": "nord-gnome-terminal",
+      "path": "~/yggdrasil/nord/nord-gnome-terminal"
+    },
+    {
+      "name": "nord-guake",
+      "path": "~/yggdrasil/nord/nord-guake"
+    },
+    {
+      "name": "nord-highlightjs",
+      "path": "~/yggdrasil/nord/nord-highlightjs"
+    },
+    {
+      "name": "nord-hyper",
+      "path": "~/yggdrasil/nord/nord-hyper"
+    },
+    {
+      "name": "nord-iterm2",
+      "path": "~/yggdrasil/nord/nord-iterm2"
+    },
+    {
+      "name": "nord-java",
+      "path": "~/yggdrasil/nord/nord-java"
+    },
+    {
+      "name": "nord-jetbrains-editor",
+      "path": "~/yggdrasil/nord/nord-jetbrains-editor"
+    },
+    {
+      "name": "nord-konsole",
+      "path": "~/yggdrasil/nord/nord-konsole"
+    },
+    {
+      "name": "nord-mintty",
+      "path": "~/yggdrasil/nord/nord-mintty"
+    },
+    {
+      "name": "nord-notepadplusplus",
+      "path": "~/yggdrasil/nord/nord-notepadplusplus"
+    },
+    {
+      "name": "nord-putty",
+      "path": "~/yggdrasil/nord/nord-putty"
+    },
+    {
+      "name": "nord-slack",
+      "path": "~/yggdrasil/nord/nord-slack"
+    },
+    {
+      "name": "nord-sublime-text",
+      "path": "~/yggdrasil/nord/nord-sublime-text"
+    },
+    {
+      "name": "nord-terminal-app",
+      "path": "~/yggdrasil/nord/nord-terminal-app"
+    },
+    {
+      "name": "nord-terminator",
+      "path": "~/yggdrasil/nord/nord-terminator"
+    },
+    {
+      "name": "nord-termite",
+      "path": "~/yggdrasil/nord/nord-termite"
+    },
+    {
+      "name": "nord-tilix",
+      "path": "~/yggdrasil/nord/nord-tilix"
+    },
+    {
+      "name": "nord-tmux",
+      "path": "~/yggdrasil/nord/nord-tmux"
+    },
+    {
+      "name": "nord-vim",
+      "path": "~/yggdrasil/nord/nord-vim"
+    },
+    {
+      "name": "nord-visual-studio-code",
+      "path": "~/yggdrasil/nord/nord-visual-studio-code"
+    },
+    {
+      "name": "nord-xcode",
+      "path": "~/yggdrasil/nord/nord-xcode"
+    },
+    {
+      "name": "nord-xfce-terminal",
+      "path": "~/yggdrasil/nord/nord-xfce-terminal"
+    },
+    {
+      "name": "nord-xresources",
+      "path": "~/yggdrasil/nord/nord-xresources"
+    }
+  ]
+}

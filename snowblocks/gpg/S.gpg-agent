@@ -1,0 +1,2 @@
+%Assuan%
+socket=${HOME}/.gnupg-socket-box/S.gpg-agent

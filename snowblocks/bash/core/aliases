@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://www.gnu.org/software/bash/manual/bash.html#Aliases
+#   http://www.iso.org/iso/home/standards/iso8601.htm
+
+# +--------------+
+# + Applications +
+# +--------------+
+# +--- atom ---+
+alias atom-hidpi='atom --force-device-scale-factor=1.5'
+
+# +--- buku ---+
+alias bk='buku'
+
+# +--- iina ---+
+alias iina="iina --mpv-config-dir=~/.config/mpv --mpv-watch-later-directory=~/.config/mpv/watch_later"
+
+# +--- java ---+
+alias jj='java -jar'
+alias sbrd='mvn spring-boot:run -Drun.jvmArguments="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9999"'
+
+# +--- pacman ---+
+alias pacman='pacman --config ~/.pacman.conf'
+
+# +--- taskwarrior ---+
+alias t='task'
+
+# +--- timewarrior ---+
+# Shortcut to show IDs by default.
+#
+# @see https://taskwarrior.org/docs/timewarrior/hints.html
+alias tw='timew :ids'
+
+# Shortcut to show a summary.
+#
+# @depends alias.tw
+# @see https://taskwarrior.org/docs/timewarrior/hints.html
+alias tws='tw summary'
+
+# +--- trash-cli ---+
+# Shortcut to move a file into the trash.
+alias trm='trash'
+
+# +--- wget ---+
+# Disable log file
+alias wget='wget --hsts-file='
+
+# +--- youtube-dl ---+
+alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
+alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'
+
+# +-------+
+# + Basic +
+# +-------+
+# Enable alias expansion for commands run by sudo
+alias sudo='sudo '
+
+# Enable colorized long listing with human-readable size- and ISO-8601 date format.
+alias ls='LC_COLLATE=C ls -lAh --color=auto --time-style="+%Y-%m-%d +%H:%M:%S" --group-directories-first'
+
+# Increase verbosity by default.
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+
+# rsync based copy with process detailed information- and process output.
+alias cpr='rsync --archive --human-readable --progress --stats'
+
+# Enable colorized line numbers by default.
+alias grep='grep --line-number --color=auto'
+
+# Enable unified diff format by default.
+alias diff='diff -u'
+
+# Use ISO-8601 date format by default.
+alias date='date "+%Y-%m-%d %H:%M:%S UTC%z"'
+
+# List in raw format with one entry per line.
+alias lsraw='LC_COLLATE=C \ls -N1 --group-directories-first'
+
+# Shorthand for alias to
+#   * only display ANSI "color" escape sequences in "raw" form. (-R, --RAW-CONTROL-CHARS)
+#   * automatically exit if the entire file can be displayed on the first screen. (-F, --quit-if-one-screen)
+#   * disable sending the termcap (de)initialization strings to the terminal to avoid unnecessary operations like
+#     clearing the screen. (-X, --no-init)
+#   * use two tab stops. (-x2, --tabs=n)
+alias less='less -RFXx2'
+
+# Show mode bits of files and directories in ocal form,
+#
+# %A - Access rights in human readable form
+# %a - Access rights in octal
+# %N - Quoted file name with dereference if symbolic link
+alias lsm='stat -c "%A %a %N"'
+
+# +-------+
+# + Utils +
+# +-------+
+# Alert via notify for long running commands.
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

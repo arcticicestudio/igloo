@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Ultimate Edition
+Exec=intellij-idea-ultimate-edition %u
+Icon=idea
+Terminal=false
+StartupWMClass=jetbrains-idea
+Type=Application

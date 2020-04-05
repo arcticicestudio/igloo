@@ -1,0 +1,41 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.gitattributes": {
+        "hosts": {
+          "iceowl": "gitattributes",
+          "igloo": "gitattributes"
+        }
+      },
+      "~/.git-commit-msg": null,
+      "~/.gitconfig": null,
+      "~/.gitconfig-auth": {
+        "hosts": {
+          "iceowl": "gitconfig-auth.igloocrypt",
+          "igloo": "gitconfig-auth.igloocrypt"
+        }
+      },
+      "~/.gitconfig-auth-svengreb": {
+        "hosts": {
+          "iceowl": "gitconfig-auth-svengreb.igloocrypt",
+          "igloo": "gitconfig-auth-svengreb.igloocrypt"
+        }
+      },
+      "~/.gitconfig-auth-job": {
+        "hosts": {
+          "iceowl": "gitconfig-auth-job.igloocrypt",
+          "igloo": "gitconfig-auth-job.igloocrypt"
+        }
+      },
+      "~/.gitignore": null,
+      "~/.gitconfig-macos-mergetool-exit-code": {
+        "hosts": {
+          "iceowl": "includes/gitconfig-macos-mergetool-exit-code"
+        }
+      }
+    }
+  }
+]

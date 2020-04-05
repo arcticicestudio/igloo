@@ -1,0 +1,207 @@
+/*
+ * Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    igloo
+ * Repository: https://github.com/arcticicestudio/igloo
+ * License:    MIT
+ */
+[
+  /* +--- Editor Workflow ---+ */
+  /* Duplicate lines */
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.copyLinesDownAction"
+  },
+  {
+    "key": "cmd+shift+d",
+    "command": "editor.action.copyLinesDownAction"
+  },
+
+  /* Move lines up and down */
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /* Add multiple cursors. */
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /* Toggle block commments for current selection */
+  {
+    "key": "ctrl+shift+numpad_divide",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+shift+numpad_divide",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /* +--- Extensions ---+ */
+  /* [Markdown Preview Enhanced] */
+  /* Open markdown preview tab */
+  {
+    "key": "ctrl+shift+m",
+    "command": "markdown-preview-enhanced.openPreview",
+    "when": "editorLangId == 'markdown'"
+  },
+
+  /* [Projects+] */
+  /* Open command palette to open project */
+  {
+    "key": "ctrl+shift+alt+p",
+    "command": "projects.open"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "-projects.open"
+  },
+  /* Open command palette to add project folder to current workspace */
+  {
+    "key": "ctrl+alt+p",
+    "command": "projects.addToWorkspace"
+  },
+
+  /* +--- UI ---+ */
+  /* Toggle activity bar visibility */
+  {
+    "key": "ctrl+shift+[Period]",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "cmd+shift+[Period]",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+
+  /* Show "quick open" command palette */
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+
+  /* Show symbols command palette for current file */
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  /* Show symbols command palette for the complete workspace */
+  {
+    "key": "ctrl+shift+q",
+    "command": "workbench.action.showAllSymbols"
+  },
+  /* Show available code actions */
+  {
+    "key": "shift+space",
+    "command": "editor.action.codeAction"
+  },
+  /* Show available parameter hints */
+  {
+    "key": "ctrl+shift+space",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+space",
+    "command": "-editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+
+  /* +--- Defaults ---+ */
+  /* Disable all default keybindings to close the application window! */
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+
+  /* Disable line duplication shortcut in order to use custom keybinding. */
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+]

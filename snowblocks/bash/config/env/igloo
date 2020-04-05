@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+export LANG=en_US.UTF-8
+export LC_MESSAGES=POSIX
+
+export EDITOR="$(command -v vim)"
+export VISUAL="$(command -v vim)"
+
+export STORE_PKGS=$HOME/store/pool/packages
+export STORE_RUN=$HOME/store/run
+export BITFROEST_HOME=$HOME/store/bitfroest
+
+export AUDACITY_PATH=$STORE_RUN/audacity
+export FZ_DATADIR=$STORE_RUN/filezilla
+export GIMP2_DIRECTORY=$STORE_RUN/gimp
+export GRADLE_USER_HOME=$STORE_RUN/gradle
+export INKSCAPE_PROFILE_DIR=$STORE_RUN/inkscape
+export JAVA_HOME=/usr/lib/jvm/default
+export M2_REPO=$STORE_RUN/apache-maven-3/repository
+export PURPLEHOME=$STORE_RUN/pidgin
+
+if [ -e $(dirname $(realpath "${BASH_SOURCE[0]}"))/igloo.local ]; then
+  . $(dirname $(realpath "${BASH_SOURCE[0]}"))/igloo.local
+else
+  unset -v GNUPGHOME
+fi
+
+PATH_INTELLIJ_IDEA_U_HOME=/opt/intellij-idea-u/bin
+PATH_GIT_DIFF_HIGHLIGHT=/usr/share/git/diff-highlight
+PATH_BIN=~/.bin
+PATH_BIN_GOLANG_WORKSPACE="$HOME/.go/bin"
+export PATH="${PATH}:$JAVA_HOME/bin:$PATH_INTELLIJ_IDEA_U_HOME:$PATH_GIT_DIFF_HIGHLIGHT:$PATH_BIN:$PATH_BIN_GOLANG_WORKSPACE"

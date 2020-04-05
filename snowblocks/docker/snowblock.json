@@ -1,0 +1,16 @@
+[
+  {
+    "clean": ["~/.docker"]
+  },
+  {
+    "link": {
+      "~/.docker/config.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "config.iceowl.json"
+        }
+      }
+    }
+  }
+]

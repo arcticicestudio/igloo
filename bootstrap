@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+set -e
+
+SNOWSAW_DIR=".snowsaw"
+SNOWSAW_BIN="bin/snowsaw"
+
+SNOWBLOCKS_BASE_DIR_NAME="snowblocks"
+SNOWBLOCKSDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$SNOWBLOCKS_BASE_DIR_NAME"
+
+"${SNOWSAW_DIR}/${SNOWSAW_BIN}" -s "${SNOWBLOCKSDIR}" "${@}"

@@ -1,0 +1,70 @@
+/*
+ * Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    igloo
+ * Repository: https://github.com/arcticicestudio/igloo
+ * License:    MIT
+ */
+
+{
+  /*+--- Assignments ---+*/
+  "assignment-const-destruct": {
+    "prefix": "constd",
+    "body": "const { ${1:named} } = $0",
+    "description": "Creates and assigns a local variable using props destructing"
+  },
+
+  /*+--- Functions (ES6+) ---+*/
+  "function-arrow": {
+    "prefix": "funca",
+    "body": "${1:exportStatements} const ${2:name} = ${3:async} (${4:parameters}) => {${0:body}}",
+    "description": "Creates a named arrow function in ES6 syntax"
+  },
+  "function-declaration": {
+    "prefix": "func",
+    "body": ["${1:exportStatements} ${2:async} function ${3:name}(${4:parameters}) {\n", "  $0\n", "}"],
+    "description": "Creates a named arrow function in ES6 syntax"
+  },
+
+  /*+--- Imports (ES6+) ---+*/
+  "import": {
+    "prefix": "imp",
+    "body": "import ${1:exported} from \"${0:module}\"",
+    "description": "Imports default module export in ES6 syntax"
+  },
+  "import-named": {
+    "prefix": "impn",
+    "body": "import { ${1:exported} } from \"${0:module}\"",
+    "description": "Imports named module in ES6 syntax"
+  },
+  "require": {
+    "prefix": "req",
+    "body": "const ${$1:name} = require(\"${0:package}\");",
+    "description": "Require default package export"
+  },
+
+  /*+--- Logical Structures ---+*/
+  "forEach": {
+    "prefix": "fore",
+    "body": ["${1:array}.forEach(${2:currentItem} => {\n", "  $0\n", "});"],
+    "description": "Creates a forEach statement in ES6 syntax"
+  },
+
+  /*+--- Logging ---+*/
+  "log": {
+    "prefix": "log",
+    "body": "console.log($0)",
+    "description": "Log to the console"
+  },
+  "log-error": {
+    "prefix": "error",
+    "body": "console.error(\"$0\")",
+    "description": "Log error to the console"
+  },
+  "log-warn": {
+    "prefix": "warn",
+    "body": "console.warn(\"$0\")",
+    "description": "Log warning to the console"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "clean": ["~/Library/LaunchAgents"]
+  },
+  {
+    "link": {
+      "~/Library/LaunchAgents/com.arcticicestudio.igloo.launchd.igloosync-dropbox.plist": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "com/arcticicestudio/igloo/launchd/igloosync/com.arcticicestudio.igloo.launchd.igloosync-dropbox.plist"
+        }
+      },
+      "~/Library/LaunchAgents/igloosync-dropbox.sh": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "com/arcticicestudio/igloo/launchd/igloosync/igloosync-dropbox.sh"
+        }
+      }
+    }
+  }
+]

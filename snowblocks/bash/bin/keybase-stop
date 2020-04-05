@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Stops all running keybase services.
+
+set -euo pipefail
+
+if killall Keybase &> /dev/null; then
+  printf "\e[32m=>\e[0m Keybase GUI\n"
+else 
+  printf "\e[31mX\e[0m Keybase GUI\n"
+fi
+
+if fusermount -uz /keybase &> /dev/null; then
+  printf "\e[32m=>\e[0m \e[34m/keybase\e[0m unmount\n"
+else 
+  printf "\e[31mX\e[0m \e[34m/keybase\e[0m unmount\n"
+fi
+
+if killall kbfsfuse &> /dev/null; then
+  printf "\e[32m=>\e[0m kbfsfuse\n"
+else 
+  printf "\e[31mX\e[0m kbfsfuse\n"
+fi
+
+if killall keybase &> /dev/null; then
+  printf "\e[32m=>\e[0m keybase service\n"
+else 
+  printf "\e[31mX\e[0m keybase service\n"
+fi

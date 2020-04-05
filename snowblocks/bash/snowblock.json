@@ -1,0 +1,11 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.bash_profile": "bootstrap",
+      "~/.bashrc": "bootstrap"
+    }
+  }
+]

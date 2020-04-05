@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+__snowblock_bash::core::loader::env::get_module_realpath() {
+  if hash realpath 2>/dev/null; then
+    printf "$(realpath "${BASH_SOURCE[0]}")"
+  else
+    printf "$(readlink "${BASH_SOURCE[0]}")"
+  fi
+}
+
+__snowblock_bash::core::loader::env::get_module_name() {
+  printf "$(basename $(__snowblock_bash::core::loader::env::get_module_realpath))"
+}
+
+__snowblock_bash::core::loader::env::load() {
+  local __self_name="$(__snowblock_bash::core::loader::env::get_module_name)"
+  local envs=$(find -L "$SNOWBLOCK_BASH_BASE_DIR/config/env" -maxdepth 1 -not -name "*.local" -type f)
+  local env
+
+  for env in $envs; do
+    if [ "$(basename $env)" = $HOSTNAME ]; then
+      . $env
+      if [ $? -eq 0 ]; then
+        __snowblock_bash::log_debug\
+        "[$__self_name] Environment configuration for $(basename $env) successfully loaded"
+      else
+        __snowblock_bash::log_debug "[$__self_name] Error while loading environment configuration $env"
+      fi
+      break
+    fi
+  done
+}
+
+__snowblock_bash::core::loader::env::load

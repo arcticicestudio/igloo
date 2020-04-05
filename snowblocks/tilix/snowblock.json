@@ -1,0 +1,15 @@
+[
+  {
+    "clean": ["~/.config/tilix"]
+  },
+  {
+    "link": {
+      "~/.config/tilix/bookmarks.json": {
+        "create": true,
+        "hosts": {
+          "igloo": "bookmarks-igloo.json.igloocrypt"
+        }
+      }
+    }
+  }
+]

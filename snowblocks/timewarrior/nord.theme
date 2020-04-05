@@ -1,0 +1,25 @@
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+# References:
+#   https://taskwarrior.org/docs/timewarrior/themes.html
+#   timew(1)
+
+define theme:
+  description = "An arctic, north-bluish clean and elegant Timewarrior theme."
+  colors:
+    exclusion = "bold black"
+    today = "cyan"
+    holiday = "bold blue on white"
+    label = "bold white on black"
+    ids = "bold black on cyan"
+    debug = "magenta"
+
+  # Rotating color palette for tags.
+  palette:
+    color01 = "bold black on cyan"
+    color02 = "bold black on bright cyan"
+    color03 = "bold black on blue"

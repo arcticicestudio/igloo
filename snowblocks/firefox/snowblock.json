@@ -1,0 +1,82 @@
+[
+  {
+    "clean": [
+      "~/Library/Application Support/Firefox",
+      "~/.mozilla/firefox"
+    ]
+  },
+  {
+    "link": {
+      "~/Library/Application Support/Firefox/Profiles/igloo/chrome": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "chrome"
+        }
+      },
+      "~/Library/Application Support/Firefox/Profiles/igloo/containers.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "containers.json"
+        }
+      },
+      "~/Library/Application Support/Firefox/ignore-dev-edition-profile": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "ignore-dev-edition-profile"
+        }
+      },
+      "~/Library/Application Support/Firefox/profiles.ini": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "profiles.iceowl.ini"
+        }
+      },
+      "~/Library/Application Support/Firefox/Profiles/igloo/user.js": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "user.js"
+        }
+      },
+      "~/.mozilla/firefox/igloo/chrome": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "chrome"
+        }
+      },
+      "~/.mozilla/firefox/igloo/containers.json": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "containers.json"
+        }
+      },
+      "~/.mozilla/firefox/ignore-dev-edition-profile": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "ignore-dev-edition-profile"
+        }
+      },
+      "~/.mozilla/firefox/profiles.ini": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "profiles.igloo.ini"
+        }
+      },
+      "~/.mozilla/firefox/igloo/user.js": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "igloo": "user.js"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,137 @@
+<!--
+Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+Project:    igloo
+Repository: https://github.com/arcticicestudio/igloo
+License:    MIT
+-->
+<keymap version="1" name="arctic-keymap" parent="Default for XWin">
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="alt 8" />
+  </action>
+  <action id="ActivateVersionControlToolWindow">
+    <keyboard-shortcut first-keystroke="alt 0" />
+  </action>
+  <action id="ChangesView.AddUnversioned" />
+  <action id="ChangesView.Revert" />
+  <action id="CheckinProject" />
+  <action id="ChooseRunConfiguration">
+    <keyboard-shortcut first-keystroke="ctrl f5" />
+  </action>
+  <action id="CloseEditor">
+    <keyboard-shortcut first-keystroke="ctrl alt w" />
+  </action>
+  <action id="CodeGlance.toggle" />
+  <action id="CopyElement" />
+  <action id="DashLauncherAction">
+    <keyboard-shortcut first-keystroke="shift ctrl q" />
+  </action>
+  <action id="EditSource">
+    <keyboard-shortcut first-keystroke="f6" />
+  </action>
+  <action id="EditorCloneCaretAbove">
+    <keyboard-shortcut first-keystroke="shift alt up" />
+  </action>
+  <action id="EditorCloneCaretBelow">
+    <keyboard-shortcut first-keystroke="shift alt down" />
+  </action>
+  <action id="EditorLookupDown" />
+  <action id="EditorLookupUp" />
+  <action id="EditorMatchBrace">
+    <keyboard-shortcut first-keystroke="ctrl m" />
+  </action>
+  <action id="EditorScrollDown" />
+  <action id="EditorScrollToCenter" />
+  <action id="EditorScrollUp" />
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="shift ctrl g" />
+  </action>
+  <action id="HideAllWindows">
+    <keyboard-shortcut first-keystroke="ctrl alt d" />
+  </action>
+  <action id="Hotswap">
+    <keyboard-shortcut first-keystroke="shift ctrl f3" />
+  </action>
+  <action id="Macro.Spring HotReload">
+    <keyboard-shortcut first-keystroke="shift ctrl s" />
+  </action>
+  <action id="MethodOverloadSwitchDown" />
+  <action id="MethodOverloadSwitchUp" />
+  <action id="Move" />
+  <action id="MoveLineDown">
+    <keyboard-shortcut first-keystroke="ctrl down" />
+  </action>
+  <action id="MoveLineUp">
+    <keyboard-shortcut first-keystroke="ctrl up" />
+  </action>
+  <action id="NextDiff" />
+  <action id="NextProjectWindow" />
+  <action id="PreviousDiff" />
+  <action id="PreviousProjectWindow" />
+  <action id="RecentChangedFiles" />
+  <action id="RecentFiles" />
+  <action id="Refactorings.QuickListPopupAction" />
+  <action id="Refresh">
+    <keyboard-shortcut first-keystroke="f4" />
+  </action>
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="ctrl alt r" />
+  </action>
+  <action id="Rerun" />
+  <action id="RerunFailedTests">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f5" />
+  </action>
+  <action id="RerunTests">
+    <keyboard-shortcut first-keystroke="shift alt f5" />
+  </action>
+  <action id="RestoreDefaultLayout" />
+  <action id="Run">
+    <keyboard-shortcut first-keystroke="f5" />
+  </action>
+  <action id="RunTargetAction" />
+  <action id="RunToCursor" />
+  <action id="ShelveChanges.UnshelveWithDialog" />
+  <action id="ShowBookmarks">
+    <keyboard-shortcut first-keystroke="shift alt n" />
+  </action>
+  <action id="ShowErrorDescription">
+    <keyboard-shortcut first-keystroke="ctrl e" />
+  </action>
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="shift space" />
+  </action>
+  <action id="ShowSettings" />
+  <action id="SurroundWith">
+    <keyboard-shortcut first-keystroke="ctrl alt s" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="shift alt enter" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="shift alt down" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="shift alt left" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="shift alt right" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="shift alt up" />
+  </action>
+  <action id="ToggleBookmark">
+    <keyboard-shortcut first-keystroke="alt n" />
+  </action>
+  <action id="Vcs.Push" />
+  <action id="Vcs.QuickListPopupAction" />
+  <action id="Vcs.RollbackChangedLines" />
+  <action id="Vcs.ShowMessageHistory" />
+  <action id="Vcs.UpdateProject" />
+  <action id="VcsHistory.ShowAllAffected" />
+  <action id="VcsShowNextChangeMarker" />
+  <action id="VcsShowPrevChangeMarker" />
+  <action id="WebServicesPlugin.CreateRESTClient">
+    <keyboard-shortcut first-keystroke="alt 9" />
+  </action>
+</keymap>

@@ -1,0 +1,11 @@
+{
+  "folders": [{
+      "name": "playlists",
+      "path": "../video/playlists"
+    },
+    {
+      "name": "scratchpad",
+      "path": "../documents/scratchpad"
+    }
+  ]
+}

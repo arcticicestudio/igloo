@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "projects": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "playlists",
+      "path": "~/videos/playlists"
+    },
+    {
+      "name": "scratchpad",
+      "path": "~/documents/scratchpad"
+    }
+  ]
+}

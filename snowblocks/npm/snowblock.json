@@ -1,0 +1,15 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.npmrc": {
+        "hosts": {
+          "iceowl": "npmrc",
+          "igloo": "npmrc"
+        }
+      }
+    }
+  }
+]

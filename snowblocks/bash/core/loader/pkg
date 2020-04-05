@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+__snowblock_bash::core::loader::pkg::get_module_realpath() {
+  if hash realpath 2>/dev/null; then
+    printf "$(realpath "${BASH_SOURCE[0]}")"
+  else
+    printf "$(readlink "${BASH_SOURCE[0]}")"
+  fi
+}
+
+__snowblock_bash::core::loader::pkg::get_module_name() {
+  printf "$(basename $(__snowblock_bash::core::loader::pkg::get_module_realpath))"
+}
+
+__snowblock_bash::core::loader::pkg::load() {
+  local __self_name="$(__snowblock_bash::core::loader::pkg::get_module_name)"
+  local pkgs=$(find -L "$SNOWBLOCK_BASH_BASE_DIR/config/pkg" -maxdepth 1 -not -name "*.local" -type f)
+  local pkg
+
+  for pkg in $pkgs; do
+    . $pkg
+    if [ $? -eq 0 ]; then
+      __snowblock_bash::log_debug "[$__self_name] Package configuration for $(basename $pkg) successfully loaded"
+    else
+      __snowblock_bash::log_debug "[$__self_name] Error while loading package configuration $pkg"
+    fi
+  done
+}
+
+__snowblock_bash::core::loader::pkg::load

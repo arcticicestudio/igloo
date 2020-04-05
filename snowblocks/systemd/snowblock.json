@@ -1,0 +1,19 @@
+[
+  {
+    "clean": ["~/.config/systemd/user"]
+  },
+  {
+    "link": {
+      "~/.config/systemd/user/igloosync-dropbox.service": {
+        "create": true,
+        "hosts": {
+          "igloo": "units/user/igloosync-dropbox.service"
+        }
+      },
+      "~/.config/systemd/user/ssh-agent.service": {
+        "create": true,
+        "path": "units/user/ssh-agent.service"
+      }
+    }
+  }
+]

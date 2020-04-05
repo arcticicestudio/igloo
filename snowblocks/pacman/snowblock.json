@@ -1,0 +1,15 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.makepkg.conf": null,
+      "~/.pacman.conf": {
+        "hosts": {
+          "igloo": "pacman.conf.igloo"
+        }
+      }
+    }
+  }
+]

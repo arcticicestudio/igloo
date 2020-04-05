@@ -1,0 +1,32 @@
+/*
+ * Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    Nord Atom UI
+ * Repository: https://github.com/arcticicestudio/nord-atom-ui
+ * License:    MIT
+ */
+
+/*
+ * Removes unnecessary "action button" clutter.
+ * The functionality is available through keybindings and the command palette.
+ */
+
+/* Hide action buttons placed next to sidebar view titles */
+[aria-label="Editor actions"] {
+  display: none !important;
+}
+[aria-label="Search actions"] {
+  display: none !important;
+}
+[aria-label="Extensions actions"] {
+  display: none !important;
+}
+
+/* Hide action buttons placed in sidebar panel headers */
+.panel-header.expanded .actions {
+  display: none !important;
+}
+.sidebar .title-actions .actions-container {
+  display: none !important;
+}

@@ -1,0 +1,17 @@
+<!--
+Copyright (C) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+Copyright (C) 2016-present Sven Greb <development@svengreb.de>
+
+Project:    igloo
+Repository: https://github.com/arcticicestudio/igloo
+License:    MIT
+-->
+<application>
+  <component name="PropertiesComponent">
+    <property name="Darcula.savedEditorTheme" value="_@user_Darcula" />
+    <property name="Default.savedEditorTheme" value="_@user_Default" />
+    <property name="FileColorsEnabled" value="false" />
+    <property name="FileColorsForProjectViewEnabled" value="false" />
+    <property name="FileColorsForTabsEnabled" value="false" />
+  </component>
+</application>

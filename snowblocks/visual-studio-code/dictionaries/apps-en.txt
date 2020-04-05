@@ -1,0 +1,5 @@
+gimp
+gpick
+inkscape
+krita
+photoshop
