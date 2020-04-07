@@ -48,7 +48,7 @@ JetBrains uses a [naming scheme for the folder all user configurations][intellij
 The base target folder name for the `clean` and `link` plugins must be updated after updating to a new product version. Next to this, the `clean` plugin should also keep the previous target paths to ensure they are cleaned up after updating.
 
 [font-hack]: https://sourcefoundry.org/hack
-[gh-igloo-sb-jb-editor.xml]: https://github.com/arcticicestudio/igloo/blob/develop/snowblocks/jetbrains/ooptions/editor.xml
+[gh-igloo-sb-jb-editor.xml]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/jetbrains/ooptions/editor.xml
 [goland]: https://www.jetbrains.com/go
 [google-font-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [intellij-doc-autoupdate]: https://www.jetbrains.com/help/idea/keep-product-up-to-date.html#manage_updates_manually
