@@ -2,11 +2,11 @@
 
 This snowblock for [Firefox][] Quantum and [Firefox Developer Edition][firefox-dev-edition] provides…
 
-* …the [`user.js`][mzkb-user.js] file to define and persist almost all preferences for a profile.
-* …the [`profiles.ini`][mzkb-profiles.ini] file to configure the name and path of the main profile `igloo`.
-* …the `ignore-dev-edition-profile` file (placed within the Firefox application data folder) to fix [Bugzilla bug 1098986][bugzilla-1098986] that causes Firefox Developer Edition to use the internal default profile regardless of whether another customized profile has been set as default.
-* …the `chrome` folder with the [`userChrome.css`][mzkb-userchrome.css] and [`userContent.css`][mzkb-usercontent.css] files to customize the Firefox UI components design and layout and elements of websites.
-* …the `containers.json` file of the [Firefox Multi-Account Containers][firefox-addon-multi-acc-cont] to persist the configured containers.
+- …the [`user.js`][mzkb-user.js] file to define and persist almost all preferences for a profile.
+- …the [`profiles.ini`][mzkb-profiles.ini] file to configure the name and path of the main profile `igloo`.
+- …the `ignore-dev-edition-profile` file (placed within the Firefox application data folder) to fix [Bugzilla bug 1098986][bugzilla-1098986] that causes Firefox Developer Edition to use the internal default profile regardless of whether another customized profile has been set as default.
+- …the `chrome` folder with the [`userChrome.css`][mzkb-userchrome.css] and [`userContent.css`][mzkb-usercontent.css] files to customize the Firefox UI components design and layout and elements of websites.
+- …the `containers.json` file of the [Firefox Multi-Account Containers][firefox-addon-multi-acc-cont] to persist the configured containers.
 
 ## Configurations
 
@@ -46,16 +46,16 @@ touch ~/Library/Application\ Support/Firefox/ignore-dev-edition-profile
 
 ## References
 
-* [ghacksuserjs/ghacks-user.js][] - An ongoing comprehensive user.js template for configuring and hardening Firefox privacy, security and anti-fingerprinting.
-* [pyllyukko/user.js][] - Firefox `user.js` configuration file for Mozilla Firefox designed to harden browser settings and make it more secure.
+- [ghacksuserjs/ghacks-user.js][] - An ongoing comprehensive user.js template for configuring and hardening Firefox privacy, security and anti-fingerprinting.
+- [pyllyukko/user.js][] - Firefox `user.js` configuration file for Mozilla Firefox designed to harden browser settings and make it more secure.
 
 [bugzilla-1098986]: https://bugzilla.mozilla.org/show_bug.cgi?id=1098986
 [firefox]: https://www.mozilla.org/en-US/firefox
 [firefox-addon-multi-acc-cont]: https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers
 [firefox-dev-edition]: https://www.mozilla.org/en-US/firefox/developer
 [ghacksuserjs/ghacks-user.js]: https://github.com/ghacksuserjs/ghacks-user.js
-[gh-igloo-sb-ff-ignore-dev-profile]: https://github.com/arcticicestudio/igloo/blob/develop/snowblocks/firefox/ignore-dev-edition-profile
-[gh-igloo-sb-ff-user.js]: https://github.com/arcticicestudio/igloo/blob/develop/snowblocks/firefox/user.js
+[gh-igloo-sb-ff-ignore-dev-profile]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/firefox/ignore-dev-edition-profile
+[gh-igloo-sb-ff-user.js]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/firefox/user.js
 [google-font-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [mzkb-profiles.ini]: http://kb.mozillazine.org/Profiles.ini_file
 [mzkb-user.js]: http://kb.mozillazine.org/User.js_file

@@ -1,8 +1,8 @@
-* [Troubleshooting](#troubleshooting)
-  * [Fix instantaneous MacBook Pro suspend wakeup after lid close](#fix-instantaneous-macbook-pro-suspend-wakeup-after-lid-close)
-    * [lid close behavior](#lid-close-behavior)
-    * [custom suspend service](#custom-suspend-service)
-    * [`system-sleep` hook](#system-sleep-hook)
+- [Troubleshooting](#troubleshooting)
+  - [Fix instantaneous MacBook Pro suspend wakeup after lid close](#fix-instantaneous-macbook-pro-suspend-wakeup-after-lid-close)
+    - [lid close behavior](#lid-close-behavior)
+    - [custom suspend service](#custom-suspend-service)
+    - [`system-sleep` hook](#system-sleep-hook)
 
 # Troubleshooting
 
@@ -16,8 +16,8 @@ In order to prevent immediate wakeup after the lid has been closed the `XHC1` de
 
 Make sure to [configure the behavior on lid close][archw-gnome-lid-behavior] before installing the service or hook by either
 
-* use the automatic method via the GNOME Tweak Tool which can inhibit the *systemd* setting for the lid close ACPI event via the *Power* > *Suspend when laptop lid is closed* option.
-* set the `HandleLidSwitch=suspend` option in `/etc/systemd/logind.conf` to let *systemd* handle the [ACPI event][archw-pw-mng-acpi-event].
+- use the automatic method via the GNOME Tweak Tool which can inhibit the _systemd_ setting for the lid close ACPI event via the _Power_ > _Suspend when laptop lid is closed_ option.
+- set the `HandleLidSwitch=suspend` option in `/etc/systemd/logind.conf` to let _systemd_ handle the [ACPI event][archw-pw-mng-acpi-event].
 
 The changes will be applied after the `systemd-logind` daemon has been restarted which will terminate all currently open user sessions.
 
@@ -33,19 +33,19 @@ sudo systemctl enable igloo-mbp-lid-suspend.service
 
 ### `system-sleep` hook
 
-*systemd* runs all executables in `/usr/lib/systemd/system-sleep/`, passing two arguments to each of them:
+_systemd_ runs all executables in `/usr/lib/systemd/system-sleep/`, passing two arguments to each of them:
 
-* either `pre` or `post`: Depending on whether the machine is going to *sleep* or *waking* up
-* `suspend`, `hibernate` or `hybrid-sleep`: Depending on which is being invoked
+- either `pre` or `post`: Depending on whether the machine is going to _sleep_ or _waking_ up
+- `suspend`, `hibernate` or `hybrid-sleep`: Depending on which is being invoked
 
-Install the [`igloo-mbp-lid-suspend.service.sh`][gh-hook-system-sleep] *system-sleep* hook:
+Install the [`igloo-mbp-lid-suspend.service.sh`][gh-hook-system-sleep] _system-sleep_ hook:
 
 ```sh
 sudo cp snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.service.sh /lib/systemd/system-sleep/igloo-mbp-lid-suspend.service.sh
 sudo systemctl daemon-reload
 ```
 
-The output of any custom script will be logged by `systemd-suspend.service`, `systemd-hibernate.service` or `systemd-hybrid-sleep.service` which can be shown with *systemd*'s [journal][archw-journal]:
+The output of any custom script will be logged by `systemd-suspend.service`, `systemd-hibernate.service` or `systemd-hybrid-sleep.service` which can be shown with _systemd_'s [journal][archw-journal]:
 
 ```sh
 journalctl -b -u systemd-suspend
@@ -55,8 +55,8 @@ See [systemd.special(7)][man-systemd.special] and [systemd.sleep(8)][man-systemd
 
 References:
 
-* [MacBook Pro 11,x Suspend][archw-mbp-11x-suspend]
-* [Instantaneous wakeups from suspend][archw-pw-mng-inst-wakeup]
+- [MacBook Pro 11,x Suspend][archw-mbp-11x-suspend]
+- [Instantaneous wakeups from suspend][archw-pw-mng-inst-wakeup]
 
 [archw-journal]: https://wiki.archlinux.org/index.php/Systemd#Journal
 [archw-gnome-lid-behavior]: https://wiki.archlinux.org/index.php/GNOME#Configure_behaviour_on_lid_switch_close
@@ -65,8 +65,8 @@ References:
 [archw-pw-mng-inst-wakeup]: https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Instantaneous_wakeups_from_suspend
 [archw-suspend-service]: https://wiki.archlinux.org/index.php/Power_management#Combined_Suspend.2Fresume_service_file
 [archw-system-sleep-hook]: https://wiki.archlinux.org/index.php/Power_management#Hooks_in_.2Fusr.2Flib.2Fsystemd.2Fsystem-sleep
-[gh-hook-system-sleep]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.sh
+[gh-hook-system-sleep]: https://github.com/arcticicestudio/igloo/blob/master/snowflakes/systemd/hooks/system-sleep/igloo-mbp-lid-suspend.sh
 [gh-lk-fix-commit]: https://github.com/torvalds/linux/commit/13cfc732160f7bc7e596128ce34cda361c556966
-[gh-unit-suspend]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/systemd/units/system/igloo-mbp-lid-suspend.service
+[gh-unit-suspend]: https://github.com/arcticicestudio/igloo/blob/master/snowflakes/systemd/units/system/igloo-mbp-lid-suspend.service
 [man-systemd.sleep]: https://www.freedesktop.org/software/systemd/man/sleep.conf.d.html
 [man-systemd.special]: https://www.freedesktop.org/software/systemd/man/systemd.special.html

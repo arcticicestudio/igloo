@@ -62,13 +62,13 @@ See the [references](#references) for more information and details.
 
 **Fix failed IPC connection call on macOS**
 
-* [gpg: can’t connect to the agent: IPC connect call failed][ref-blog-michaelheap-ipc-connect-fail]
-* [GNUPG bugtracker: “gpg-agent 2.1 socket and nfs /home“][ref-gnupg-bugtracker-t1752]
-* [How to configure GnuPG's S.gpg-agent socket location?]([ref-askubuntu-gpg-socket])
+- [gpg: can’t connect to the agent: IPC connect call failed][ref-blog-michaelheap-ipc-connect-fail]
+- [GNUPG bugtracker: “gpg-agent 2.1 socket and nfs /home“][ref-gnupg-bugtracker-t1752]
+- [How to configure GnuPG's S.gpg-agent socket location?]([ref-askubuntu-gpg-socket])
 
 [gnupg]: https://www.gnupg.org
-[gh-igloo-snowblock-launchd]: https://github.com/arcticicestudio/igloo/tree/develop/snowblocks/launchd
-[gh-igloo-snowblock-systemd]: https://github.com/arcticicestudio/igloo/tree/develop/snowblocks/systemd
+[gh-igloo-snowblock-launchd]: https://github.com/arcticicestudio/igloo/tree/master/snowblocks/launchd
+[gh-igloo-snowblock-systemd]: https://github.com/arcticicestudio/igloo/tree/master/snowblocks/systemd
 [gocryptfs]: https://github.com/rfjakob/gocryptfs
 [ref-askubuntu-gpg-socket]: https://askubuntu.com/a/1053594
 [ref-blog-michaelheap-ipc-connect-fail]: https://michaelheap.com/gpg-cant-connect-to-the-agent-ipc-connect-call-failed

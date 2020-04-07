@@ -1,9 +1,9 @@
-* [Mapping scancodes to keycodes](#mapping-scancodes-to-keycodes)
-  * [Logitech R400 Presenter](#logitech-r400-presenter)
-    * [Find out the input event ID](#find-out-the-input-event-id)
-    * [Identifying the scancodes](#identifying-the-scancodes)
-    * [Update and reload the Hardware Database Index](#update-and-reload-the-hardware-database-index)
-    * [Verify the new mappings](#verify-the-new-mappings)
+- [Mapping scancodes to keycodes](#mapping-scancodes-to-keycodes)
+  - [Logitech R400 Presenter](#logitech-r400-presenter)
+    - [Find out the input event ID](#find-out-the-input-event-id)
+    - [Identifying the scancodes](#identifying-the-scancodes)
+    - [Update and reload the Hardware Database Index](#update-and-reload-the-hardware-database-index)
+    - [Verify the new mappings](#verify-the-new-mappings)
 
 # Mapping scancodes to keycodes
 
@@ -13,8 +13,8 @@ The [Logitech R400 Presenter][logitech-r400-presenter] works out-of-the-box™ f
 
 The presenter itself includes two more controls for slideshows:
 
-* „play“ (lower-left)
-* „toggle screen“ (lower-right)
+- „play“ (lower-left)
+- „toggle screen“ (lower-right)
 
 These are designed for applications like _LibreOffice Impress_ or _Microsoft PowerPoint_, but have no meaningful use for _Spectacle_-based presentations. [udev][archw-udev] can be used to change the mappings for both buttons to fire key events for the <kbd>⭡</kbd> and <kbd>⭣</kbd> keys instead. This allows to also use the presenter for presentations with the _Code Slide_ extension.
 
@@ -29,6 +29,7 @@ The first column of a udev rule represents the scancode. It can be obtained by l
 ```sh
 ls /dev/input/by-id/usb-Logitech_USB_Receiver-event-kbd
 ```
+
 Alternatively, `stat` can be used:
 
 ```sh
@@ -89,18 +90,18 @@ Event: time 1529159644.459619, -------------- SYN_REPORT ------------
 
 This example shows that
 
-* `KEY_PAGEUP` (left) has scancode `7004b` and keycode `104`
-* `KEY_PAGEDOWN` (right) has scancode `7004e` and keycode `109`
-* `KEY_PRESENTATION` („play“) has scancode `7003e` and keycode `425`
-* `KEY_DISPLAYTOGGLE` (toggle screen“) has scancode `70037` and keycode `431`
+- `KEY_PAGEUP` (left) has scancode `7004b` and keycode `104`
+- `KEY_PAGEDOWN` (right) has scancode `7004e` and keycode `109`
+- `KEY_PRESENTATION` („play“) has scancode `7003e` and keycode `425`
+- `KEY_DISPLAYTOGGLE` (toggle screen“) has scancode `70037` and keycode `431`
 
 ### Create the custom udev rule
 
 **Note**: Make sure to read the Arch Linux Wiki about how to [map scancodes to keycodes using udev][archw-map-scancodes-to-keycodes] and `udev(7)`! They contain details about
 
-* the _udev_ hardware database index `/etc/udev/hwdb.bin`.
-* the default custom rule paths `/usr/lib/udev/hwdb.d/`, `/run/udev/hwdb.d/` and `/etc/udev/hwdb.d/`.
-* the default _scancodes-to-keycodes_ mapping files `/usr/lib/udev/hwdb.d/60-keyboard.hwdb` and `/lib/udev/hwdb.d/60-keyboard.hwdb` which are already include default mappings for the Logitech R400 presenter: `rg --context 6 R400 /usr/lib/udev/hwdb.d/60-keyboard.hwdb`
+- the _udev_ hardware database index `/etc/udev/hwdb.bin`.
+- the default custom rule paths `/usr/lib/udev/hwdb.d/`, `/run/udev/hwdb.d/` and `/etc/udev/hwdb.d/`.
+- the default _scancodes-to-keycodes_ mapping files `/usr/lib/udev/hwdb.d/60-keyboard.hwdb` and `/lib/udev/hwdb.d/60-keyboard.hwdb` which are already include default mappings for the Logitech R400 presenter: `rg --context 6 R400 /usr/lib/udev/hwdb.d/60-keyboard.hwdb`
 
 Create a new custom `.hwdb` file in the `/etc/udev/hwdb.d` directory, e.g. `/etc/udev/hwdb.d/igloo-udev-logitech-r400-presenter.hwdb`:
 
@@ -154,7 +155,7 @@ E: KEYBOARD_KEY_07004e=right
 [archw-map-scancodes-to-keycodes-index-update]: https://wiki.archlinux.org/index.php/Map_scancodes_to_keycodes#Updating_the_Hardware_Database_Index
 [archw-udev]: https://wiki.archlinux.org/index.php/Udev
 [gh-jamiebuilds/spectacle-code-slide]: https://github.com/jamiebuilds/spectacle-code-slide
-[gh-igloo-udev-logitech-r400-presenter.hwdb]: https://github.com/arcticicestudio/igloo/blob/develop/snowflakes/udev/rules/igloo-udev-logitech-r400-presenter.hwdb
+[gh-igloo-udev-logitech-r400-presenter.hwdb]: https://github.com/arcticicestudio/igloo/blob/master/snowflakes/udev/rules/igloo-udev-logitech-r400-presenter.hwdb
 [logitech-r400-presenter]: https://www.logitech.com/en-us/product/wireless-presenter-r400
 [ref-blog-rweaking-r400]: https://derickrethans.nl/logitech-r400-take2.html
 [spectacle]: https://formidable.com/open-source/spectacle
