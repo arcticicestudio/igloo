@@ -22,5 +22,5 @@ virtualenv
 # +------+
 
 # Required by the custom hooks of the "taskwarrior" snowblock to interact with Taskwarrior API.
-# See https://github.com/arcticicestudio/igloo/tree/develop/snowblocks/taskwarrior for details.
+# See https://github.com/arcticicestudio/igloo/tree/master/snowblocks/taskwarrior for details.
 taskw
