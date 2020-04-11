@@ -14,14 +14,14 @@
       "~/.gitconfig": null,
       "~/.gitconfig-auth": {
         "hosts": {
-          "iceowl": "gitconfig-auth.igloocrypt",
-          "igloo": "gitconfig-auth.igloocrypt"
+          "iceowl": "gitconfig-auth",
+          "igloo": "gitconfig-auth"
         }
       },
       "~/.gitconfig-auth-svengreb": {
         "hosts": {
-          "iceowl": "gitconfig-auth-svengreb.igloocrypt",
-          "igloo": "gitconfig-auth-svengreb.igloocrypt"
+          "iceowl": "gitconfig-auth-svengreb",
+          "igloo": "gitconfig-auth-svengreb"
         }
       },
       "~/.gitconfig-auth-job": {
