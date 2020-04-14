@@ -1,0 +1,26 @@
+[
+  {
+    "clean": [
+      "$HOME/Library/Application Support/keepassxc",
+      "$XDG_CONFIG_HOME/keepassxc"
+    ]
+  },
+  {
+    "link": {
+      "$HOME/Library/Application Support/keepassxc/keepassxc.ini": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "keepassxc.ini.igloocrypt"
+        }
+      },
+      "$XDG_CONFIG_HOME/keepassxc/keepassxc.ini": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "polarbear": "keepassxc.ini.igloocrypt"
+        }
+      }
+    }
+  }
+]
