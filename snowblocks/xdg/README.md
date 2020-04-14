@@ -1,39 +1,26 @@
-* [Application Desktop Entries](#application-desktop-entries)
-* [Autostart](#autostart)
-* [Bookmarks](#bookmarks)
-* [User Directories](#user-directories)
+## _XDG_ Application Desktop Launchers
 
-### Application Desktop Entries
+All application `*.desktop` launcher files adhere the [_XDG_ Desktop Entry Specification][fd-spec-desktop-entry].
 
-All application `*.desktop` entry files adhere the freedesktop [Desktop Entry Specification][fd-spec-desktop-entry].
+See the _Arch Linux wiki_ page about [desktop entries][archw-desktop_entries] for more details.
 
-Read the [Arch Linux Wiki][archw-desktop-entries] site for detailed information and examples.
+## _XDG_ Autostart
 
-### Autostart
+In an _XDG_-compliant desktop environment, such as [GNOME][], the desktop environment will automatically start `*.desktop` files found in the directories specified in the [Desktop Application Autostart Specification][fd-spec-autostart]:
 
-In an XDG-compliant desktop environment, such as GNOME, the desktop environment will automatically start `*.desktop` files found in the directories specified in the [Desktop Application Autostart Specification][fd-spec-autostart]:
+- System-wide: `$XDG_CONFIG_DIRS/autostart/` (`/etc/xdg/autostart/` by default)
+  - GNOME also starts files found in `/usr/share/gnome/autostart`
+- User-level: `$XDG_CONFIG_HOME/autostart` (`~/.config/autostart/` by default)
 
-* System-wide: `$XDG_CONFIG_DIRS/autostart/` (`/etc/xdg/autostart/` by default)
-  * GNOME also starts files found in `/usr/share/gnome/autostart/`
-* User-specific: `$XDG_CONFIG_HOME/autostart/` (`~/.config/autostart/` by default)
+See the _Arch Linux_ wiki page about [desktop autostart entries][archw-desktop_entries#autostart] for more details.
 
-System-wide `*.desktop` files can be overridden via the user-specific `~/.config/autostart/` folder.
+## _XDG_ User Directories
 
-References:
+All user directory configurations adhere the _freedesktop_/_XDG_ [user directories specification][archw-xdg_user_dir].
 
-* [Arch Linux Wiki - Desktop Entries (Autostart)][archw-desktop-entries-autostart]
-
-### Bookmarks
-
-All bookmark configurations adhere the freedesktop [Desktop Bookmark Specification][fd-spec-bookmark].
-
-### User Directories
-
-All user directory configurations adhere the freedesktop [XDG user directories][archw-xdg-user-dir] specification.
-
-[archw-desktop-entries]: https://wiki.archlinux.org/index.php/Desktop_entries
-[archw-desktop-entries-autostart]: https://wiki.archlinux.org/index.php/Desktop_entries#Autostart
-[archw-xdg-user-dir]: https://wiki.archlinux.org/index.php/XDG_user_directories
+[archw-desktop_entries]: https://wiki.archlinux.org/index.php/Desktop_entries
+[archw-desktop_entries#autostart]: https://wiki.archlinux.org/index.php/Desktop_entries#Autostart
+[archw-xdg_user_dir]: https://wiki.archlinux.org/index.php/XDG_user_directories
 [fd-spec-autostart]: https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html
-[fd-spec-bookmark]: https://www.freedesktop.org/wiki/Specifications/desktop-bookmark-spec/
-[fd-spec-desktop-entry]: https://specifications.freedesktop.org/desktop-entry-spec/latest/
+[fd-spec-desktop-entry]: https://specifications.freedesktop.org/desktop-entry-spec/latest
+[gnome]: https://www.gnome.org

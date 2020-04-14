@@ -1,86 +1,50 @@
 [
   {
     "clean": [
-      "~/.config",
-      "~/.config/autostart",
-      "~/.config/gtk-3.0",
-      "~/.local/share/applications"
+      "$XDG_CONFIG_HOME",
+      "$XDG_CONFIG_HOME/autostart",
+      "$XDG_CONFIG_HOME/gtk-3.0",
+      "$XDG_DATA_HOME/applications"
     ]
   },
   {
     "link": {
-      "~/.config/user-dirs.conf": {
-        "force": true
-      },
-      "~/.config/user-dirs.dirs": {
-        "force": true
-      },
-      "~/.config/user-dirs.locale": {
-        "force": true
-      },
-      "~/.config/gtk-3.0/bookmarks": {
+      "$XDG_DATA_HOME/applications/minecraft.desktop": {
         "create": true,
         "force": true,
         "hosts": {
-          "igloo": "gtk-3.0/bookmarks-igloo.igloocrypt"
+          "polarbear": "applications/minecraft.desktop"
         }
       },
-      "~/.local/share/applications/atom.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/atom.desktop"
-      },
-      "~/.local/share/applications/evolution.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/evolution.desktop"
-      },
-      "~/.local/share/applications/gpick.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/gpick.desktop"
-      },
-      "~/.local/share/applications/gtkhash.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/gtkhash.desktop"
-      },
-      "~/.local/share/applications/minecraft.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/minecraft.desktop"
-      },
-      "~/.local/share/applications/org.gnome.gedit.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/org.gnome.gedit.desktop"
-      },
-      "~/.local/share/applications/org.gnome.Screenshot.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/org.gnome.Screenshot.desktop"
-      },
-      "~/.local/share/applications/shotwell-viewer.desktop": {
-        "create": true,
-        "force": true,
-        "path": "applications/shotwell-viewer.desktop"
-      },
-      "~/.config/autostart/dropbox.desktop": {
-        "create": true,
-        "force": true,
-        "path": "autostart/dropbox.desktop"
-      },
-      "~/.config/autostart/plank.desktop": {
+      "$XDG_DATA_HOME/applications/org.gnome.Screenshot.desktop": {
         "create": true,
         "force": true,
         "hosts": {
-          "igloo": "autostart/plank.desktop.igloo"
+          "polarbear": "applications/org.gnome.Screenshot.desktop"
         }
       },
-      "~/.config/gtk-3.0/settings.ini": {
+      "$XDG_CONFIG_HOME/autostart/plank.desktop": {
         "create": true,
         "force": true,
-        "path": "gtk-3.0/settings.ini"
+        "hosts": {
+          "polarbear": "autostart/plank.desktop.polarbear"
+        }
+      },
+      "$XDG_CONFIG_HOME/gtk-3.0/settings.ini": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "polarbear": "gtk-3.0/settings.ini"
+        }
+      },
+      "$XDG_CONFIG_HOME/user-dirs.conf": {
+        "force": true
+      },
+      "$XDG_CONFIG_HOME/user-dirs.dirs": {
+        "force": true
+      },
+      "$XDG_CONFIG_HOME/user-dirs.locale": {
+        "force": true
       }
     }
   }

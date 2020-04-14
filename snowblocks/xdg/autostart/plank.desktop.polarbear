@@ -6,7 +6,7 @@
 # License:    MIT
 
 [Desktop Entry]
+Name=Plank
 Type=Application
-Name=Shotwell Viewer
-NoDisplay=true
-Exec=
+Exec=plank -n polarbear
+Icon=plank
