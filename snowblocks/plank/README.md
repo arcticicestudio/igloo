@@ -1,31 +1,25 @@
-- [dconf Configuration](#dconf-configuration)
-- [Autostart](#autostart)
+# _dconf_ Configuration
 
-# dconf Configuration
-
-The [dconf][dconf] dump [`plank.dconf`][config-dconf-gh] provides configurations for the `net.launchpad.plank` schema and can be loaded via `dconf` by run
+The [dconf][] dump [`plank.dconf`][blob-plank.dconf] provides configurations for the `net.launchpad.plank` schema.
 
 ```sh
+# Load the schema configurations from the dump file.
 dconf load /net/launchpad/plank/ < plank.dconf
-```
 
-A new dump can be exported via
-
-```sh
+# Export the schema configurations as dump file.
 dconf dump /net/launchpad/plank/ > plank.dconf
 ```
 
-# Autostart
+Also see [_Plank_'s GitHub repository][ricotz/plank] for more documentations and details.
 
-The [xdg snowblock][gh-sb-xdg] provides host specific [autostart][gh-sb-xdg-autostart] configurations for the [igloo][gh-sb-xdg-autostart-igloo] Plank launcher profile(s).
+# _XDG_ Autostart
 
-# References
+The [_XDG_ _snowblock_][tree-sb-xdg] provides host specific [autostart][archw-xdg_autostart] configurations for the `igloo` _Plank_ launcher profile.
 
-- [Plank GitHub Repository][plank-gh]
-
-[config-dconf-gh]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/plank/plank.dconf
+[archw-plank]: https://wiki.archlinux.org/index.php/Plank
+[archw-xdg_autostart]: https://wiki.archlinux.org/index.php/XDG_Autostart
+[blob-plank.dconf]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/plank/plank.dconf
 [dconf]: https://wiki.gnome.org/Projects/dconf
-[gh-sb-xdg]: https://github.com/arcticicestudio/igloo/tree/master/snowblocks/xdg
-[gh-sb-xdg-autostart]: https://github.com/arcticicestudio/igloo/tree/master/snowblocks/xdg/autostart
-[gh-sb-xdg-autostart-igloo]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/xdg/autostart/plank.desktop.igloo
-[plank-gh]: https://github.com/ricotz/plank
+[ricotz/plank]: https://github.com/ricotz/plank
+[tree-sb-xdg-autostart]: https://github.com/arcticicestudio/igloo/tree/master/snowblocks/xdg/autostart
+[tree-sb-xdg]: https://github.com/arcticicestudio/igloo/tree/master/snowblocks/xdg

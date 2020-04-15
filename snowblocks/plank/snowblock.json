@@ -1,23 +1,22 @@
 [
   {
-    "clean": [
-      "~/.config",
-      "~/.local/share"
-    ]
+    "clean": ["$XDG_CONFIG_HOME/plank", "$XDG_DATA_HOME/plank"]
   },
   {
     "link": {
-      "~/.config/plank/igloo/launchers": {
+      "$XDG_CONFIG_HOME/plank/polarbear/launchers": {
         "create": true,
         "force": true,
         "hosts": {
-          "igloo": "launchers/igloo"
+          "polarbear": "launchers/polarbear"
         }
       },
-      "~/.local/share/plank/themes/igloo": {
+      "$XDG_DATA_HOME/plank/themes/polarbear": {
         "create": true,
         "force": true,
-        "path": "themes/igloo"
+        "hosts": {
+          "polarbear": "themes/polarbear"
+        }
       }
     }
   }
