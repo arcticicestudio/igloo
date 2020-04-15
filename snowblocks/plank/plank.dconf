@@ -1,24 +1,24 @@
-[docks/igloo]
-icon-size=48
-show-dock-item=false
-position='bottom'
-dock-items=['org.gnome.Nautilus.dockitem', 'google-chrome.dockitem', 'intellij-idea-u.dockitem', 'webstorm.dockitem', 'pycharm-community.dockitem', 'org.gnome.Screenshot.dockitem']
-unhide-delay=0
-items-alignment='center'
-theme='igloo'
-hide-mode='auto'
-pinned-only=false
-auto-pinning=true
+[docks/polarbear]
 alignment='center'
-zoom-percent=150
-hide-delay=0
-zoom-enabled=true
-monitor=''
-lock-items=true
-tooltips-enabled=true
-pressure-reveal=false
-offset=0
+auto-pinning=true
 current-workspace-only=false
+dock-items=['org.gnome.Nautilus.dockitem', 'firefox-developer-edition.dockitem', 'jetbrains-idea.dockitem', 'visual-studio-code.dockitem', 'org.gnome.Screenshot.dockitem']
+hide-delay=0
+hide-mode='auto'
+icon-size=48
+items-alignment='center'
+lock-items=true
+monitor=''
+offset=0
+pinned-only=false
+position='bottom'
+pressure-reveal=false
+show-dock-item=false
+theme='polarbear'
+tooltips-enabled=true
+unhide-delay=0
+zoom-enabled=true
+zoom-percent=150
 
 [/]
-enabled-docks=['igloo']
+enabled-docks=['polarbear']
