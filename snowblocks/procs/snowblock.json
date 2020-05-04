@@ -1,0 +1,26 @@
+[
+  {
+    "clean": [
+      "$HOME/Library/Preferences/com.github.dalance.procs",
+      "$IGLOO_PATH_USER_CONFIG/procs"
+    ]
+  },
+  {
+    "link": {
+      "$HOME/Library/Preferences/com.github.dalance.procs/config.toml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "config.toml"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/procs/config.toml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "polarbear": "config.toml"
+        }
+      }
+    }
+  }
+]
