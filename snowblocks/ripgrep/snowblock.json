@@ -1,0 +1,13 @@
+[
+  {
+    "clean": ["$RIPGREP_CONFIG_PATH"]
+  },
+  {
+    "link": {
+      "$RIPGREP_CONFIG_PATH": {
+        "create": true,
+        "path": "config"
+      }
+    }
+  }
+]
