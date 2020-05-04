@@ -1,0 +1,13 @@
+[
+  {
+    "clean": ["$IGLOO_PATH_USER_CONFIG/bat"]
+  },
+  {
+    "link": {
+      "$IGLOO_PATH_USER_CONFIG/bat/config": {
+        "create": true,
+        "path": "config"
+      }
+    }
+  }
+]
