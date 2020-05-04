@@ -1,0 +1,26 @@
+[
+  {
+    "clean": [
+      "$HOME/Library/Preferences/org.dystroy.broot",
+      "$IGLOO_PATH_USER_CONFIG/broot"
+    ]
+  },
+  {
+    "link": {
+      "$HOME/Library/Preferences/org.dystroy.broot/conf.toml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "conf.toml"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/broot/conf.toml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "polarbear": "conf.toml"
+        }
+      }
+    }
+  }
+]

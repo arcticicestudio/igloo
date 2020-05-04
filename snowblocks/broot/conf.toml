@@ -1,0 +1,103 @@
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Configuration for broot.
+# See:
+#   1. https://dystroy.org/broot/documentation/configuration
+
+# Set default flags to always show hidden files.
+default_flags = "h"
+
+[[verbs]]
+invocation = "edit"
+key = "ctrl-e"
+shortcut = "e"
+execution = "$EDITOR {file}"
+
+[[verbs]]
+key = "ctrl-c"
+execution = ":quit"
+
+# Use the [← Left] and [→ Right] arrow keys to go to the parent directory or to open the selected one.
+[[verbs]]
+key = "left"
+execution = ":parent"
+[[verbs]]
+key = "right"
+execution = ":focus"
+
+# Adjust the color styles for match the "Nord" theme.
+# Note that the "Nord" color palettes must be provided through the terminal.
+# Due to the format of this configuration file it is not possible to use shell syntax like
+# environment variables in order to dynamically pass color values.
+# See:
+#   1. https://www.nordtheme.com
+[skin]
+# +---------------+
+# + UI Components +
+# +---------------+
+char_match = "ansi(6) ansi(8)"
+# The default foreground and background style.
+default = "none none"
+# Indicators rendered at the bottom right, showing the settings regarding hidden files and .gitignore rules.
+flag_label = "ansi(6) none"
+flag_value = "none none"
+# The line for user commands and input.
+input = "none none"
+# The counter of unlisted nodes when the tree is larger than the available terminal height.
+pruning = "ansi(8) none bold"
+# Scrollbars that are rendered when the content doesn't fit the current terminal height,
+# e.g. in most cases the help screen (`?` shortcut).
+scrollbar_track = "ansi(0) none"
+scrollbar_thumb = "ansi(8) none"
+selected_line = "none ansi(8)"
+# The draw lines to visualize the tree structure. 
+tree = "ansi(8) none"
+# +--- Status Bar ---+
+status_bold = "ansi(4) none bold"
+# Code like e.g. the full command a verb will execute.
+status_code = "ansi(14) none bold"
+# The three-dots that are rendered when the content doesn't fit the current terminal width.
+status_ellipsis = "ansi(4) ansi(0)"
+status_error = "ansi(1) ansi(0) bold"
+status_italic = "ansi(6) none italic"
+# The state of jobs states, e.g. "computing sizes..." when run with the `--sizes` flag
+# in a large directory tree.
+status_job = "ansi(0) ansi(6)"
+status_normal = "none ansi(0)"
+
+# +------------+
+# + Node Types +
+# +------------+
+# Different node types.
+directory = "ansi(4) none bold"
+exe = "ansi(14) none bold"
+file = "none none"
+link = "ansi(6) none"
+
+# +-----------------+
+# + Tree Components +
+# +-----------------+
+# The permissions and owner information when run with the `--permissions` flag.
+perm__ = "ansi(12) none"
+perm_r = "ansi(12) none"
+perm_w = "ansi(12) none"
+perm_x = "ansi(12) none"
+owner = "ansi(12) none"
+group = "ansi(12) none"
+# Broken data like e.g. an invalid symlink. 
+file_error = "ansi(1) none"
+
+# +-----------+
+# + Help Page +
+# +-----------+
+# The style of different elements on the help screen (`?` shortcut).
+help_paragraph = "none none"
+help_bold = "ansi(4) none bold"
+help_italic = "ansi(6) none italic"
+help_code = "ansi(14) none"
+help_headers = "ansi(6) none"
