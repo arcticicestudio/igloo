@@ -1,0 +1,130 @@
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Configuration for procs.
+# The color styles are adjusted to match the "Nord" theme.
+# Note that the "Nord" color palettes must be provided through the terminal.
+# See:
+#   1. https://github.com/dalance/procs#configuration
+#   2. https://www.nordtheme.com
+
+[[columns]]
+kind = "Pid"
+style = "Cyan"
+numeric_search = true
+nonnumeric_search = false
+
+[[columns]]
+kind = "User"
+header = "USER"
+style = "Blue"
+numeric_search = false
+nonnumeric_search = true
+
+[[columns]]
+kind = "Separator"
+style = "BrightBlack"
+numeric_search = false
+nonnumeric_search = false
+
+[[columns]]
+kind = "UsageCpu"
+style = "ByPercentage"
+numeric_search = false
+nonnumeric_search = false
+
+[[columns]]
+kind = "UsageMem"
+style = "ByPercentage"
+numeric_search = false
+nonnumeric_search = false
+
+[[columns]]
+kind = "Docker"
+header = "DOCK"
+style = "Cyan"
+numeric_search = false
+nonnumeric_search = true
+
+[[columns]]
+kind = "VmRss"
+header = "RAM"
+style = "ByUnit"
+numeric_search = false
+nonnumeric_search = false
+
+[[columns]]
+kind = "State"
+header = "S"
+style = "ByState"
+numeric_search = false
+nonnumeric_search = true
+align = "Center"
+
+# Dynamic slot targeted for the "TcpPort" column.
+[[columns]]
+kind = "Slot"
+style = "Blue"
+numeric_search = true
+nonnumeric_search = false
+# Dynamic slot targeted for the "UdpPort" column.
+[[columns]]
+kind = "Slot"
+style = "Blue"
+numeric_search = true
+nonnumeric_search = false
+
+[[columns]]
+kind = "Separator"
+style = "BrightBlack"
+numeric_search = false
+nonnumeric_search = false
+
+[[columns]]
+kind = "Command"
+header = "CMD"
+style = "White"
+numeric_search = false
+nonnumeric_search = true
+
+[style]
+header = "BrightWhite"
+unit = "Cyan"
+tree = "BrightBlack"
+
+[style.by_percentage]
+color_000 = "Blue"
+color_025 = "Green"
+color_050 = "Yellow"
+color_075 = "BrightYellow"
+color_100 = "BrightRed"
+
+[style.by_state]
+# Uninterruptible sleep (usually IO).
+color_d = "Yellow"
+# Running or runnable (on run queue).
+color_r = "Green"
+# Interruptible sleep (waiting for an event to complete).
+color_s = "Cyan"
+# Stopped, either by a job control signal or because it is being traced.
+color_t = "BrightCyan"
+# Defunct ("zombie") process, terminated but not reaped by its parent.
+color_z = "BrightRed"
+# Dead (should never be seen).
+color_x = "Red"
+color_k = "BrightYellow"
+# Paging (not valid since the 2.6.xxq kernel).
+color_w = "BrightBlack"
+color_p = "Black"
+
+[style.by_unit]
+color_k = "Cyan"
+color_m = "Blue"
+color_g = "Yellow"
+color_t = "BrightRed"
+color_p = "BrightRed"
+color_x = "BrightBlue"
