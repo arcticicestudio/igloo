@@ -1,40 +1,52 @@
 [
   {
-    "clean": ["~"]
+    "clean": [
+      "$IGLOO_PATH_USER_CONFIG/git",
+      "$IGLOO_PATH_USER_CONFIG/git/includes",
+      "$IGLOO_PATH_USER_CONFIG/git/includes/templates"
+    ]
   },
   {
     "link": {
-      "~/.gitattributes": {
-        "hosts": {
-          "iceowl": "gitattributes",
-          "igloo": "gitattributes"
-        }
+      "$IGLOO_PATH_USER_CONFIG/git/includes/templates/commit-github.txt": {
+        "create": true,
+        "path": "includes/templates/commit-github.txt"
       },
-      "~/.git-commit-msg": null,
-      "~/.gitconfig": null,
-      "~/.gitconfig-auth": {
-        "hosts": {
-          "iceowl": "gitconfig-auth",
-          "igloo": "gitconfig-auth"
-        }
+      "$IGLOO_PATH_USER_CONFIG/git/includes/templates/commit-job.txt": {
+        "create": true,
+        "hosts": { "iceowl": "includes/templates/commit-job.txt.igloocrypt" }
       },
-      "~/.gitconfig-auth-svengreb": {
-        "hosts": {
-          "iceowl": "gitconfig-auth-svengreb",
-          "igloo": "gitconfig-auth-svengreb"
-        }
+      "$IGLOO_PATH_USER_CONFIG/git/includes/commit_template-job.conf": {
+        "create": true,
+        "hosts": { "iceowl": "includes/commit_template-job.conf" }
       },
-      "~/.gitconfig-auth-job": {
-        "hosts": {
-          "iceowl": "gitconfig-auth-job.igloocrypt",
-          "igloo": "gitconfig-auth-job.igloocrypt"
-        }
+      "$IGLOO_PATH_USER_CONFIG/git/includes/macos_mergetool_exit_code_fix.conf": {
+        "create": true,
+        "hosts": { "iceowl": "includes/macos_mergetool_exit_code_fix.conf" }
       },
-      "~/.gitignore": null,
-      "~/.gitconfig-macos-mergetool-exit-code": {
-        "hosts": {
-          "iceowl": "includes/gitconfig-macos-mergetool-exit-code"
-        }
+      "$IGLOO_PATH_USER_CONFIG/git/includes/user-arcticicestudio.conf": {
+        "create": true,
+        "path": "includes/user-arcticicestudio.conf"
+      },
+      "$IGLOO_PATH_USER_CONFIG/git/includes/user-job.conf": {
+        "create": true,
+        "hosts": { "iceowl": "includes/user-job.conf.igloocrypt" }
+      },
+      "$IGLOO_PATH_USER_CONFIG/git/includes/user-svengreb.conf": {
+        "create": true,
+        "path": "includes/user-svengreb.conf"
+      },
+      "$IGLOO_PATH_USER_CONFIG/git/attributes": {
+        "create": true,
+        "path": "attributes.conf"
+      },
+      "$IGLOO_PATH_USER_CONFIG/git/config": {
+        "create": true,
+        "path": "config.conf"
+      },
+      "$IGLOO_PATH_USER_CONFIG/git/ignore": {
+        "create": true,
+        "path": "ignore.conf"
       }
     }
   }
