@@ -1,0 +1,13 @@
+[
+  {
+    "clean": ["$IGLOO_PATH_USER_CONFIG/wget"]
+  },
+  {
+    "link": {
+      "$IGLOO_PATH_USER_CONFIG/wget/wgetrc": {
+        "create": true,
+        "path": "wgetrc"
+      }
+    }
+  }
+]
