@@ -1,0 +1,264 @@
+[
+  {
+    "clean": ["$IGLOO_PATH_USER_CONFIG/zsh", "$IGLOO_PATH_USER_CACHE/zsh"]
+  },
+  {
+    "link": {
+      "$HOME/.zshenv": "main.zsh",
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/autoload.zsh": {
+        "create": true,
+        "path": "config/autoload.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/completion.zsh": {
+        "create": true,
+        "path": "config/completion.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/hooks.zsh": {
+        "create": true,
+        "path": "config/hooks.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/history.zsh": {
+        "create": true,
+        "path": "config/history.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/options.zsh": {
+        "create": true,
+        "path": "config/options.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/style.zsh": {
+        "create": true,
+        "path": "config/style.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/functions": {
+        "create": true,
+        "path": "lib/functions"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/themes": {
+        "create": true,
+        "path": "lib/themes"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/config.zsh": {
+        "create": true,
+        "path": "lib/config.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/env.zsh": {
+        "create": true,
+        "path": "lib/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/key_bindings.zsh": {
+        "create": true,
+        "path": "lib/key_bindings.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/plugins-base.zsh": {
+        "create": true,
+        "path": "lib/plugins-base.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/lib/plugins.zsh": {
+        "create": true,
+        "hosts": {
+          "iceowl": "lib/plugins.iceowl.zsh",
+          "polarbear": "lib/plugins.polarbear.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/broot/config.zsh": {
+        "create": true,
+        "hosts": {
+          "iceowl": "pkgs/broot/config.iceowl.zsh",
+          "polarbear": "pkgs/broot/config.polarbear.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/coreutils/aliases.zsh": {
+        "create": true,
+        "path": "pkgs/coreutils/aliases.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/coreutils/env.zsh": {
+        "create": true,
+        "path": "pkgs/coreutils/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/diff/aliases.zsh": {
+        "create": true,
+        "path": "pkgs/diff/aliases.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/dircolors/config.zsh": {
+        "create": true,
+        "path": "pkgs/dircolors/config.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/docker/env.zsh": {
+        "create": true,
+        "path": "pkgs/docker/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/fzf/config.zsh": {
+        "create": true,
+        "path": "pkgs/fzf/config.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/fzf/env.zsh": {
+        "create": true,
+        "path": "pkgs/fzf/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/git/config-base.zsh": {
+        "create": true,
+        "path": "pkgs/git/config-base.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/git/config.zsh": {
+        "create": true,
+        "hosts": {
+          "iceowl": "pkgs/git/config.iceowl.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/gnome/env.zsh": {
+        "create": true,
+        "hosts": {
+          "polarbear": "pkgs/gnome/env.polarbear.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/gnupg/env.zsh": {
+        "create": true,
+        "path": "pkgs/gnupg/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/go/env.zsh": {
+        "create": true,
+        "path": "pkgs/go/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/gradle/env.zsh": {
+        "create": true,
+        "hosts": {
+          "iceowl": "pkgs/gradle/env.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/grep/aliases.zsh": {
+        "create": true,
+        "path": "pkgs/grep/aliases.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/grep/env.zsh": {
+        "create": true,
+        "path": "pkgs/grep/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/homebrew/config.zsh": {
+        "create": true,
+        "hosts": {
+          "iceowl": "pkgs/homebrew/config.iceowl.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/java/env.zsh": {
+        "create": true,
+        "hosts": {
+          "iceowl": "pkgs/java/env.iceowl.zsh",
+          "polarbear": "pkgs/java/env.polarbear.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/jetbrains/config.zsh": {
+        "create": true,
+        "hosts": {
+          "polarbear": "pkgs/jetbrains/config.polarbear.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/less/env.zsh": {
+        "create": true,
+        "path": "pkgs/less/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/mage/env.zsh": {
+        "create": true,
+        "path": "pkgs/mage/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/maven/env.zsh": {
+        "create": true,
+        "path": "pkgs/maven/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/pacman/aliases.zsh": {
+        "create": true,
+        "hosts": {
+          "polarbear": "pkgs/pacman/aliases.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/ripgrep/env.zsh": {
+        "create": true,
+        "path": "pkgs/ripgrep/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/rsync/aliases.zsh": {
+        "create": true,
+        "path": "pkgs/rsync/aliases.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/ssh/env.zsh": {
+        "create": true,
+        "hosts": {
+          "polarbear": "pkgs/ssh/env.polarbear.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/sudo/aliases.zsh": {
+        "create": true,
+        "path": "pkgs/sudo/aliases.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/sudo/env.zsh": {
+        "create": true,
+        "path": "pkgs/sudo/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/systemd/xdg/env.zsh": {
+        "create": true,
+        "hosts": {
+          "polarbear": "pkgs/systemd/xdg/env.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/tilix/config.zsh": {
+        "create": true,
+        "hosts": {
+          "polarbear": "pkgs/tilix/config.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/wget/env.zsh": {
+        "create": true,
+        "path": "pkgs/wget/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/zplug/plugins/b4b4r07/enhancd/env.zsh": {
+        "create": true,
+        "path": "pkgs/zplug/plugins/b4b4r07/enhancd/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/zplug/plugins/zsh-users/zsh-syntax-highlighting/config.zsh": {
+        "create": true,
+        "path": "pkgs/zplug/plugins/zsh-users/zsh-syntax-highlighting/config.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/zplug/plugins/zsh-users/zsh-syntax-highlighting/theme-nord.zsh": {
+        "create": true,
+        "path": "pkgs/zplug/plugins/zsh-users/zsh-syntax-highlighting/theme-nord.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/pkgs/zplug/env.zsh": {
+        "create": true,
+        "path": "pkgs/zplug/env.zsh"
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/.zlogin": {
+        "create": true,
+        "hosts": {
+          "iceowl": "login.zsh",
+          "polarbear": "login.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/.zlogout": {
+        "create": true,
+        "hosts": {
+          "iceowl": "logout.zsh",
+          "polarbear": "logout.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/.zprofile": {
+        "create": true,
+        "hosts": {
+          "iceowl": "profile.zsh",
+          "polarbear": "profile.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/.zshenv": {
+        "create": true,
+        "hosts": {
+          "iceowl": "env.zsh",
+          "polarbear": "env.zsh"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/zsh/.zshrc": {
+        "create": true,
+        "hosts": {
+          "iceowl": "rc.zsh",
+          "polarbear": "rc.zsh"
+        }
+      }
+    }
+  }
+]

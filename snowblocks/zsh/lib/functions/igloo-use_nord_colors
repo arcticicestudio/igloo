@@ -1,0 +1,56 @@
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Creates and defines the "Nord" color palettes as `IGLOO_ZSH_NORD_COLORS` hash.
+# When the terminal supports 24-bit colors ("true color") the values are defined as HEX triplets,
+# otherwise the terminal's 16 base colors are used.
+# See:
+#   1. https://www.nordtheme.com
+autoload -Uz colors && colors
+autoload -Uz igloo-has_true_color
+
+typeset -Agx IGLOO_ZSH_NORD_COLORS
+
+if igloo-has_true_color; then
+  IGLOO_ZSH_NORD_COLORS[0]="#2e3440"
+  IGLOO_ZSH_NORD_COLORS[1]="#3b4252"
+  IGLOO_ZSH_NORD_COLORS[2]="#434c5e"
+  IGLOO_ZSH_NORD_COLORS[3]="#4c566a"
+  IGLOO_ZSH_NORD_COLORS[4]="#d8dee9"
+  IGLOO_ZSH_NORD_COLORS[5]="#e5e9f0"
+  IGLOO_ZSH_NORD_COLORS[6]="#eceff4"
+  IGLOO_ZSH_NORD_COLORS[7]="#8fbcbb"
+  IGLOO_ZSH_NORD_COLORS[8]="#88c0d0"
+  IGLOO_ZSH_NORD_COLORS[9]="#81a1c1"
+  IGLOO_ZSH_NORD_COLORS[10]="#5e81ac"
+  IGLOO_ZSH_NORD_COLORS[11]="#bf616a"
+  IGLOO_ZSH_NORD_COLORS[12]="#d08770"
+  IGLOO_ZSH_NORD_COLORS[13]="#ebcb8b"
+  IGLOO_ZSH_NORD_COLORS[14]="#a3be8c"
+  IGLOO_ZSH_NORD_COLORS[15]="#b48ead"
+  # The comment color with increased brightness base on `nord3`.
+  # See https://github.com/arcticicestudio/nord/issues/94 for more details.
+  IGLOO_ZSH_NORD_COLORS[comment]="#616e88"
+else
+  IGLOO_ZSH_NORD_COLORS[0]=-1
+  IGLOO_ZSH_NORD_COLORS[1]=0
+  IGLOO_ZSH_NORD_COLORS[2]=0
+  IGLOO_ZSH_NORD_COLORS[3]=8
+  IGLOO_ZSH_NORD_COLORS[4]=-1
+  IGLOO_ZSH_NORD_COLORS[5]=7
+  IGLOO_ZSH_NORD_COLORS[6]=15
+  IGLOO_ZSH_NORD_COLORS[7]=14
+  IGLOO_ZSH_NORD_COLORS[8]=6
+  IGLOO_ZSH_NORD_COLORS[9]=4
+  IGLOO_ZSH_NORD_COLORS[10]=12
+  IGLOO_ZSH_NORD_COLORS[11]=1
+  IGLOO_ZSH_NORD_COLORS[12]=11
+  IGLOO_ZSH_NORD_COLORS[13]=3
+  IGLOO_ZSH_NORD_COLORS[14]=2
+  IGLOO_ZSH_NORD_COLORS[15]=5
+  IGLOO_ZSH_NORD_COLORS[comment]=8
+fi
