@@ -158,7 +158,7 @@ The ▶ “arrow“ character is always rendered and not bound by a condition.
 # Colors
 
 This _snowblock_ is designed for the usage with [Nord][] through one of it‘s terminal [port projects][nord-ports].
-In order to simplify the usage of the [color palettes][nord-docs-colors] in scripts and commands, the [`igloo-use_nord_colors` function][gh-blob-lib-funcs-nord_colors] can be _autoloaded_. It‘ll create and populate the `IGLOO_ZSH_NORD_COLORS` array with the _Nord_ colors either using the hexadecimal values or the 16 ANSI base colors of the terminal. That depends on whether the [`igloo-has_true_color`][gh-blob-func-true_color] detected that the used [terminal supports “true colors“][gist-true_colors], otherwise it falls back to the ANSI colors `0` to `15`.
+In order to simplify the usage of the [color palettes][nord-docs-colors] in scripts and commands, the [`igloo-use_nord_colors` function][gh-blob-lib-funcs-nord_colors] can be _autoloaded_. It‘ll create and populate the `IGLOO_ZSH_NORD_COLORS` array with the _Nord_ colors either using the hexadecimal values or the 16 ANSI base colors of the terminal. That depends on whether the [`igloo-has_true_color`][gh-blob-lib-func-true_color] detected that the used [terminal supports “true colors“][gist-true_colors], otherwise it falls back to the ANSI colors `0` to `15`.
 
 # Plugins
 
@@ -171,6 +171,34 @@ They are defined and configured per host / OS in `plugins-*.zsh` files located i
 - [enhancd][] — A next-generation `cd` command with an interactive filter.
 - [zsh-autosuggestions][] — Fish-like autosuggestions for commands while typing based on history and completions.
 - [zsh-syntax-highlighting][] — Fish-like syntax highlighting for commands whilst they are typed.
+
+# Key Bindings
+
+The [`key_bindings.zsh`][gh-blob-lib-key_bind] creates and populates a `zkbd` compatible hash with [`terminfo(5)`][wiki-terminfo] mappings and defines basic key bindings.
+In addition to the custom key bindings the [`zle.zsh`][gh-blob-config-zle] file sets _ZSH line editor_ specific configurations including the `WORDCHARS` environment variable. It contains characters used to determine the next / previous cursor column position when moving back and forth between words based on the defined characters. This allow e.g. to move between different segments of paths or dash-separated words.
+See the [official ZSH line editor documentation][zsh-docs-zle] for more details.
+
+## OS & Terminal Configurations
+
+I/O events like keystrokes are always interpreted a little differently by the OS and terminal. Sometimes additional configurations are required in order to make the key bindings work properly.
+The following sections provide guides how to set these configurations for OS / applications supported by this _igloo_.
+
+### iTerm2 Profile Keys
+
+The default key preset of [iTerm2][] profiles don't include shortcuts for the left <kbd>⌥</kbd> (_Options_/<kbd>Alt</kbd>) key when used with the <kbd>←</kbd> and <kbd>→</kbd> arrow keys to move between words. Therefore it is required to add both key shortcuts and configure the left <kbd>⌥</kbd> (_Options_/<kbd>Alt</kbd>) key to behave in _escape sequence_ mode “Esc+“:
+
+1. Open the preferences via **iTerm2** → **Preferences** or press the <kbd>⌘</kbd><kbd>,</kbd> shortcut.
+2. Switch to the **Profiles** tab, select your profile and change to the **Keys** sub-tab.
+3. Select the “Esc+“ option radio box for **Left Option (⌥) Key**.
+4. Click on the <kbd>+</kbd> button to add the new key shortcuts using the following values:
+   - **Keyboard Shortcut**: `⌥←`
+     **Action**: `Send Escape Sequence`
+     **Esc+**: `b`
+   - **Keyboard Shortcut**: `⌥→`
+     **Action**: `Send Escape Sequence`
+     **Esc+**: `f`
+
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/igloo/master/assets/sb-zsh-zle-iterm2-key_shortcuts.png" /></p>
 
 # Resources
 
@@ -196,11 +224,13 @@ They are defined and configured per host / OS in `plugins-*.zsh` files located i
 [fzf-gh-tree-shell]: https://github.com/junegunn/fzf/tree/master/shell
 [fzf-tab]: https://github.com/Aloxaf/fzf-tab
 [fzf]: https://github.com/junegunn/fzf
+[gh-blob-config-zle]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/config/zle.zsh
 [gh-blob-env.zsh]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/env.zsh
-[gh-blob-func-true_color]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/functions/igloo-has_true_color
 [gh-blob-lib-config.zsh]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/config.zsh
 [gh-blob-lib-env.zsh]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/env.zsh
+[gh-blob-lib-func-true_color]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/functions/igloo-has_true_color
 [gh-blob-lib-funcs-nord_colors]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/functions/igloo-use_nord_colors
+[gh-blob-lib-key_bind]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/key_bindings.zsh
 [gh-blob-lib-plugins_base]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/plugins-base.zsh
 [gh-blob-lib-themes-igloo]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/lib/themes/igloo.zsh
 [gh-blob-login.zsh]: https://github.com/arcticicestudio/igloo/blob/master/snowblocks/zsh/login.zsh
@@ -216,11 +246,13 @@ They are defined and configured per host / OS in `plugins-*.zsh` files located i
 [git-blob-git_prompt.sh]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 [git-docs-appx-other_envs]: https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Zsh
 [git]: https://git-scm.com
+[iterm2]: https://www.iterm2.com
 [man7-linux-manpath]: http://man7.org/linux/man-pages/man5/manpath.5.html
 [nord-docs-colors]: https://www.nordtheme.com/docs/colors-and-palettes
 [nord-ports]: https://www.nordtheme.com/ports
 [nord]: https://www.nordtheme.com
 [wiki-path_var]: https://en.wikipedia.org/wiki/PATH_(variable)
+[wiki-terminfo]: https://en.wikipedia.org/wiki/Terminfo
 [zplug]: https://github.com/zplug/zplug
 [zsh-autosuggestions]: https://github.com/zsh-users/zsh-autosuggestions
 [zsh-docs-compl_sys]: http://zsh.sourceforge.net/Doc/Release/Completion-System.html

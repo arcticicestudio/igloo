@@ -41,6 +41,7 @@ function {
 [[ -f $ZDOTDIR/config/options.zsh ]] && source $ZDOTDIR/config/options.zsh
 [[ -f $ZDOTDIR/config/style.zsh ]] && source $ZDOTDIR/config/style.zsh
 [[ -f $ZDOTDIR/config/hooks.zsh ]] && source $ZDOTDIR/config/hooks.zsh
+[[ -f $ZDOTDIR/config/zle.zsh ]] && source $ZDOTDIR/config/zle.zsh
 
 # Load all package configurations and aliases.
 function {
