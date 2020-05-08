@@ -29,6 +29,10 @@
         "create": true,
         "path": "config/style.zsh"
       },
+      "$IGLOO_PATH_USER_CONFIG/zsh/config/zle.zsh": {
+        "create": true,
+        "path": "config/zle.zsh"
+      },
       "$IGLOO_PATH_USER_CONFIG/zsh/lib/functions": {
         "create": true,
         "path": "lib/functions"
