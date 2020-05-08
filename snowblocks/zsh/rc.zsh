@@ -8,7 +8,7 @@
 # Tie (`-T`) the `FPATH` environment variable for unique (`-U`) entries.
 # Extend the ZSH function search path where system-wide functions should always take precedence.
 export -TU FPATH fpath
-fpath=($fpath $ZDOTDIR/lib/functions $ZDOTDIR/lib/themes)
+fpath=($fpath $ZDOTDIR/lib/functions $ZDOTDIR/lib/themes $IGLOO_PATH_USER_FUNC)
 
 # Tie (`-T`) the `INFOPATH` environment variable for unique (`-U`) entries.
 # Extend the info search path where user-level manuals should always take precedence.
