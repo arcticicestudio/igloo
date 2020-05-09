@@ -73,6 +73,9 @@ In order to allow a clean and simple way to configure applications, this _snowbl
 This _snowblock_ comes with a [custom prompt theme][gh-blob-lib-themes-igloo] for the [_ZSH_ `promptinit` module][zsh-docs-contrib#prompt_themes] named `igloo`. It has been designed for a minimal and uncluttered appearance without an unnecessary overhead of information and distractions.
 The theme consists of **eight elements in total**, divided into **fix segments**, where **five of them can be rendered conditionally** or **hidden explicitly through configurations** via environment variables.
 
+<p align="center">Appearance when <strong>all segments</strong> are rendered</p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/igloo/master/assets/sb-zsh-prompt-theme-segments-all.png" /></p>
+
 The following sections provide a brief overview of their purpose, style and the ways to configure them.
 For a extensive and detailed documentation see the theme help by running `prompt -h igloo`.
 
@@ -101,7 +104,6 @@ This is the metadata line that consists of segments like the name of the current
 - **Time** — The in _YYYY-MM-DD_ format.
   When the `IGLOO_ZSH_PROMPT_THEME_HIDE_TIME` environment variable is set to `true` the segment won‘t be rendered.
   **Note** that this does not represent the actual time but the last time the prompt was rendered and printed which occurs when the last command finished.
-  <p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/igloo/master/assets/sb-zsh-prompt-theme-segments-default.png" /></p>
 
 ## Line B
 
@@ -151,9 +153,6 @@ See the official Git documentation about [Git in other environments][git-docs-ap
 
 This is the main line to actually fire and run commands.
 The ▶ “arrow“ character is always rendered and not bound by a condition.
-
-<p align="center">Appearance when <strong>all segments</strong> are rendered</p>
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/igloo/master/assets/sb-zsh-prompt-theme-segments-all.png" /></p>
 
 # Colors
 
