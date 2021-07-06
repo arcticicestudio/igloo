@@ -26,7 +26,7 @@ if [[ "${+functions[__git_ps1]}" ]]; then
   # Show colored hints about the current dirty state.
   # The colors are based on the colored output of `git status -sb`.
   # NOTE: Only available when using __git_ps1 via ZSH's `precmd` hook function!
-  export GIT_PS1_SHOWCOLORHINTS=true
+  export GIT_PS1_SHOWCOLORHINTS=
 
   # Show unstaged (*) and staged (+) changes.
   # Also configurable per repository via `bash.showDirtyState`.
