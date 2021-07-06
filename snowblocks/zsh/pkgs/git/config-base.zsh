@@ -21,7 +21,7 @@ if [[ "${+functions[__git_ps1]}" ]]; then
 
   # Disable __git_ps1 output when the current working directory is set up to be ignored by git.
   # Also configurable per repository via `bash.hideIfPwdIgnored`.
-  export GIT_PS1_HIDE_IF_PWD_IGNORED=false
+  export GIT_PS1_HIDE_IF_PWD_IGNORED=
 
   # Show colored hints about the current dirty state.
   # The colors are based on the colored output of `git status -sb`.
@@ -33,7 +33,7 @@ if [[ "${+functions[__git_ps1]}" ]]; then
   export GIT_PS1_SHOWDIRTYSTATE=true
 
   # Show currently stashed ($) changes.
-  export GIT_PS1_SHOWSTASHSTATE=false
+  export GIT_PS1_SHOWSTASHSTATE=
 
   # Show untracked (%) changes.
   # Also configurable per repository via `bash.showUntrackedFiles`.

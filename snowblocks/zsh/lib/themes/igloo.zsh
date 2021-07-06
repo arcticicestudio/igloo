@@ -223,7 +223,7 @@ prompt_igloo_setup() {
   # Disable `__git_ps1` output when the current working directory is set up to be ignored by Git.
   # Also configurable per repository via `git config bash.hideIfPwdIgnored`.
 
-  GIT_PS1_HIDE_IF_PWD_IGNORED=${GIT_PS1_HIDE_IF_PWD_IGNORED:-false}
+  GIT_PS1_HIDE_IF_PWD_IGNORED=${GIT_PS1_HIDE_IF_PWD_IGNORED:-}
   # Show colored hints about the current dirty state.
   # The colors are based on the colored output of `git status -sb`.
   # NOTE: Only available when using `__git_ps1` via ZSH's `precmd` hook function!
