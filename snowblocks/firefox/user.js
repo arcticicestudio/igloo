@@ -84,6 +84,14 @@ user_pref("browser.display.background_color", "#FFFFFF");
  */
 user_pref("browser.display.use_document_fonts", 1);
 
+/*
+ * Do not always open the download panel for each new download.
+ * References:
+ *   1. https://support.mozilla.org/en-US/kb/manage-downloads-preferences-using-downloads-menu
+ *   2. https://support.mozilla.org/en-US/kb/change-firefox-behavior-when-open-file
+ */
+user_pref("browser.download.alwaysOpenPanel", false);
+
 /* Automatically hide the download button on empty state. */
 user_pref("browser.download.autohideButton", true);
 
