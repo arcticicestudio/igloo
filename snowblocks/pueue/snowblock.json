@@ -1,0 +1,44 @@
+[
+  {
+    "clean": [
+      "$IGLOO_PATH_USER_CONFIG/pueue",
+      "$IGLOO_PATH_USER_DATA/pueue",
+      "~/Library/Preferences/pueue",
+      "~/Library/Application Support/pueue"
+    ]
+  },
+  {
+    "link": {
+      "$IGLOO_PATH_USER_CONFIG/pueue/pueue.yml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "polarbear": "pueue.yaml",
+          "puffin": "pueue.yaml"
+        }
+      },
+      "$IGLOO_PATH_USER_CONFIG/pueue/pueue_aliases.yml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "polarbear": "pueue_aliases.yaml",
+          "puffin": "pueue_aliases.yaml"
+        }
+      },
+      "~/Library/Application Support/pueue/pueue.yml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "pueue.yaml"
+        }
+      },
+      "~/Library/Application Support/pueue/pueue_aliases.yml": {
+        "create": true,
+        "force": true,
+        "hosts": {
+          "iceowl": "pueue_aliases.yaml"
+        }
+      }
+    }
+  }
+]

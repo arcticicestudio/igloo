@@ -1,0 +1,143 @@
+---
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (X) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Alias configuration for pueue.
+# Note that only the first word will be checked for an alias!
+# See https://github.com/Nukesor/pueue/wiki/Miscellaneous#aliases for details.
+
+# Universal "rsync" usage for copying data that...
+#
+# 1. excludes common OS specific files.
+# 2. outputs numbers in a human-readable format (`--human-readable` / `-h`) using level 2 (double `-h` parameter).
+# 3. outputs a change-summary for all updates (`--itemize-changes` / `-i`).
+# 4. copies symlinks as symlinks instead of following them (`--links` / `-l`).
+# 5. recurses into directories (`--recursive` / `-r`).
+# 6. outputs with increased verbosity (`--verbose` / `-v`).
+pq-cpr: "rsync --exclude .DS_Store --exclude .localized -hh --itemize-changes --links --recursive --verbose"
+
+# Same as the "pq-cpr" alias, but with a higher verbosity level that...
+#
+# 1. shows the per-file and total transfer progress (`--info=progress2`).
+# 2. shows updated file & directory names (`--info=name1`).
+#
+# See `rsync --info=help` and `man rsync` for details about the available verbosity options.
+pq-cpr-verbose: "rsync --exclude .DS_Store --exclude .localized -hh --info=name1 --info=progress2 --info=stats1 --itemize-changes --links --recursive"
+
+# "rsync" usage for copying data on Linux-based/-only filesystems that is based on the "pq-cpr" alias, but additionally...
+#
+# 1. preserves devices (`--devices`) through the `-D` flag which is includes through the `--archive` / `-a` flag.
+# 2. preserves groups (`--perms` / `-g`) through the `--archive` / `-a` flag.
+# 3. preserves permissions (`--perms` / `-p`) through the `--archive` / `-a` flag.
+# 4. preserves owners (`--owner` / `-o`) through the `--archive` / `-a` flag.
+# 5. preserves special files (`--specials`) through the `-D` flag which is includes through the `--archive` / `-a` flag.
+# 6. outputs a change-summary for all updates (`--itemize-changes` / `-i`).
+# 7. preserves modification times (`--times` / `-t`).
+# 8. outputs with increased verbosity (`--verbose` / `-v`).
+pq-cpr-fs-linux: "rsync --archive --exclude .DS_Store --exclude .localized -hh --itemize-changes --times --verbose"
+
+# Same as the "pq-cpr-fs-linux-verbose" alias, but with a higher verbosity level that...
+#
+# 1. shows the per-file and total transfer progress (`--info=progress2`).
+# 2. shows updated file & directory names (`--info=name1`).
+#
+# See `rsync --info=help` and `man rsync` for details about the available verbosity options.
+pq-cpr-fs-linux-verbose: "rsync --archive --exclude .DS_Store --exclude .localized -hh --info=name1 --info=progress2 --info=stats1 --itemize-changes --times"
+
+# "rsync" usage for copying data on NTFS filesystems that skips the handling of special file attributes since these are not supported and only...
+#
+# 1. excludes common OS specific files.
+# 2. outputs numbers in a human-readable format (`--human-readable` / `-h`) using level 2 (double `-h` parameter).
+# 3. outputs a change-summary for all updates (`--itemize-changes` / `-i`).
+# 4. compares moditifcation times with reduced accuracy (`--human-readable` / `-h`) because of NTFS limitations.
+# 5. recurses into directories (`--recursive` / `-r`).
+# 6. outputs with increased verbosity (`--verbose` / `-v`).
+#
+# References:
+#
+# 1. https://unix.stackexchange.com/a/461881
+pq-cpr-fs-ntfs: "rsync --exclude .DS_Store --exclude .localized -hh --itemize-changes --modify-window=1 --recursive --verbose"
+
+# Same as the "pq-cpr-fs-ntfs" alias, but with a higher verbosity level that...
+#
+# 1. shows the per-file and total transfer progress (`--info=progress2`).
+# 2. shows updated file & directory names (`--info=name1`).
+#
+# See `rsync --info=help` and `man rsync` for details about the available verbosity options.
+pq-cpr-fs-ntfs-verbose: "rsync --exclude .DS_Store --exclude .localized -hh --info=name1 --info=progress2 --info=stats1 --itemize-changes --modify-window=1 --recursive"
+
+# Same as the "pq-cpr" alias, but removes synchronized files from the sending side (`--remove-source-files`).
+pq-mvr: "rsync --exclude .DS_Store --exclude .localized -hh --itemize-changes --links --recursive --remove-source-files --verbose"
+
+# Same as the "pq-cpr-fs-linux" alias, but removes synchronized files from the sending side (`--remove-source-files`).
+pq-mvr-fs-linux: "rsync rsync --archive --exclude .DS_Store --exclude .localized -hh --itemize-changes --remove-source-files --times --verbose"
+
+# Same as the "pq-cpr-fs-ntfs" alias, but removes synchronized files from the sending side (`--remove-source-files`).
+pq-mvr-ntfs: "rsync --exclude .DS_Store --exclude .localized -hh --itemize-changes --modify-window=1 --recursive --remove-source-files --verbose"
+
+# Keeps two targets in-sync by deleting files that do not exist on the sending side (`--delete`) and also...
+#
+# 1. excludes common OS specific files.
+# 2. outputs numbers in a human-readable format (`--human-readable` / `-h`) using level 2 (double `-h` parameter).
+# 3. outputs a change-summary for all updates (`--itemize-changes` / `-i`).
+# 4. copies symlinks as symlinks instead of following them (`--links` / `-l`).
+# 5. recurses into directories (`--recursive` / `-r`).
+# 6. outputs with increased verbosity (`--verbose` / `-v`).
+pq-sync: "rsync --delete --exclude .DS_Store --exclude .localized -hh --itemize-changes --links --recursive --verbose"
+
+# Same as the "pq-sync" alias, but with a higher verbosity level that...
+#
+# 1. shows the per-file and total transfer progress (`--info=progress2`).
+# 2. shows deletions on the receiving side (`--info=del`).
+# 3. shows updated file & directory names (`--info=name1`).
+#
+# See `rsync --info=help` and `man rsync` for details about the available verbosity options.
+pq-sync-verbose: "rsync --delete --exclude .DS_Store --exclude .localized -hh --info=del --info=name1 --info=progress2 --info=stats1 --itemize-changes --links --recursive"
+
+# Based on the "pq-sync" alias, it keeps two targets on Linux-based/-only filesystems in-sync as it additionally...
+#
+# 1. preserves devices (`--devices`) through the `-D` flag which is includes through the `--archive` / `-a` flag.
+# 2. preserves groups (`--perms` / `-g`) through the `--archive` / `-a` flag.
+# 3. preserves permissions (`--perms` / `-p`) through the `--archive` / `-a` flag.
+# 4. preserves owners (`--owner` / `-o`) through the `--archive` / `-a` flag.
+# 5. preserves special files (`--specials`) through the `-D` flag which is includes through the `--archive` / `-a` flag.
+# 6. outputs a change-summary for all updates (`--itemize-changes` / `-i`).
+# 7. preserves modification times (`--times` / `-t`).
+# 8. outputs with increased verbosity (`--verbose` / `-v`).
+pq-sync-fs-linux: "rsync --archive --delete --exclude .DS_Store --exclude .localized -hh --itemize-changes --times --verbose"
+
+# Same as the "pq-sync-fs-linux" alias, but with a higher verbosity level that...
+#
+# 1. shows the per-file and total transfer progress (`--info=progress2`).
+# 2. shows deletions on the receiving side (`--info=del`).
+# 3. shows updated file & directory names (`--info=name1`).
+#
+# See `rsync --info=help` and `man rsync` for details about the available verbosity options.
+pq-sync-fs-linux-verbose: "rsync --archive --delete --exclude .DS_Store --exclude .localized -hh --info=del --info=name1 --info=progress2 --info=stats1 --itemize-changes --times"
+
+# Based on the "pq-sync" alias, it keeps two targets on NTFS filesystems in-sync, but skips the handling of special file attributes since these are not supported and only...
+#
+# 1. excludes common OS specific files.
+# 2. outputs numbers in a human-readable format (`--human-readable` / `-h`) using level 2 (double `-h` parameter).
+# 3. outputs a change-summary for all updates (`--itemize-changes` / `-i`).
+# 4. compares moditifcation times with reduced accuracy (`--human-readable` / `-h`) because of NTFS limitations.
+# 5. recurses into directories (`--recursive` / `-r`).
+# 6. outputs with increased verbosity (`--verbose` / `-v`).
+#
+# References:
+#
+# 1. https://unix.stackexchange.com/a/461881
+pq-sync-fs-ntfs: "rsync --delete --exclude .DS_Store --exclude .localized -hh --itemize-changes --modify-window=1 --recursive --verbose"
+
+# Same as the "pq-sync-fs-ntfs" alias, but with a higher verbosity level that...
+#
+# 1. shows the per-file and total transfer progress (`--info=progress2`).
+# 2. shows deletions on the receiving side (`--info=del`).
+# 3. shows updated file & directory names (`--info=name1`).
+#
+# See `rsync --info=help` and `man rsync` for details about the available verbosity options.
+pq-sync-fs-ntfs-verbose: "rsync --delete --exclude .DS_Store --exclude .localized -hh --info=del --info=name1 --info=progress2 --info=stats1 --itemize-changes --modify-window=1 --recursive"

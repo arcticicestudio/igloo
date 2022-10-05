@@ -1,0 +1,64 @@
+---
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+
+# Project:    igloo
+# Repository: https://github.com/arcticicestudio/igloo
+# License:    MIT
+
+# Configuration for pueue.
+# See https://github.com/Nukesor/pueue/wiki/Configuration for details.
+
+client:
+  # Use dark colors instead of standard colors in the command output.
+  dark_mode: true
+  # Do not truncate table rows of the `status` command output which have more than the given number of lines.
+  max_status_height: null
+  # Allow infinte table rows for the `status` command.
+  max_status_lines: ~
+  # If the client runs on the same machine as the daemon, do not sent logs via the socket but read them directly from
+  # the disk instead.
+  read_local_logs: true
+  # Restart in place instead of creating a new identical task instead.
+  # Note that this will override logs from the previous execution!
+  restart_in_place: true
+  # Do not print warnings that require confirmation for different critical commands.
+  show_confirmation_questions: false
+  # Do not show the command after expanding any aliases from the `pueue_aliases.yml` file when calling the `status` command.
+  show_expanded_aliases: false
+  # Use a humnan-readable date and time format for the `status` command.
+  # See https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html for information about the formatting syntax.
+  status_datetime_format: "%Y-%m-%d\n%H:%M:%S"
+  status_time_format: "%H:%M:%S"
+
+daemon:
+  # Do not run any callback when a task finishes.
+  callback: ~
+  # The amount of stdout/stderr lines that are available in the callback.
+  callback_log_lines: 100
+  # Only process one task at a time.
+  default_parallel_tasks: 1
+  # Do not stop to process new tasks when a single task fails.
+  pause_all_on_failure: false
+  pause_group_on_failure: false
+
+shared:
+  # The path to the TLS certificate used for encrypting any TCP traffic.
+  daemon_cert: ~/.local/share/pueue/certs/daemon.cert
+  # The path to the TLS private key used for encrypting any TCP traffic.
+  daemon_key: ~/.local/share/pueue/certs/daemon.key
+  # The host the daemon listens on and the client connects to.
+  # Note that this is only used when running in TCP mode.
+  host: localhost
+  # The host the daemon listens on and the client connects to.
+  # Note that this is only used when running in TCP mode.
+  port: "6924"
+  # The directory path for intermediate files and logs.
+  pueue_directory: ~/.local/share/pueue
+  # The path to the file which contains the secret used for authentication with the daemon.
+  #shared_secret_path: ~/.local/share/pueue/shared_secret
+  shared_secret_path: ~/.local/share/pueue/shared_secret
+  # The directory path for Unix the socket. (Unix only)
+  unix_sockets_path: ~/.local/share/pueue/pueue_user.socket
+  # Let the daemon listen on a Unix- or TCP socket. (Unix only)
+  use_unix_sockets: true
