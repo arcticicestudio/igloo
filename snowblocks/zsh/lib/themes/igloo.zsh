@@ -297,7 +297,12 @@ prompt_igloo_setup() {
   local seg_connect_bar_down="${newline}${nord3}${CONNECTBAR_DOWN}${c_reset}"
   local seg_exit_status="%(?..${nord3}[%(?.${nord9}.${nord11})%?${nord3}]${SPLITBAR}${c_reset})"
   local seg_jobs="%(1j.${nord3}[${nord9}%j${nord3}]${c_reset}%(?.${nord3}${SPLITBAR}${c_reset}.).)"
-  local seg_working_dir="${nord3}[${nord9}%~${nord3}]${newline}${c_reset}"
+
+  VENV=""
+  if [[ "$VIRTUAL_ENV" != "" ]]; then
+    VENV="($(basename "$VIRTUAL_ENV")) "
+  fi
+  local seg_working_dir="${nord3}[${nord9}${VENV}%~${nord3}]${newline}${c_reset}"
 
   local seg_time="${nord3}[${nord9}%D{%H:%M:%S}${nord3}]${newline}${CONNECTBAR_UP}${c_reset}"
   if [[ $IGLOO_ZSH_PROMPT_THEME_HIDE_TIME == true ]]; then
